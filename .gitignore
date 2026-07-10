@@ -1,3 +1,4 @@
 dist/
 node_modules/
 .netlify/
+.claude/scheduled_tasks.lock

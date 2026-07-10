@@ -1,0 +1,925 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: ""
+public_folder: "/"
+
+locale: "pt"
+
+collections:
+  - name: "home"
+    label: "Página Inicial"
+    files:
+      - name: "home"
+        label: "Conteúdo da Home"
+        file: "content/home.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Selo pequeno acima do título", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Aperte Enter para quebrar linha. Use *palavra* para deixar em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Texto de descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+          - label: "Seção Sobre"
+            name: about
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: text, widget: text }
+          - label: "Números (estatísticas)"
+            name: stats
+            widget: list
+            fields:
+              - { label: "Número", name: number, widget: string }
+              - { label: "Legenda", name: label, widget: string }
+          - label: "Fundadora"
+            name: founder
+            widget: object
+            fields:
+              - { label: "Foto", name: photo, widget: image }
+              - { label: "Número do selo (ex: 9+)", name: badgeNumber, widget: string }
+              - { label: "Legenda do selo (ex: anos)", name: badgeLabel, widget: string }
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Nome", name: name, widget: string, hint: "Use *sobrenome* para deixar em itálico." }
+              - { label: "Cargo/função", name: role, widget: string }
+              - { label: "Biografia — parágrafo 1", name: bio1, widget: text }
+              - { label: "Biografia — parágrafo 2", name: bio2, widget: text }
+              - { label: "Pilares/especialidades", name: pillars, widget: list }
+          - label: "Seção Serviços"
+            name: services
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - { label: "Texto do contador (ex: 08 práticas)", name: count, widget: string }
+              - label: "Cards de serviço"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Ícone (não mexer)", name: icon, widget: hidden }
+                  - { label: "Categoria pequena", name: tag, widget: string }
+                  - { label: "Título", name: title, widget: string, hint: "Enter quebra linha." }
+                  - { label: "Descrição", name: desc, widget: text }
+                  - { label: "Texto do link", name: linkText, widget: hidden }
+                  - { label: "Link (não mexer)", name: href, widget: hidden }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: quote, widget: text }
+                  - { label: "Autor(a)", name: author, widget: string }
+          - label: "Carrossel de fotos"
+            name: carousel
+            widget: list
+            field: { label: "Foto", name: image, widget: image }
+          - label: "Seção Contato"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: text, widget: text }
+              - { label: "Texto do botão WhatsApp", name: ctaText, widget: string }
+              - label: "Informações de contato"
+                name: info
+                widget: list
+                fields:
+                  - { label: "Rótulo (ex: Instagram)", name: label, widget: string }
+                  - { label: "Valor", name: value, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Nome no rodapé", name: logo, widget: string }
+              - { label: "Texto de copyright", name: copy, widget: string }
+
+  - name: "paginas-servico"
+    label: "Páginas de Serviço"
+    files:
+      - name: "acupuntura"
+        label: "Acupuntura"
+        file: "content/lp-acupuntura.json"
+        fields: &servico_padrao
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo (chinês)", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios / Condições tratadas"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - label: "Card 1 (avulso)"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+              - label: "Card 2 (pacote / destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "yoga"
+        label: "Yoga"
+        file: "content/lp-yoga.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Símbolo Om decorativo", name: om, widget: string, required: false }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Modalidades / Formatos"
+            name: modalities
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Cards"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Número", name: number, widget: string, required: false }
+                  - { label: "Nome", name: name, widget: string }
+                  - { label: "Nome em sânscrito", name: sanskrit, widget: string, required: false }
+                  - { label: "Texto", name: text, widget: text }
+                  - { label: "Selo/tag", name: tag, widget: string, required: false }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "contoterapia"
+        label: "Contoterapia"
+        file: "content/lp-contoterapia.json"
+        fields: *servico_padrao
+
+      - name: "meditacao"
+        label: "Meditação & Mindfulness"
+        file: "content/lp-meditacao.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2 (parte A, antes do destaque fixo)", name: text2a, widget: text }
+              - { label: "Parágrafo 2 (parte B, depois do destaque fixo)", name: text2b, widget: text }
+              - { label: "Parágrafo 3", name: text3, widget: text, required: false }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "psicanalise-junguiana"
+        label: "Psicanálise Junguiana"
+        file: "content/lp-psicanalise-junguiana.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: inscription, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título — linha 1", name: titleLine1, widget: string }
+              - { label: "Título — linha 2", name: titleLine2, widget: string, hint: "*palavra* fica em itálico." }
+              - { label: "Título — linha 3 (destaque)", name: titleLine3, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Parágrafo 3", name: text3, widget: text, required: false }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - { label: "Observação abaixo dos preços", name: note, widget: text, required: false }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "psicoterapia-feminino"
+        label: "Psicoterapia para Mulheres"
+        file: "content/lp-psicoterapia-feminino.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Parágrafo 3", name: text3, widget: text, required: false }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "reiki"
+        label: "Reiki"
+        file: "content/lp-reiki.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "Filosofia / Conceito"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Parágrafo 3", name: text3, widget: text, required: false }
+              - { label: "Citação em destaque", name: sutraText, widget: text, required: false }
+              - { label: "Fonte da citação", name: sutraRef, widget: string, required: false }
+              - label: "Cards conceituais"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Ícone/símbolo", name: icon, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: name, widget: string }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }
+
+      - name: "saude-mental-empresas"
+        label: "Saúde Mental nas Empresas"
+        file: "content/lp-saude-mental-empresas.json"
+        fields:
+          - label: "Topo (Hero)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto pequeno decorativo", name: eyebrow, widget: string, required: false }
+              - { label: "Selo pequeno", name: tag, widget: string }
+              - { label: "Título principal", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: string }
+              - { label: "Descrição", name: desc, widget: text }
+              - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
+              - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
+          - label: "Faixa de destaques"
+            name: strip
+            widget: list
+            fields:
+              - { label: "Destaque (negrito)", name: highlight, widget: string }
+              - { label: "Texto complementar", name: text, widget: string }
+          - label: "O Problema"
+            name: problem
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Parágrafo 1", name: text1, widget: text }
+              - { label: "Parágrafo 2", name: text2, widget: text }
+              - { label: "Frase em destaque", name: highlightText, widget: text, required: false }
+              - { label: "Fonte/referência do destaque", name: highlightRef, widget: string, required: false }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+                  - { label: "Estatística", name: stat, widget: string, required: false }
+                  - { label: "Legenda da estatística", name: statLabel, widget: string, required: false }
+              - label: "Card 2"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+                  - { label: "Estatística", name: stat, widget: string, required: false }
+                  - { label: "Legenda da estatística", name: statLabel, widget: string, required: false }
+              - label: "Card 3"
+                name: card3
+                widget: object
+                fields:
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+                  - { label: "Estatística", name: stat, widget: string, required: false }
+                  - { label: "Legenda da estatística", name: statLabel, widget: string, required: false }
+              - label: "Card 4"
+                name: card4
+                widget: object
+                fields:
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+                  - { label: "Estatística", name: stat, widget: string, required: false }
+                  - { label: "Legenda da estatística", name: statLabel, widget: string, required: false }
+          - label: "Benefícios"
+            name: benefits
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - { label: "Subtítulo", name: subtitle, widget: text, required: false }
+              - label: "Itens"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Número (ex: 01)", name: number, widget: string }
+                  - { label: "Título", name: title, widget: string }
+                  - { label: "Texto", name: text, widget: text }
+          - label: "Depoimentos"
+            name: testimonials
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "*palavra* fica em itálico." }
+              - label: "Depoimentos"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Depoimento", name: text, widget: text }
+                  - { label: "Autor(a)", name: author, widget: string }
+                  - { label: "Cargo/empresa", name: role, widget: string, required: false }
+          - label: "Preços"
+            name: pricing
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: string }
+              - { label: "Subtítulo", name: subtitle, widget: text }
+              - { label: "Observação abaixo dos preços", name: note, widget: text, required: false }
+              - label: "Card 1"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+              - label: "Card 2 (destaque)"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Selo", name: badge, widget: string }
+                  - { label: "Nome do plano", name: name, widget: string }
+                  - { label: "Preço", name: price, widget: string }
+                  - { label: "Período", name: period, widget: string }
+                  - { label: "Detalhe 1", name: detail1, widget: string, required: false }
+                  - { label: "Detalhe 2", name: detail2, widget: string, required: false }
+                  - { label: "Detalhe 3", name: detail3, widget: string, required: false }
+          - label: "Chamada final (CTA)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Selo pequeno", name: label, widget: string }
+              - { label: "Título", name: title, widget: text, hint: "Enter quebra linha. *palavra* fica em itálico." }
+              - { label: "Texto", name: sub, widget: text }
+              - { label: "Texto do botão principal", name: primaryText, widget: string }
+              - { label: "Texto do botão secundário", name: secondaryText, widget: string }
+              - { label: "Observação pequena", name: note, widget: string, required: false }
+              - label: "Selos de diagnóstico"
+                name: diagnostico
+                widget: list
+                fields:
+                  - { label: "Número", name: num, widget: string }
+                  - { label: "Legenda", name: label, widget: string }
+          - label: "Rodapé"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Texto de copyright", name: text, widget: string }

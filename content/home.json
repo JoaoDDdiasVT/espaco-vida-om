@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "tag": "Bem-vinda ao sagrado",
+    "title": "Um espaço para\n*reconectar*\nsua essência.",
+    "subtitle": "Espaço Vida Om.",
+    "desc": "Yoga, meditação, reiki e práticas do sagrado feminino. Um convite para desacelerar, sentir e florescer.",
+    "ctaText": "Explorar práticas"
+  },
+  "about": {
+    "label": "Nossa essência",
+    "title": "Um lar para quem\nbusca o *equilíbrio*\ninterior.",
+    "text": "Há quase uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar  silêncio, força, presença."
+  },
+  "stats": [
+    { "number": "9+", "label": "Anos de prática" },
+    { "number": "8", "label": "Modalidades" },
+    { "number": "&#8734;", "label": "Transformações" },
+    { "number": "1", "label": "Propósito" }
+  ],
+  "founder": {
+    "photo": "andreia.jpeg",
+    "badgeNumber": "9+",
+    "badgeLabel": "anos",
+    "label": "Quem guia o espaço",
+    "name": "Andreia *Rosa*",
+    "role": "Fundadora &amp; Instrutora do Espaço Vida Om",
+    "bio1": "Sou instrutora de Yoga, facilitadora de Meditação e praticante de Reiki com mais de 9 anos dedicados ao autoconhecimento e ao cuidado com o ser. Formada em diversas tradições, conduzo cada aluno com presença, escuta e profundo respeito pela jornada individual.",
+    "bio2": "No Espaço Vida Om, criei um ambiente onde o sagrado e o cotidiano se encontram  um lugar para quem busca parar, respirar e se reconectar com a própria essência. Uno o rigor das práticas ancestrais com a leveza necessária para a vida moderna.",
+    "pillars": ["Yoga", "Meditação", "Reiki", "Sagrado Feminino", "Florais de Bach"]
+  },
+  "services": {
+    "label": "Nossas práticas",
+    "title": "Escolha o seu *caminho*",
+    "count": "08 práticas",
+    "items": [
+      { "icon": "&#9711;", "tag": "Prática corporal", "title": "Yoga", "desc": "União de corpo, mente e espírito. Aulas para todos os níveis, do iniciante ao avançado.", "linkText": "Conhecer &#8594;", "href": "lp-yoga.html" },
+      { "icon": "&#10022;", "tag": "Cura energética", "title": "Reiki", "desc": "Canalização de energia vital para restaurar o equilíbrio físico, emocional e espiritual.", "linkText": "Conhecer &#8594;", "href": "lp-reiki.html" },
+      { "icon": "&#10043;", "tag": "Medicina chinesa", "title": "Acupuntura", "desc": "Estímulo dos pontos e meridianos para restaurar o fluxo de energia, aliviar dores e harmonizar o corpo.", "linkText": "Conhecer &#8594;", "href": "lp-acupuntura.html" },
+      { "icon": "&#9737;", "tag": "Análise profunda", "title": "Psicanálise\nJunguiana", "desc": "Mergulho no inconsciente à luz de Jung  sonhos, símbolos e arquétipos no caminho da individuação.", "linkText": "Conhecer &#8594;", "href": "lp-psicanalise-junguiana.html" },
+      { "icon": "&#9790;", "tag": "Sagrado Feminino", "title": "Psicoterapia\npara Mulheres", "desc": "Escuta terapêutica e vivências do sagrado feminino para reconectar com sua natureza cíclica e sua força.", "linkText": "Conhecer &#8594;", "href": "lp-psicoterapia-feminino.html" },
+      { "icon": "&#10086;", "tag": "Cura pelas histórias", "title": "Contoterapia", "desc": "O poder terapêutico dos contos e das narrativas para acessar emoções, ressignificar e curar.", "linkText": "Conhecer &#8594;", "href": "lp-contoterapia.html" },
+      { "icon": "&#9670;", "tag": "Silêncio interior", "title": "Meditação &amp;\nMindfulness", "desc": "Práticas guiadas para aquietar a mente, cultivar presença e atenção plena no momento presente.", "linkText": "Conhecer &#8594;", "href": "lp-meditacao.html" },
+      { "icon": "&#9784;", "tag": "Bem-estar corporativo", "title": "Saúde Mental\nnas Empresas", "desc": "Programas de equilíbrio emocional e prevenção do estresse para equipes e ambientes de trabalho.", "linkText": "Conhecer &#8594;", "href": "lp-saude-mental-empresas.html" }
+    ]
+  },
+  "testimonials": {
+    "label": "Depoimentos",
+    "title": "O que dizem sobre *nós*",
+    "items": [
+      { "quote": "\"O Espaço Vida Om mudou minha relação comigo mesma. As práticas de yoga e meditação me trouxeram uma paz que eu havia esquecido que existia.\"", "author": "Ana Paula, aluna de yoga" },
+      { "quote": "\"A vivência do sagrado feminino foi uma das experiências mais transformadoras da minha vida. Me sinto inteira.\"", "author": "Marina, participante do círculo" },
+      { "quote": "\"Depois de três sessões de reiki, minha ansiedade reduziu de forma incrível. A energia do espaço é única.\"", "author": "Fernanda, sessão de reiki" },
+      { "quote": "\"Um lugar que parece fora do tempo. A cada visita saio mais leve, mais centrada, mais eu mesma.\"", "author": "Luciana, aluna regular" }
+    ]
+  },
+  "carousel": [
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.15.jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16.jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16 (1).jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.17.jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.17 (1).jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18.jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18 (1).jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18 (2).jpeg",
+    "CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.19.jpeg"
+  ],
+  "contact": {
+    "label": "Venha nos visitar",
+    "title": "Dê o primeiro\npasso para o seu\n*despertar.*",
+    "text": "Estamos aqui para te receber com acolhimento e presença. Entre em contato e descubra qual prática faz mais sentido para o seu momento.",
+    "ctaText": "Falar no WhatsApp",
+    "info": [
+      { "label": "Instagram", "value": "@espacovidaom" },
+      { "label": "Facebook", "value": "facebook.com/espacovidaom" },
+      { "label": "Localização", "value": "Consulte nas redes sociais" },
+      { "label": "Horários", "value": "Conforme agenda de cursos" }
+    ]
+  },
+  "footer": {
+    "logo": "Espaço Vida Om",
+    "copy": "© 2026 Espaço Vida Om. Todos os direitos reservados."
+  }
+}

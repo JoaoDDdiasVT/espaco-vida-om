@@ -789,7 +789,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/home.json">
 
 <!-- NAV -->
 <nav>
@@ -811,12 +811,12 @@
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-left">
-    <p class="hero-tag">Bem-vinda ao sagrado</p>
-    <h1 class="hero-title">Um espaço para<br><em>reconectar</em><br>sua essência.</h1>
-    <p class="hero-subtitle">Espaço Vida Om.</p>
-    <p class="hero-desc">Yoga, meditação, reiki e práticas do sagrado feminino. Um convite para desacelerar, sentir e florescer.</p>
+    <p class="hero-tag" data-field="hero.tag">Bem-vinda ao sagrado</p>
+    <h1 class="hero-title" data-field="hero.title">Um espaço para<br><em>reconectar</em><br>sua essência.</h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Espaço Vida Om.</p>
+    <p class="hero-desc" data-field="hero.desc">Yoga, meditação, reiki e práticas do sagrado feminino. Um convite para desacelerar, sentir e florescer.</p>
     <a href="#servicos" class="hero-cta">
-      Explorar práticas <span class="hero-cta-arrow">&#8594;</span>
+      <span data-field="hero.ctaText">Explorar práticas</span> <span class="hero-cta-arrow">&#8594;</span>
     </a>
   </div>
 </section>
@@ -830,14 +830,14 @@
 <!-- ABOUT -->
 <section class="about" id="sobre">
   <div class="reveal">
-    <p class="about-label">Nossa essência</p>
-    <h2 class="about-title">Um lar para quem<br>busca o <em>equilíbrio</em><br>interior.</h2>
-    <p class="about-text">Há quase uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar  silêncio, força, presença.</p>
+    <p class="about-label" data-field="about.label">Nossa essência</p>
+    <h2 class="about-title" data-field="about.title">Um lar para quem<br>busca o <em>equilíbrio</em><br>interior.</h2>
+    <p class="about-text" data-field="about.text">Há quase uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar  silêncio, força, presença.</p>
   </div>
-  <div class="about-stats reveal" style="transition-delay:0.15s">
-    <div class="stat-item">
-      <div class="stat-number">9+</div>
-      <div class="stat-label">Anos de prática</div>
+  <div class="about-stats reveal" style="transition-delay:0.15s" data-list="stats">
+    <div class="stat-item" data-list-item>
+      <div class="stat-number" data-field="number">9+</div>
+      <div class="stat-label" data-field="label">Anos de prática</div>
     </div>
     <div class="stat-item">
       <div class="stat-number">8</div>
@@ -864,28 +864,28 @@
 <section class="founder" id="andreia">
   <div class="founder-photo-wrap reveal">
     <div class="founder-photo-placeholder">
-      <img src="andreia.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:center top;" alt="Andreia Rosa">
+      <img src="andreia.jpeg" data-field-src="founder.photo" style="width:100%;height:100%;object-fit:cover;object-position:center top;" alt="Andreia Rosa">
     </div>
     <div class="founder-photo-badge">
-      <span>9+</span>
-      <span>anos</span>
+      <span data-field="founder.badgeNumber">9+</span>
+      <span data-field="founder.badgeLabel">anos</span>
     </div>
   </div>
 
   <div class="reveal" style="transition-delay:0.15s">
-    <p class="founder-label">Quem guia o espaço</p>
-    <h2 class="founder-name">Andreia <em>Rosa</em></h2>
-    <p class="founder-role">Fundadora &amp; Instrutora do Espaço Vida Om</p>
+    <p class="founder-label" data-field="founder.label">Quem guia o espaço</p>
+    <h2 class="founder-name" data-field="founder.name">Andreia <em>Rosa</em></h2>
+    <p class="founder-role" data-field="founder.role">Fundadora &amp; Instrutora do Espaço Vida Om</p>
 
-    <p class="founder-bio">
+    <p class="founder-bio" data-field="founder.bio1">
       Sou instrutora de Yoga, facilitadora de Meditação e praticante de Reiki com mais de 9 anos dedicados ao autoconhecimento e ao cuidado com o ser. Formada em diversas tradições, conduzo cada aluno com presença, escuta e profundo respeito pela jornada individual.
     </p>
-    <p class="founder-bio">
+    <p class="founder-bio" data-field="founder.bio2">
       No Espaço Vida Om, criei um ambiente onde o sagrado e o cotidiano se encontram  um lugar para quem busca parar, respirar e se reconectar com a própria essência. Uno o rigor das práticas ancestrais com a leveza necessária para a vida moderna.
     </p>
 
-    <div class="founder-pillars">
-      <span class="founder-pillar">Yoga</span>
+    <div class="founder-pillars" data-list="founder.pillars">
+      <span class="founder-pillar" data-list-item data-field=".">Yoga</span>
       <span class="founder-pillar">Meditação</span>
       <span class="founder-pillar">Reiki</span>
       <span class="founder-pillar">Sagrado Feminino</span>
@@ -904,19 +904,19 @@
 <section class="services" id="servicos" style="padding-top:80px">
   <div class="section-header reveal">
     <div>
-      <p class="section-label">Nossas práticas</p>
-      <h2 class="section-title">Escolha o seu <em>caminho</em></h2>
+      <p class="section-label" data-field="services.label">Nossas práticas</p>
+      <h2 class="section-title" data-field="services.title">Escolha o seu <em>caminho</em></h2>
     </div>
-    <span class="section-count">08 práticas</span>
+    <span class="section-count" data-field="services.count">08 práticas</span>
   </div>
 
-  <div class="services-grid">
-    <a href="lp-yoga.html" class="service-card reveal">
-      <span class="service-icon">&#9711;</span>
-      <span class="service-tag">Prática corporal</span>
-      <h3 class="service-title">Yoga</h3>
-      <p class="service-desc">União de corpo, mente e espírito. Aulas para todos os níveis, do iniciante ao avançado.</p>
-      <span class="service-link">Conhecer &#8594;</span>
+  <div class="services-grid" data-list="services.items">
+    <a href="lp-yoga.html" data-field-href="href" class="service-card reveal" data-list-item>
+      <span class="service-icon" data-field="icon">&#9711;</span>
+      <span class="service-tag" data-field="tag">Prática corporal</span>
+      <h3 class="service-title" data-field="title">Yoga</h3>
+      <p class="service-desc" data-field="desc">União de corpo, mente e espírito. Aulas para todos os níveis, do iniciante ao avançado.</p>
+      <span class="service-link" data-field="linkText">Conhecer &#8594;</span>
     </a>
 
     <a href="lp-reiki.html" class="service-card reveal" style="transition-delay:0.1s">
@@ -980,14 +980,14 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="depoimentos">
   <div class="testimonials-header reveal">
-    <p class="section-label">Depoimentos</p>
-    <h2 class="testimonials-title">O que dizem sobre <em>nós</em></h2>
+    <p class="section-label" data-field="testimonials.label">Depoimentos</p>
+    <h2 class="testimonials-title" data-field="testimonials.title">O que dizem sobre <em>nós</em></h2>
   </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card reveal">
+  <div class="testimonials-grid" data-list="testimonials.items">
+    <div class="testimonial-card reveal" data-list-item>
       <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-      <p class="testimonial-quote">"O Espaço Vida Om mudou minha relação comigo mesma. As práticas de yoga e meditação me trouxeram uma paz que eu havia esquecido que existia."</p>
-      <span class="testimonial-author">Ana Paula, aluna de yoga</span>
+      <p class="testimonial-quote" data-field="quote">"O Espaço Vida Om mudou minha relação comigo mesma. As práticas de yoga e meditação me trouxeram uma paz que eu havia esquecido que existia."</p>
+      <span class="testimonial-author" data-field="author">Ana Paula, aluna de yoga</span>
     </div>
     <div class="testimonial-card reveal" style="transition-delay:0.1s">
       <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
@@ -1009,19 +1009,8 @@
 
 <!-- CAROUSEL -->
 <div class="carousel-strip">
-  <div class="carousel-track">
-    <!-- set 1 -->
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.15.jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16.jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16 (1).jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.17.jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.17 (1).jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18.jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18 (1).jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.18 (2).jpeg" alt=""></div>
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.19.jpeg" alt=""></div>
-    <!-- set 2 (duplicado para loop contínuo) -->
-    <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.15.jpeg" alt=""></div>
+  <div class="carousel-track" data-list="carousel" data-list-repeat="2">
+    <div class="carousel-item" data-list-item><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.15.jpeg" data-field-src="." alt=""></div>
     <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16.jpeg" alt=""></div>
     <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.16 (1).jpeg" alt=""></div>
     <div class="carousel-item"><img src="CARROSSEL/WhatsApp Image 2026-06-11 at 17.27.17.jpeg" alt=""></div>
@@ -1036,17 +1025,17 @@
 <!-- CONTACT -->
 <section class="contact" id="contato">
   <div class="reveal">
-    <p class="about-label">Venha nos visitar</p>
-    <h2 class="contact-title">Dê o primeiro<br>passo para o seu<br><em>despertar.</em></h2>
-    <p class="contact-text">Estamos aqui para te receber com acolhimento e presença. Entre em contato e descubra qual prática faz mais sentido para o seu momento.</p>
+    <p class="about-label" data-field="contact.label">Venha nos visitar</p>
+    <h2 class="contact-title" data-field="contact.title">Dê o primeiro<br>passo para o seu<br><em>despertar.</em></h2>
+    <p class="contact-text" data-field="contact.text">Estamos aqui para te receber com acolhimento e presença. Entre em contato e descubra qual prática faz mais sentido para o seu momento.</p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20os%20servicos%20do%20Espaco%20Vida%20Om" class="contact-link">
-      Falar no WhatsApp &#8594;
+      <span data-field="contact.ctaText">Falar no WhatsApp</span> &#8594;
     </a>
   </div>
-  <div class="contact-info reveal" style="transition-delay:0.15s">
-    <div class="contact-info-item">
-      <span class="contact-info-label">Instagram</span>
-      <span class="contact-info-value">@espacovidaom</span>
+  <div class="contact-info reveal" style="transition-delay:0.15s" data-list="contact.info">
+    <div class="contact-info-item" data-list-item>
+      <span class="contact-info-label" data-field="label">Instagram</span>
+      <span class="contact-info-value" data-field="value">@espacovidaom</span>
     </div>
     <div class="contact-info-item">
       <span class="contact-info-label">Facebook</span>
@@ -1065,8 +1054,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-logo">Espaço Vida Om</span>
-  <span class="footer-copy">© 2026 Espaço Vida Om. Todos os direitos reservados.</span>
+  <span class="footer-logo" data-field="footer.logo">Espaço Vida Om</span>
+  <span class="footer-copy" data-field="footer.copy">© 2026 Espaço Vida Om. Todos os direitos reservados.</span>
   <div class="footer-social">
     <a href="https://instagram.com/espacovidaom" target="_blank">Instagram</a>
     <a href="https://facebook.com/espacovidaom" target="_blank">Facebook</a>
@@ -1074,6 +1063,7 @@
   </div>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
@@ -1084,7 +1074,11 @@
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 
   // Smooth slow loop starting at 3s
   var video = document.getElementById('heroVideo');

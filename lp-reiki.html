@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reiki — Espaço Vida Om</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --burgundy: #80001f;
+    --beige: #f1d9b5;
+    --cream: #f9f3e0;
+    --rose: #d8a7b2;
+    --purple: #6d17a2;
+    --dark: #1c0d10;
+    --text: #2e1a1e;
+    --muted: #7a6060;
+    --gold: #c9a96e;
+    --gold-light: #e8d5a8;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 22px 64px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(249,243,224,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(128,0,31,0.07);
+  }
+  .nav-back {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); transition: color 0.3s;
+  }
+  .nav-back:hover { color: var(--burgundy); }
+  .nav-back svg { transition: transform 0.3s; }
+  .nav-back:hover svg { transform: translateX(-3px); }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; letter-spacing: 0.18em;
+    color: var(--text); text-transform: uppercase;
+  }
+  .nav-logo-name em { font-style: italic; color: var(--burgundy); }
+  .nav-cta-top {
+    padding: 10px 28px;
+    background: var(--burgundy); color: white;
+    text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: background 0.3s;
+  }
+  .nav-cta-top:hover { background: #a0002a; }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: grid; grid-template-columns: 56% 44%;
+    align-items: center;
+    padding-top: 72px;
+    background: #ffffff;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid rgba(128,0,31,0.06);
+  }
+  .hero-right {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; position: relative; overflow: hidden;
+  }
+  .hero-right > * { display: none !important; }
+  .hero-right::after {
+    content: '気';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(220px, 30vw, 420px);
+    font-weight: 200; line-height: 1;
+    color: rgba(128,0,31,0.045);
+    pointer-events: none; user-select: none;
+    letter-spacing: -0.02em;
+  }
+  .hero-divider { display: none; }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 56px 80px 80px;
+    position: relative; z-index: 1; background: transparent;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 80%, rgba(216,167,178,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-divider {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 1px;
+    background: rgba(128,0,31,0.06);
+  }
+  .hero-kanji {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.65rem; letter-spacing: 0.32em;
+    color: rgba(122,96,96,0.35); text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 4.6rem);
+    font-weight: 300; line-height: 1.06;
+    color: var(--text); margin-bottom: 14px;
+  }
+  .hero-title em { font-style: italic; color: var(--burgundy); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-style: italic;
+    color: var(--muted); letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+  .hero-desc {
+    font-size: 0.77rem; line-height: 2;
+    color: var(--muted); max-width: 380px;
+    margin-bottom: 52px;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 15px 36px;
+    background: var(--burgundy);
+    color: #fff; text-decoration: none;
+    font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; align-self: flex-start;
+  }
+  .hero-cta:hover { background: #a0002a; transform: translateY(-2px); }
+  .hero-cta-arrow { transition: transform 0.3s; }
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+
+  .hero-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(216,167,178,0.05) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Mandala SVG container */
+  .hero-visual {
+    position: relative; z-index: 1; text-align: center;
+  }
+  .hero-mandala-wrap {
+    position: relative; width: 300px; height: 300px;
+    margin: 0 auto 36px;
+  }
+  .hero-quote {
+    position: relative; z-index: 2; text-align: center; max-width: 280px; margin: 0 auto;
+  }
+  .hero-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.98rem; font-style: italic; font-weight: 300;
+    color: var(--muted); line-height: 1.9;
+  }
+  .hero-quote-source {
+    font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(122,96,96,0.5); margin-top: 14px;
+  }
+
+  /* STRIP */
+  .strip {
+    background: var(--burgundy); padding: 22px 64px;
+    display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;
+  }
+  .strip-item {
+    font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(249,243,224,0.7); display: flex; align-items: center; gap: 10px;
+  }
+  .strip-item span { color: var(--beige); font-weight: 500; }
+
+  /* PHILOSOPHY */
+  .philosophy {
+    padding: 100px 64px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+    background: white;
+  }
+  .phil-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .phil-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    line-height: 1.2; color: var(--text); margin-bottom: 28px;
+  }
+  .phil-title em { font-style: italic; color: var(--burgundy); }
+  .phil-text {
+    font-size: 0.8rem; line-height: 2; color: var(--muted); margin-bottom: 18px;
+  }
+  .phil-sutra {
+    margin-top: 32px; padding: 28px 32px;
+    border-left: 2px solid var(--gold);
+    background: rgba(201,169,110,0.06);
+  }
+  .phil-sutra-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.7; margin-bottom: 10px;
+  }
+  .phil-sutra-ref {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  }
+  .phil-visual {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .phil-card {
+    padding: 40px 28px;
+    background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .phil-card-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; color: var(--gold);
+    margin-bottom: 12px; line-height: 1;
+  }
+  .phil-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .phil-card-text {
+    font-size: 0.72rem; line-height: 1.8; color: var(--muted);
+  }
+
+  /* BENEFITS */
+  .benefits {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .benefits-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .benefits-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .benefits-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    color: var(--text);
+  }
+  .benefits-title em { font-style: italic; color: var(--burgundy); }
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .benefit-item {
+    padding: 48px 36px; background: white;
+    border: 1px solid rgba(128,0,31,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .benefit-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: rgba(201,169,110,0.2); line-height: 1;
+    margin-bottom: 16px;
+  }
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 12px;
+  }
+  .benefit-text {
+    font-size: 0.75rem; line-height: 1.9; color: var(--muted);
+  }
+
+  /* FORMATS */
+  .modalities {
+    padding: 100px 64px;
+    background: var(--dark);
+  }
+  .mod-header {
+    margin-bottom: 56px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .mod-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(201,169,110,0.55); margin-bottom: 12px;
+  }
+  .mod-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300;
+    color: var(--cream);
+  }
+  .mod-title em { font-style: italic; color: var(--gold-light); }
+  .mod-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: rgba(255,255,255,0.04);
+  }
+  .mod-card {
+    padding: 48px 36px;
+    background: rgba(28,13,16,0.96);
+    border: 1px solid rgba(201,169,110,0.07);
+    transition: background 0.3s;
+  }
+  .mod-card:hover { background: rgba(40,18,22,0.98); }
+  .mod-number {
+    font-size: 0.58rem; letter-spacing: 0.3em;
+    color: rgba(201,169,110,0.25); margin-bottom: 28px;
+  }
+  .mod-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 300; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .mod-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; font-style: italic;
+    color: rgba(201,169,110,0.45); margin-bottom: 20px;
+  }
+  .mod-text {
+    font-size: 0.74rem; line-height: 1.9;
+    color: rgba(249,243,224,0.44);
+  }
+  .mod-tag {
+    display: inline-block; margin-top: 20px;
+    padding: 5px 14px;
+    border: 1px solid rgba(201,169,110,0.3);
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(201,169,110,0.6);
+  }
+
+  /* PLANS */
+  .plans {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .plans-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .plans-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .plans-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; color: var(--text);
+  }
+  .plans-title em { font-style: italic; color: var(--burgundy); }
+  .plans-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .plan-card {
+    padding: 48px 36px;
+    background: white;
+    border: 1px solid rgba(128,0,31,0.06);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .plan-card.featured {
+    background: var(--burgundy); border-color: var(--burgundy);
+  }
+  .plan-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    padding: 4px 18px;
+    background: var(--purple); color: white;
+    font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .plan-name {
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 20px;
+  }
+  .plan-card.featured .plan-name { color: rgba(249,243,224,0.6); }
+  .plan-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; line-height: 1;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .plan-card.featured .plan-price { color: var(--cream); }
+  .plan-period {
+    font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted);
+    margin-bottom: 28px; padding-bottom: 24px;
+    border-bottom: 1px solid rgba(128,0,31,0.08);
+  }
+  .plan-card.featured .plan-period { color: rgba(249,243,224,0.5); border-color: rgba(249,243,224,0.1); }
+  .plan-features { list-style: none; margin-bottom: 36px; }
+  .plan-features li {
+    font-size: 0.74rem; line-height: 1; color: var(--muted);
+    padding: 9px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .plan-card.featured .plan-features li { color: rgba(249,243,224,0.7); border-color: rgba(249,243,224,0.1); }
+  .plan-features li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .plan-card.featured .plan-features li::before { background: var(--beige); }
+  .plan-btn {
+    display: block; width: 100%; padding: 14px;
+    background: transparent; border: 1px solid rgba(128,0,31,0.25);
+    color: var(--burgundy); text-align: center; text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .plan-btn:hover { background: var(--burgundy); color: white; }
+  .plan-card.featured .plan-btn {
+    background: white; border-color: white; color: var(--burgundy);
+  }
+  .plan-card.featured .plan-btn:hover { background: var(--cream); }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 100px 64px;
+    background: white;
+  }
+  .test-header { text-align: center; margin-bottom: 56px; }
+  .test-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .test-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 300; color: var(--text);
+  }
+  .test-title em { font-style: italic; color: var(--burgundy); }
+  .test-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .test-card {
+    padding: 40px 32px; background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .test-stars {
+    font-size: 0.8rem; color: var(--gold); margin-bottom: 16px; letter-spacing: 4px;
+  }
+  .test-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.8; margin-bottom: 20px;
+  }
+  .test-name {
+    font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 120px 64px;
+    background: var(--dark); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(128,0,31,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 50%, rgba(201,169,110,0.1) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(109,23,162,0.15) 0%, transparent 45%);
+  }
+  .cta-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(201,169,110,0.55); margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300;
+    line-height: 1.1; color: var(--cream); margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .cta-title em { font-style: italic; color: var(--beige); }
+  .cta-sub {
+    font-size: 0.8rem; line-height: 1.9;
+    color: rgba(249,243,224,0.45); max-width: 480px; margin: 0 auto 48px;
+    position: relative; z-index: 1;
+  }
+  .cta-buttons {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+  .cta-btn-primary {
+    padding: 16px 44px;
+    background: rgba(128,0,31,0.85); border: 1px solid rgba(241,217,181,0.2);
+    color: var(--cream); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; display: flex; align-items: center; gap: 12px;
+  }
+  .cta-btn-primary:hover { background: rgba(160,0,42,0.95); transform: translateY(-2px); }
+  .cta-btn-secondary {
+    padding: 16px 44px;
+    background: transparent; border: 1px solid rgba(249,243,224,0.2);
+    color: rgba(249,243,224,0.6); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .cta-btn-secondary:hover { border-color: rgba(249,243,224,0.5); color: var(--cream); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); padding: 32px 64px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-text {
+    font-size: 0.62rem; letter-spacing: 0.15em; color: rgba(249,243,224,0.25);
+  }
+  .footer-link {
+    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(216,167,178,0.4); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-link:hover { color: var(--rose); }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PRICING */
+  .pricing { padding: 96px 64px; background: var(--cream); }
+  .pricing-inner { max-width: 960px; margin: 0 auto; }
+  .pricing-label {
+    font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pricing-label::before {
+    content: ''; display: inline-block; width: 28px; height: 1px;
+    background: var(--rose); opacity: 0.5;
+  }
+  .pricing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300; color: var(--text); margin-bottom: 12px;
+  }
+  .pricing-subtitle {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.9;
+    max-width: 520px; margin-bottom: 52px;
+  }
+  .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+  .pricing-card { background: #fff; padding: 40px 36px; }
+  .pricing-card.featured { background: var(--burgundy); }
+  .pricing-card-badge {
+    font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 20px; display: block;
+  }
+  .pricing-card.featured .pricing-card-badge { color: rgba(255,255,255,0.55); }
+  .pricing-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 20px; line-height: 1.3;
+  }
+  .pricing-card.featured .pricing-card-name { color: #fff; }
+  .pricing-card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 300; color: var(--burgundy);
+    line-height: 1; margin-bottom: 4px;
+  }
+  .pricing-card.featured .pricing-card-price { color: #fff; }
+  .pricing-card-period {
+    font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted);
+    margin-bottom: 28px; display: block;
+  }
+  .pricing-card.featured .pricing-card-period { color: rgba(255,255,255,0.55); }
+  .pricing-card-divider { width: 28px; height: 1px; background: rgba(128,0,31,0.12); margin-bottom: 24px; }
+  .pricing-card.featured .pricing-card-divider { background: rgba(255,255,255,0.18); }
+  .pricing-card-details { list-style: none; padding: 0; margin: 0; }
+  .pricing-card-details li {
+    font-size: 0.73rem; line-height: 1.7; color: var(--muted);
+    padding: 7px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .pricing-card-details li::before { content: '—'; color: var(--rose); flex-shrink: 0; }
+  .pricing-card.featured .pricing-card-details li { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
+  .pricing-card.featured .pricing-card-details li::before { color: rgba(255,255,255,0.4); }
+  .pricing-note {
+    margin-top: 36px; font-size: 0.72rem; color: var(--muted); line-height: 1.9;
+    padding: 20px 28px; border-left: 2px solid rgba(128,0,31,0.15);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 28px; }
+    .hero-left { padding: 80px 28px 56px; }
+    .hero::after { font-size: clamp(180px, 55vw, 280px); opacity: 0.6; }
+    .philosophy { grid-template-columns: 1fr; }
+    .phil-visual { grid-template-columns: 1fr 1fr; }
+    .plans-grid, .benefits-grid, .test-grid, .mod-grid { grid-template-columns: 1fr; }
+    .philosophy, .benefits, .modalities, .plans, .testimonials, .cta-section { padding: 64px 28px; }
+    .strip { padding: 18px 28px; gap: 24px; }
+    footer { padding: 24px 28px; }
+  }
+
+  /* fallback p/ glifos CJK e simbolos no hero */
+  .hero-right::after, .hero-bg-glyph, .hero-chinese, .hero-kanji, .hero-sanskrit {
+    font-family: 'Cormorant Garamond', 'Segoe UI Symbol', 'Noto Serif SC', 'Microsoft YaHei', 'Yu Mincho', 'Nirmala UI', serif !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="espaco_vida_om.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+    Voltar ao site
+  </a>
+  <a href="espaco_vida_om.html" class="nav-logo">
+    <span class="nav-logo-name">Espaço <em>Vida Om</em></span>
+  </a>
+  <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Reiki" class="nav-cta-top">Agendar sessão</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-divider"></div>
+    <p class="hero-kanji">霊気 — Rei Ki — Energia Vital Universal</p>
+    <p class="hero-tag">Espaço Vida Om — Terapia de Reiki</p>
+    <h1 class="hero-title">O que em você<br>precisa de <em>silêncio</em><br>para se curar.</h1>
+    <p class="hero-subtitle">Reiki como caminho de restauração e presença</p>
+    <p class="hero-desc">
+      Uma técnica japonesa de canalização da energia vital que dissolve bloqueios, acalma o sistema nervoso e desperta a capacidade natural do corpo de se equilibrar.
+    </p>
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Reiki" class="hero-cta">
+      Quero agendar
+      <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-visual">
+      <!-- Lótus / Mandala Reiki — fundo claro, traços finos e suaves -->
+      <div class="hero-mandala-wrap">
+        <svg viewBox="0 0 300 300" width="300" height="300" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+
+          <!-- Anéis concêntricos — muito sutis sobre cream -->
+          <circle cx="150" cy="150" r="138" fill="none" stroke="rgba(216,167,178,0.18)" stroke-width="0.6"/>
+          <circle cx="150" cy="150" r="122" fill="none" stroke="rgba(128,0,31,0.07)"  stroke-width="0.5"/>
+          <circle cx="150" cy="150" r="106" fill="none" stroke="rgba(216,167,178,0.14)" stroke-width="0.5"/>
+          <circle cx="150" cy="150" r="88"  fill="none" stroke="rgba(128,0,31,0.08)"  stroke-width="0.5"/>
+          <circle cx="150" cy="150" r="70"  fill="none" stroke="rgba(216,167,178,0.2)" stroke-width="0.6"/>
+          <circle cx="150" cy="150" r="50"  fill="none" stroke="rgba(128,0,31,0.09)"  stroke-width="0.5"/>
+          <circle cx="150" cy="150" r="30"  fill="none" stroke="rgba(216,167,178,0.22)" stroke-width="0.6"/>
+
+          <!-- Pétalas externas de lótus — 12 pétalas, rose muito suave -->
+          <g fill="rgba(216,167,178,0.07)" stroke="rgba(216,167,178,0.55)" stroke-width="0.6">
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(0   150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(30  150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(60  150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(90  150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(120 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(150 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(180 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(210 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(240 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(270 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(300 150 150)"/>
+            <ellipse cx="150" cy="34"  rx="6.5" ry="17" transform="rotate(330 150 150)"/>
+          </g>
+
+          <!-- Pétalas médias — 8 pétalas, borgonha muitíssimo suave -->
+          <g fill="rgba(128,0,31,0.04)" stroke="rgba(128,0,31,0.22)" stroke-width="0.65">
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(0   150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(45  150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(90  150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(135 150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(180 150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(225 150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(270 150 150)"/>
+            <ellipse cx="150" cy="74"  rx="8.5" ry="22" transform="rotate(315 150 150)"/>
+          </g>
+
+          <!-- Pétalas internas — 6 pétalas, rose-beige -->
+          <g fill="rgba(216,167,178,0.1)" stroke="rgba(216,167,178,0.45)" stroke-width="0.7">
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(0   150 150)"/>
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(60  150 150)"/>
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(120 150 150)"/>
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(180 150 150)"/>
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(240 150 150)"/>
+            <ellipse cx="150" cy="108" rx="9" ry="25" transform="rotate(300 150 150)"/>
+          </g>
+
+          <!-- Losangos axiais ornamentais — borgonha suave -->
+          <g fill="none" stroke="rgba(128,0,31,0.18)" stroke-width="0.6">
+            <polygon points="150,96 157,106 150,116 143,106"/>
+            <polygon points="150,184 157,194 150,204 143,194"/>
+            <polygon points="96,150 106,157 116,150 106,143"/>
+            <polygon points="184,150 194,157 204,150 194,143"/>
+          </g>
+
+          <!-- Hexagrama central — equilíbrio -->
+          <g fill="none" stroke="rgba(216,167,178,0.35)" stroke-width="0.7" stroke-linejoin="round">
+            <polygon points="150,130 162,150 138,150"/>
+            <polygon points="150,170 162,150 138,150"/>
+          </g>
+
+          <!-- Linhas radiais finas — irradiação suave -->
+          <g stroke="rgba(216,167,178,0.2)" stroke-width="0.5" stroke-linecap="round">
+            <line x1="150" y1="150" x2="150" y2="18"/>
+            <line x1="150" y1="150" x2="150" y2="282"/>
+            <line x1="150" y1="150" x2="18"  y2="150"/>
+            <line x1="150" y1="150" x2="282" y2="150"/>
+            <line x1="150" y1="150" x2="243" y2="57"/>
+            <line x1="150" y1="150" x2="57"  y2="57"/>
+            <line x1="150" y1="150" x2="243" y2="243"/>
+            <line x1="150" y1="150" x2="57"  y2="243"/>
+          </g>
+
+          <!-- Ponto central — rose claro -->
+          <circle cx="150" cy="150" r="3.5" fill="rgba(216,167,178,0.7)" stroke="rgba(216,167,178,0.9)" stroke-width="0.8"/>
+          <circle cx="150" cy="150" r="7"   fill="none" stroke="rgba(216,167,178,0.3)" stroke-width="0.6"/>
+          <circle cx="150" cy="150" r="13"  fill="none" stroke="rgba(128,0,31,0.1)"   stroke-width="0.5"/>
+
+          <!-- Pontos cardinais decorativos -->
+          <circle cx="150" cy="54"  r="2" fill="rgba(216,167,178,0.45)"/>
+          <circle cx="246" cy="150" r="2" fill="rgba(216,167,178,0.45)"/>
+          <circle cx="150" cy="246" r="2" fill="rgba(216,167,178,0.45)"/>
+          <circle cx="54"  cy="150" r="2" fill="rgba(216,167,178,0.45)"/>
+
+          <!-- Pontos diagonais sutis -->
+          <circle cx="221" cy="79"  r="1.4" fill="rgba(128,0,31,0.2)"/>
+          <circle cx="221" cy="221" r="1.4" fill="rgba(128,0,31,0.2)"/>
+          <circle cx="79"  cy="221" r="1.4" fill="rgba(128,0,31,0.2)"/>
+          <circle cx="79"  cy="79"  r="1.4" fill="rgba(128,0,31,0.2)"/>
+        </svg>
+      </div>
+
+      <div class="hero-quote">
+        <p class="hero-quote-text">"A cura não vem de fora.<br>Ela acorda dentro."</p>
+        <p class="hero-quote-source">Mikao Usui — Fundador do Reiki</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item"><span>Não invasivo</span> — Toque suave ou sem contato</div>
+  <div class="strip-item"><span>Sessão individual</span> — Atenção plena e exclusiva</div>
+  <div class="strip-item"><span>Origem japonesa</span> — Mikao Usui, 1922</div>
+  <div class="strip-item"><span>1ª sessão especial</span> — Venha experienciar</div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="reveal">
+    <p class="phil-label">O que é Reiki</p>
+    <h2 class="phil-title">Uma arte antiga<br>de escutar<br><em>o invisível.</em></h2>
+    <p class="phil-text">
+      Reiki é uma técnica terapêutica criada no Japão em 1922 pelo mestre Mikao Usui. Seu nome une dois ideogramas: <em>Rei</em> (energia universal, espiritual) e <em>Ki</em> — o mesmo que <em>Prana</em> no sânscrito, <em>Chi</em> na tradição chinesa: a força vital que anima todos os seres.
+    </p>
+    <p class="phil-text">
+      A prática parte da premissa de que o ser humano possui um campo energético estruturado por chakras e meridianos. Quando essa energia flui livremente, há saúde, clareza e equilíbrio. Quando bloqueada — por estresse, emoções reprimidas ou padrões inconscientes — o corpo responde com sinais de desequilíbrio físico e emocional.
+    </p>
+    <p class="phil-text">
+      Durante a sessão, o praticante canaliza essa energia universal por meio das mãos, estimulando o organismo a recuperar sua inteligência curativa inata. ?? sutil, profundo e não invasivo.
+    </p>
+    <div class="phil-sutra">
+      <p class="phil-sutra-text">"Só hoje: não me irrites. Não me preocupes. Sê grato. Trabalha com dedicação. Sê gentil com todos os seres."</p>
+      <p class="phil-sutra-ref">Os Cinco Princípios de Reiki — Gokai de Mikao Usui</p>
+    </div>
+  </div>
+  <div class="phil-visual reveal" style="transition-delay:0.15s">
+    <div class="phil-card">
+      <div class="phil-card-icon">?</div>
+      <div class="phil-card-title">Ki — Energia Vital</div>
+      <p class="phil-card-text">A força que organiza e sustenta a vida. Quando flui livremente, o equilíbrio é natural.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">?~?</div>
+      <div class="phil-card-title">Chakras</div>
+      <p class="phil-card-text">Centros de energia que conectam corpo, mente e campo sutil. O Reiki harmoniza cada um deles.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">?^?</div>
+      <div class="phil-card-title">Meridianos</div>
+      <p class="phil-card-text">Canais por onde a energia circula. Quando desobstruídos, o vitalidade e a clareza se restabelecem.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">?~?</div>
+      <div class="phil-card-title">Autocura</div>
+      <p class="phil-card-text">O Reiki não cura — ele ativa o potencial que o próprio organismo já carrega para se reequilibrar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="benefits-header reveal">
+    <p class="benefits-label">O que a sessão transforma</p>
+    <h2 class="benefits-title">Seis formas de sentir o <em>Reiki</em></h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-item reveal">
+      <div class="benefit-number">01</div>
+      <h3 class="benefit-title">Alívio da Ansiedade</h3>
+      <p class="benefit-text">A sessão ativa o sistema nervoso parassimpático, dissolvendo o estado de alerta crônico e devolvendo a sensação de calma e segurança interna.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">02</div>
+      <h3 class="benefit-title">Redução da Dor</h3>
+      <p class="benefit-text">A energia canalizada estimula processos anti-inflamatórios naturais e promove bem-estar físico, aliviando tensões musculares e desconfortos crônicos.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">03</div>
+      <h3 class="benefit-title">Equilíbrio Emocional</h3>
+      <p class="benefit-text">Emoções represadas encontram espaço para se mover. O Reiki favorece o processamento gentil de padrões emocionais que o corpo guarda há anos.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">04</div>
+      <h3 class="benefit-title">Qualidade do Sono</h3>
+      <p class="benefit-text">Ao reorganizar o campo energético e reduzir o estado de hipervigilância, o Reiki favorece noites mais profundas e o descanso que o corpo realmente precisa.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">05</div>
+      <h3 class="benefit-title">Fortalecimento Imunológico</h3>
+      <p class="benefit-text">O equilíbrio energético apoia diretamente os sistemas de autorregulação do organismo, tornando o corpo mais resiliente ao estresse e às variações do ambiente.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.3s">
+      <div class="benefit-number">06</div>
+      <h3 class="benefit-title">Autoconhecimento</h3>
+      <p class="benefit-text">Cada sessão é um encontro consigo mesmo. Muitas pessoas relatam clareza sobre padrões, propósito e um contato mais genuíno com sua vida interior.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="test-header reveal">
+    <p class="test-label">Experiências reais</p>
+    <h2 class="test-title">O que dizem quem já <em>sentiu</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Cheguei ao Reiki num momento de ansiedade severa. Depois da segunda sessão com a Andreia senti como se um peso imenso tivesse saído do meu peito. ?? difícil explicar, mas o corpo sabe. ?? real."</p>
+      <p class="test-name">— Fernanda M., 34 anos</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.1s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Era cético no início. Fui por indicação da minha esposa. Na primeira sessão adormeci e acordei sentindo uma leveza que não sentia há anos. Hoje faço sessão toda semana e minha qualidade de vida mudou completamente."</p>
+      <p class="test-name">— Marcelo A., 41 anos</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.2s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"A Andreia tem uma presença muito especial. As sessões são um espaço de acolhimento profundo. Saio sempre diferente — mais inteira, mais conectada comigo mesma. O Reiki me devolveu a clareza que eu precisava."</p>
+      <p class="test-name">— Luciana P., 38 anos</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <p class="pricing-label">Investimento</p>
+    <h2 class="pricing-title">Clareza em cada escolha</h2>
+    <p class="pricing-subtitle">Sessões individuais ou em pacote para um acompanhamento mais profundo e contínuo.</p>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <span class="pricing-card-badge">Sessão avulsa</span>
+        <p class="pricing-card-name">Reiki — sessão individual</p>
+        <p class="pricing-card-price">R$180</p>
+        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Sessão completa de 60 minutos</li>
+          <li>Agendamento flexível</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-card-badge">Pacote recomendado</span>
+        <p class="pricing-card-name">4 sessões de Reiki</p>
+        <p class="pricing-card-price">R$680</p>
+        <span class="pricing-card-period">à vista · ou 2? de R$360</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Desconto de R$40 no pacote</li>
+          <li>1 sessão por semana</li>
+          <li>Acompanhamento contínuo e profundo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <p class="cta-label">Comece hoje</p>
+  <h2 class="cta-title">Seu corpo sabe<br>que precisa de <em>descanso.</em></h2>
+  <p class="cta-sub">Agende sua sessão e permita-se uma hora de presença plena, silêncio e restauração. O próximo passo é apenas um clique.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Reiki" class="cta-btn-primary">
+      Agendar minha sessão
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras terapias</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contoterapia — Espaço Vida Om</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --burgundy: #80001f;
+    --beige: #f1d9b5;
+    --cream: #f9f3e0;
+    --rose: #d8a7b2;
+    --purple: #6d17a2;
+    --dark: #1c0d10;
+    --text: #2e1a1e;
+    --muted: #7a6060;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 22px 64px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(249,243,224,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(128,0,31,0.07);
+  }
+  .nav-back {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); transition: color 0.3s;
+  }
+  .nav-back:hover { color: var(--burgundy); }
+  .nav-back svg { transition: transform 0.3s; }
+  .nav-back:hover svg { transform: translateX(-3px); }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; letter-spacing: 0.18em;
+    color: var(--text); text-transform: uppercase;
+  }
+  .nav-logo-name em { font-style: italic; color: var(--burgundy); }
+  .nav-cta-top {
+    padding: 10px 28px;
+    background: var(--burgundy); color: white;
+    text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: background 0.3s;
+  }
+  .nav-cta-top:hover { background: #a0002a; }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: grid; grid-template-columns: 56% 44%;
+    align-items: center;
+    padding-top: 72px;
+    background: #ffffff;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid rgba(128,0,31,0.06);
+  }
+  .hero-right {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; position: relative; overflow: hidden;
+  }
+  .hero-right > * { display: none !important; }
+  .hero-right::after {
+    content: '❧';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(220px, 30vw, 420px);
+    font-weight: 200; line-height: 1;
+    color: rgba(128,0,31,0.045);
+    pointer-events: none; user-select: none;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 56px 80px 80px;
+    position: relative; z-index: 1; background: transparent;
+  }
+  .hero-epigraph {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.68rem; letter-spacing: 0.32em;
+    color: rgba(46,26,30,0.28); text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .hero-tag {
+    font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 5.5vw, 5rem);
+    font-weight: 300; line-height: 1.05;
+    color: var(--text); margin-bottom: 16px;
+  }
+  .hero-title em { font-style: italic; color: var(--burgundy); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-style: italic;
+    color: var(--muted); letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+  .hero-desc {
+    font-size: 0.77rem; line-height: 2;
+    color: var(--muted); max-width: 380px;
+    margin-bottom: 52px;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 15px 36px;
+    background: var(--burgundy);
+    color: #fff; text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; align-self: flex-start;
+  }
+  .hero-cta:hover { background: #a0002a; transform: translateY(-2px); }
+  .hero-cta-arrow { transition: transform 0.3s; }
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+  .hero-visual {
+    position: relative; text-align: center;
+  }
+  .hero-svg-wrap svg { width: 320px; height: 420px; }
+  .hero-quote {
+    margin-top: 36px;
+    text-align: center; max-width: 300px;
+  }
+  .hero-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.75; opacity: 0.55;
+  }
+  .hero-quote-source {
+    font-size: 0.56rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--burgundy); opacity: 0.5; margin-top: 10px;
+  }
+
+  /* STRIP */
+  .strip {
+    background: var(--burgundy); padding: 22px 64px;
+    display: flex; justify-content: center; gap: 64px; flex-wrap: wrap;
+  }
+  .strip-item {
+    font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(249,243,224,0.7); display: flex; align-items: center; gap: 10px;
+  }
+  .strip-item span { color: var(--beige); font-weight: 500; }
+
+  /* PHILOSOPHY */
+  .philosophy {
+    padding: 100px 64px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+    background: white;
+  }
+  .phil-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .phil-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    line-height: 1.2; color: var(--text); margin-bottom: 28px;
+  }
+  .phil-title em { font-style: italic; color: var(--burgundy); }
+  .phil-text {
+    font-size: 0.8rem; line-height: 2; color: var(--muted); margin-bottom: 18px;
+  }
+  .phil-sutra {
+    margin-top: 32px; padding: 28px 32px;
+    border-left: 2px solid var(--rose);
+    background: rgba(216,167,178,0.07);
+  }
+  .phil-sutra-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.7; margin-bottom: 10px;
+  }
+  .phil-sutra-ref {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose);
+  }
+  .phil-visual {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .phil-card {
+    padding: 40px 28px;
+    background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .phil-card-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; color: var(--burgundy);
+    margin-bottom: 12px; line-height: 1;
+  }
+  .phil-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .phil-card-text {
+    font-size: 0.72rem; line-height: 1.8; color: var(--muted);
+  }
+
+  /* BENEFITS */
+  .benefits {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .benefits-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .benefits-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .benefits-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    color: var(--text);
+  }
+  .benefits-title em { font-style: italic; color: var(--burgundy); }
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .benefit-item {
+    padding: 48px 36px; background: white;
+    border: 1px solid rgba(128,0,31,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .benefit-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: rgba(128,0,31,0.1); line-height: 1;
+    margin-bottom: 16px;
+  }
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 12px;
+  }
+  .benefit-text {
+    font-size: 0.75rem; line-height: 1.9; color: var(--muted);
+  }
+
+  /* MODALITIES */
+  .modalities {
+    padding: 100px 64px;
+    background: var(--dark);
+  }
+  .mod-header {
+    margin-bottom: 56px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .mod-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(216,167,178,0.6); margin-bottom: 12px;
+  }
+  .mod-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300;
+    color: var(--cream);
+  }
+  .mod-title em { font-style: italic; color: var(--beige); }
+  .mod-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: rgba(255,255,255,0.05);
+  }
+  .mod-card {
+    padding: 48px 36px;
+    background: rgba(28,13,16,0.95);
+    border: 1px solid rgba(241,217,181,0.06);
+    transition: background 0.3s;
+  }
+  .mod-card:hover { background: rgba(40,18,22,0.98); }
+  .mod-number {
+    font-size: 0.58rem; letter-spacing: 0.3em;
+    color: rgba(241,217,181,0.2); margin-bottom: 28px;
+  }
+  .mod-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 300; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .mod-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; font-style: italic;
+    color: rgba(216,167,178,0.5); margin-bottom: 20px;
+  }
+  .mod-text {
+    font-size: 0.74rem; line-height: 1.9;
+    color: rgba(249,243,224,0.45);
+  }
+  .mod-tag {
+    display: inline-block; margin-top: 20px;
+    padding: 5px 14px;
+    border: 1px solid rgba(128,0,31,0.4);
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(216,167,178,0.7);
+  }
+
+  /* PLANS */
+  .plans {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .plans-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .plans-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .plans-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; color: var(--text);
+  }
+  .plans-title em { font-style: italic; color: var(--burgundy); }
+  .plans-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .plan-card {
+    padding: 48px 36px;
+    background: white;
+    border: 1px solid rgba(128,0,31,0.06);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .plan-card.featured {
+    background: var(--burgundy); border-color: var(--burgundy);
+  }
+  .plan-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    padding: 4px 18px;
+    background: var(--purple); color: white;
+    font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .plan-name {
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 20px;
+  }
+  .plan-card.featured .plan-name { color: rgba(249,243,224,0.6); }
+  .plan-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; line-height: 1;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .plan-card.featured .plan-price { color: var(--cream); }
+  .plan-period {
+    font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted);
+    margin-bottom: 28px; padding-bottom: 24px;
+    border-bottom: 1px solid rgba(128,0,31,0.08);
+  }
+  .plan-card.featured .plan-period { color: rgba(249,243,224,0.5); border-color: rgba(249,243,224,0.1); }
+  .plan-features { list-style: none; margin-bottom: 36px; }
+  .plan-features li {
+    font-size: 0.74rem; line-height: 1; color: var(--muted);
+    padding: 9px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .plan-card.featured .plan-features li { color: rgba(249,243,224,0.7); border-color: rgba(249,243,224,0.1); }
+  .plan-features li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0;
+  }
+  .plan-card.featured .plan-features li::before { background: var(--beige); }
+  .plan-btn {
+    display: block; width: 100%; padding: 14px;
+    background: transparent; border: 1px solid rgba(128,0,31,0.25);
+    color: var(--burgundy); text-align: center; text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .plan-btn:hover { background: var(--burgundy); color: white; }
+  .plan-card.featured .plan-btn {
+    background: white; border-color: white; color: var(--burgundy);
+  }
+  .plan-card.featured .plan-btn:hover { background: var(--cream); }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 100px 64px;
+    background: white;
+  }
+  .test-header { text-align: center; margin-bottom: 56px; }
+  .test-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .test-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 300; color: var(--text);
+  }
+  .test-title em { font-style: italic; color: var(--burgundy); }
+  .test-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .test-card {
+    padding: 40px 32px; background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .test-stars {
+    font-size: 0.8rem; color: var(--rose); margin-bottom: 16px; letter-spacing: 4px;
+  }
+  .test-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.8; margin-bottom: 20px;
+  }
+  .test-name {
+    font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 120px 64px;
+    background: var(--dark); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(128,0,31,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 50%, rgba(109,23,162,0.2) 0%, transparent 55%);
+  }
+  .cta-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(216,167,178,0.6); margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300;
+    line-height: 1.1; color: var(--cream); margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .cta-title em { font-style: italic; color: var(--beige); }
+  .cta-sub {
+    font-size: 0.8rem; line-height: 1.9;
+    color: rgba(249,243,224,0.45); max-width: 480px; margin: 0 auto 48px;
+    position: relative; z-index: 1;
+  }
+  .cta-buttons {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+  .cta-btn-primary {
+    padding: 16px 44px;
+    background: rgba(128,0,31,0.85); border: 1px solid rgba(241,217,181,0.2);
+    color: var(--cream); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; display: flex; align-items: center; gap: 12px;
+  }
+  .cta-btn-primary:hover { background: rgba(160,0,42,0.95); transform: translateY(-2px); }
+  .cta-btn-secondary {
+    padding: 16px 44px;
+    background: transparent; border: 1px solid rgba(249,243,224,0.2);
+    color: rgba(249,243,224,0.6); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .cta-btn-secondary:hover { border-color: rgba(249,243,224,0.5); color: var(--cream); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); padding: 32px 64px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-text {
+    font-size: 0.62rem; letter-spacing: 0.15em; color: rgba(249,243,224,0.25);
+  }
+  .footer-link {
+    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(216,167,178,0.4); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-link:hover { color: var(--rose); }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PRICING */
+  .pricing { padding: 96px 64px; background: var(--cream); }
+  .pricing-inner { max-width: 960px; margin: 0 auto; }
+  .pricing-label {
+    font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pricing-label::before {
+    content: ''; display: inline-block; width: 28px; height: 1px;
+    background: var(--rose); opacity: 0.5;
+  }
+  .pricing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300; color: var(--text); margin-bottom: 12px;
+  }
+  .pricing-subtitle {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.9;
+    max-width: 520px; margin-bottom: 52px;
+  }
+  .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+  .pricing-card { background: #fff; padding: 40px 36px; }
+  .pricing-card.featured { background: var(--burgundy); }
+  .pricing-card-badge {
+    font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 20px; display: block;
+  }
+  .pricing-card.featured .pricing-card-badge { color: rgba(255,255,255,0.55); }
+  .pricing-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 20px; line-height: 1.3;
+  }
+  .pricing-card.featured .pricing-card-name { color: #fff; }
+  .pricing-card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 300; color: var(--burgundy);
+    line-height: 1; margin-bottom: 4px;
+  }
+  .pricing-card.featured .pricing-card-price { color: #fff; }
+  .pricing-card-period {
+    font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted);
+    margin-bottom: 28px; display: block;
+  }
+  .pricing-card.featured .pricing-card-period { color: rgba(255,255,255,0.55); }
+  .pricing-card-divider { width: 28px; height: 1px; background: rgba(128,0,31,0.12); margin-bottom: 24px; }
+  .pricing-card.featured .pricing-card-divider { background: rgba(255,255,255,0.18); }
+  .pricing-card-details { list-style: none; padding: 0; margin: 0; }
+  .pricing-card-details li {
+    font-size: 0.73rem; line-height: 1.7; color: var(--muted);
+    padding: 7px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .pricing-card-details li::before { content: '—'; color: var(--rose); flex-shrink: 0; }
+  .pricing-card.featured .pricing-card-details li { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
+  .pricing-card.featured .pricing-card-details li::before { color: rgba(255,255,255,0.4); }
+  .pricing-note {
+    margin-top: 36px; font-size: 0.72rem; color: var(--muted); line-height: 1.9;
+    padding: 20px 28px; border-left: 2px solid rgba(128,0,31,0.15);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 28px; }
+    .hero-left { padding: 80px 28px 56px; }
+    .hero::after { font-size: clamp(180px, 55vw, 280px); opacity: 0.6; }
+    .philosophy, .plans-grid, .benefits-grid, .test-grid, .mod-grid { grid-template-columns: 1fr; }
+    .philosophy, .benefits, .modalities, .plans, .testimonials, .cta-section { padding: 64px 28px; }
+    .strip { padding: 18px 28px; gap: 24px; }
+    footer { padding: 24px 28px; }
+  }
+
+  /* fallback p/ glifos CJK e simbolos no hero */
+  .hero-right::after, .hero-bg-glyph, .hero-chinese, .hero-kanji, .hero-sanskrit {
+    font-family: 'Cormorant Garamond', 'Segoe UI Symbol', 'Noto Serif SC', 'Microsoft YaHei', 'Yu Mincho', 'Nirmala UI', serif !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="espaco_vida_om.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+    Voltar ao site
+  </a>
+  <a href="espaco_vida_om.html" class="nav-logo">
+    <span class="nav-logo-name">Espaço <em>Vida Om</em></span>
+  </a>
+  <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Contoterapia" class="nav-cta-top">Iniciar jornada</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-epigraph">Era uma vez — a história que te cura</span>
+    <p class="hero-tag">Espaço Vida Om — Contoterapia</p>
+    <h1 class="hero-title">As histórias<br>que você <em>carrega</em><br>podem te libertar.</h1>
+    <p class="hero-subtitle">Cura pelo poder das narrativas e dos contos</p>
+    <p class="hero-desc">
+      Dentro de cada conto existe uma chave. A Contoterapia usa mitos, contos de fadas e narrativas simbólicas para acessar o que a razão não alcança — e transformar, pela beleza da metáfora, aquilo que a dor direta não consegue tocar.
+    </p>
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Contoterapia" class="hero-cta">
+      Quero começar minha história
+      <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <!-- Watermark: letra estilizada "C" de conto -->
+      <div class="hero-watermark">C</div>
+      <div class="hero-svg-wrap">
+        <!-- SVG inline: livro aberto com espiral de palavras e chama -->
+        <svg viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Livro aberto -->
+          <path d="M40 200 Q120 185 120 185 Q200 185 200 200 L200 240 Q200 250 190 252 Q120 265 120 265 Q50 252 40 252 Z"
+            fill="rgba(128,0,31,0.10)" stroke="rgba(128,0,31,0.28)" stroke-width="1.2"/>
+          <!-- Página esquerda -->
+          <path d="M40 200 Q80 175 120 185 L120 265 Q80 255 40 252 Z"
+            fill="rgba(241,217,181,0.25)" stroke="rgba(128,0,31,0.18)" stroke-width="1"/>
+          <!-- Página direita -->
+          <path d="M120 185 Q160 175 200 200 L200 252 Q160 255 120 265 Z"
+            fill="rgba(241,217,181,0.18)" stroke="rgba(128,0,31,0.14)" stroke-width="1"/>
+          <!-- Lombada central -->
+          <line x1="120" y1="185" x2="120" y2="265" stroke="rgba(128,0,31,0.35)" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Linhas de texto — página esquerda -->
+          <line x1="60" y1="210" x2="108" y2="207" stroke="rgba(128,0,31,0.18)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="58" y1="220" x2="110" y2="217" stroke="rgba(128,0,31,0.14)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="60" y1="230" x2="106" y2="227" stroke="rgba(128,0,31,0.12)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="62" y1="240" x2="108" y2="237" stroke="rgba(128,0,31,0.10)" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Linhas de texto — página direita -->
+          <line x1="132" y1="207" x2="180" y2="210" stroke="rgba(128,0,31,0.18)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="130" y1="217" x2="182" y2="220" stroke="rgba(128,0,31,0.14)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="132" y1="227" x2="178" y2="230" stroke="rgba(128,0,31,0.12)" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="130" y1="237" x2="180" y2="240" stroke="rgba(128,0,31,0.10)" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Espiral de palavras ascendendo do livro -->
+          <path d="M120 185 C118 170 108 158 114 145 C120 132 132 128 128 115 C124 102 112 97 118 84 C124 71 138 68 134 55"
+            stroke="rgba(128,0,31,0.22)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-dasharray="2 4"/>
+          <path d="M120 185 C122 168 134 154 128 140 C122 126 110 122 116 108 C122 94 136 90 130 76 C124 62 112 58 118 44"
+            stroke="rgba(109,23,162,0.18)" stroke-width="1" fill="none" stroke-linecap="round" stroke-dasharray="1.5 5"/>
+          <!-- Chama acima do livro -->
+          <path d="M120 90 C116 80 108 74 112 64 C116 54 124 52 120 42 C118 36 114 33 118 26 C122 20 130 22 128 30 C126 38 132 42 130 50 C128 58 134 62 132 72 C130 82 124 86 120 90 Z"
+            fill="rgba(128,0,31,0.22)" stroke="rgba(128,0,31,0.40)" stroke-width="1"/>
+          <path d="M120 85 C118 76 114 70 117 63 C119 57 124 55 122 48 C120 43 117 40 119 34 C121 29 125 30 124 36 C123 42 127 46 126 53 C125 60 129 64 128 71 C127 78 122 83 120 85 Z"
+            fill="rgba(216,167,178,0.4)"/>
+          <!-- Estrelinhas / pontos de luz -->
+          <circle cx="92" cy="128" r="1.5" fill="rgba(128,0,31,0.3)"/>
+          <circle cx="150" cy="112" r="1" fill="rgba(128,0,31,0.25)"/>
+          <circle cx="78" cy="96" r="1.2" fill="rgba(109,23,162,0.3)"/>
+          <circle cx="164" cy="140" r="1" fill="rgba(128,0,31,0.2)"/>
+          <circle cx="100" cy="160" r="0.8" fill="rgba(216,167,178,0.5)"/>
+          <circle cx="148" cy="168" r="1.2" fill="rgba(216,167,178,0.4)"/>
+          <!-- Sombra livro -->
+          <ellipse cx="120" cy="258" rx="50" ry="6" fill="rgba(128,0,31,0.07)"/>
+        </svg>
+      </div>
+      <div class="hero-quote">
+        <p class="hero-quote-text">"Os contos de fadas são verdadeiros — não porque nos dizem que dragões existem, mas porque nos dizem que podem ser vencidos."</p>
+        <p class="hero-quote-source">G. K. Chesterton</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item"><span>Crianças e adultos</span> — Para todas as idades</div>
+  <div class="strip-item"><span>Metáfora como cura</span> — O inconsciente compreende</div>
+  <div class="strip-item"><span>Base junguiana</span> — Bettelheim &amp; Campbell</div>
+  <div class="strip-item"><span>Sessão experimental</span> — Conheça antes de decidir</div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="reveal">
+    <p class="phil-label">O que é Contoterapia</p>
+    <h2 class="phil-title">Histórias que<br>tocam onde as<br>palavras <em>não chegam.</em></h2>
+    <p class="phil-text">
+      A Contoterapia é uma abordagem terapêutica que usa contos de fadas, mitos e narrativas simbólicas como instrumentos de cura. Ao contrário da terapia convencional, ela não exige que a pessoa confronte diretamente sua dor — em vez disso, oferece a distância segura da metáfora, permitindo que o inconsciente encontre seu próprio caminho de transformação.
+    </p>
+    <p class="phil-text">
+      Bruno Bettelheim, em <em>A Psicanálise dos Contos de Fadas</em>, mostrou que as narrativas arquetípicas falam diretamente ao inconsciente da criança — e também do adulto que ainda vive dentro de nós. Joseph Campbell, com a Jornada do Herói, revelou que toda história de transformação segue um padrão universal: a travessia, o desafio, a virada e o retorno renovado. Na Contoterapia, você não apenas escuta essa jornada. Você a reconhece como sua.
+    </p>
+    <div class="phil-sutra">
+      <p class="phil-sutra-text">"O conto de fadas, ao contrário de qualquer outra forma de literatura, dirige a criança aos seus problemas internos e sugere soluções — mas apenas em termos simbólicos."</p>
+      <p class="phil-sutra-ref">Bruno Bettelheim — A Psicanálise dos Contos de Fadas</p>
+    </div>
+  </div>
+  <div class="phil-visual reveal" style="transition-delay:0.15s">
+    <div class="phil-card">
+      <div class="phil-card-icon">I</div>
+      <div class="phil-card-title">O Conto</div>
+      <p class="phil-card-text">Narrativas escolhidas com intenção, que ressoam com o momento de vida de quem ouve.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">II</div>
+      <div class="phil-card-title">A Metáfora</div>
+      <p class="phil-card-text">A linguagem simbólica bypassa as defesas da mente racional e alcança camadas mais profundas.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">III</div>
+      <div class="phil-card-title">A Jornada</div>
+      <p class="phil-card-text">O herói do conto carrega os conflitos do leitor. Ao vê-lo superar, algo dentro de nós se move.</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">IV</div>
+      <div class="phil-card-title">A Ressignificação</div>
+      <p class="phil-card-text">Ao fim, a experiência vivida ganha um novo sentido — e a história de vida começa a ser reescrita.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="benefits-header reveal">
+    <p class="benefits-label">O que a narrativa transforma</p>
+    <h2 class="benefits-title">O que você <em>encontra</em> na Contoterapia</h2>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-item reveal">
+      <div class="benefit-number">01</div>
+      <h3 class="benefit-title">Desbloqueio Emocional</h3>
+      <p class="benefit-text">Emoções cristalizadas há anos encontram uma saída segura através do conto. O que não cabia em palavras diretas, cabe na linguagem do símbolo.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">02</div>
+      <h3 class="benefit-title">Trauma Suavizado</h3>
+      <p class="benefit-text">A metáfora cria distância psíquica saudável. ?? mais fácil olhar para o dragão no conto do que encarar a dor de frente — e ainda assim, o efeito é profundamente real.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">03</div>
+      <h3 class="benefit-title">Para Crianças e Adultos</h3>
+      <p class="benefit-text">Crianças processam o mundo através de histórias; adultos, muitas vezes, esqueceram que também podem. A Contoterapia devolve a ambos essa linguagem essencial.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">04</div>
+      <h3 class="benefit-title">Criatividade Expandida</h3>
+      <p class="benefit-text">Ao habitar universos narrativos e criar seus próprios finais, a imaginação se destrava. A criatividade que desperta nas histórias transborda para a vida real.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">05</div>
+      <h3 class="benefit-title">Identidade e Pertencimento</h3>
+      <p class="benefit-text">Os arquétipos dos contos — o herói, o sábio, o pária que se transforma — espelham partes da nossa identidade que aguardam reconhecimento e integração.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.3s">
+      <div class="benefit-number">06</div>
+      <h3 class="benefit-title">Ressignificação de Experiências</h3>
+      <p class="benefit-text">Toda experiência difícil pode ser relida como capítulo de uma história maior. A Contoterapia ensina a enxergar a própria vida com olhos de narrador — não de vítima.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="test-header reveal">
+    <p class="test-label">Quem já encontrou sua história</p>
+    <h2 class="test-title">O que dizem quem <em>viveu</em> a narrativa</h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Cheguei sem saber ao certo o que esperar. Andreia leu um conto que parecia ter sido escrito para mim. Chorei — mas não de dor. De reconhecimento. Foi como se uma parte de mim, que estava trancada há anos, finalmente encontrasse a chave."</p>
+      <p class="test-name">— Fernanda L., 34 anos</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.1s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Levei meu filho de 8 anos depois que ele passou por uma situação difícil na escola. Em vez de psicólogo com prancheta — histórias. Ele saiu falando do personagem como se fosse um amigo. Em duas semanas, era outro menino. A Contoterapia é mágica de verdade."</p>
+      <p class="test-name">— Cláudia M., mãe</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.2s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Participei do workshop sobre a sombra junguiana. Fui por curiosidade e saí com perguntas que nunca tinha me feito sobre mim mesmo. Em dois meses, mudei de emprego, reatei com minha família e comecei a escrever. A história do herói era a minha — só não sabia ainda."</p>
+      <p class="test-name">— Ricardo A., 41 anos</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <p class="pricing-label">Investimento</p>
+    <h2 class="pricing-title">Cada história tem o seu ritmo</h2>
+    <p class="pricing-subtitle">Sessões individuais ou processo continuado — a escolha é sua.</p>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <span class="pricing-card-badge">Sessão avulsa</span>
+        <p class="pricing-card-name">Contoterapia — sessão individual</p>
+        <p class="pricing-card-price">R$180</p>
+        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Sessão individual presencial</li>
+          <li>Agendamento flexível</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-card-badge">Processo continuado</span>
+        <p class="pricing-card-name">4 sessões por mês</p>
+        <p class="pricing-card-price">R$680</p>
+        <span class="pricing-card-period">por mês · 1 sessão por semana</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Processo narrativo contínuo</li>
+          <li>Transformação mais profunda</li>
+          <li>Desconto incluso no pacote</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label">Toda grande história começa com um primeiro passo</p>
+  <h2 class="cta-title">Qual é o próximo<br>capítulo da sua <em>história?</em></h2>
+  <p class="cta-sub">Você não precisa ter tudo resolvido para começar. Basta estar disposto a escutar — a si mesmo, através de uma narrativa que te encontra onde você está.</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Contoterapia" class="cta-btn-primary">
+      Começar minha jornada
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras práticas</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

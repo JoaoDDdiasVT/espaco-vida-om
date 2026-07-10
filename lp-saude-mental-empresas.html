@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saúde Mental nas Empresas — Espaço Vida Om</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --burgundy: #80001f;
+    --beige: #f1d9b5;
+    --cream: #f9f3e0;
+    --rose: #d8a7b2;
+    --purple: #6d17a2;
+    --dark: #1c0d10;
+    --text: #2e1a1e;
+    --muted: #7a6060;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 22px 64px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(249,243,224,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(128,0,31,0.07);
+  }
+  .nav-back {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); transition: color 0.3s;
+  }
+  .nav-back:hover { color: var(--burgundy); }
+  .nav-back svg { transition: transform 0.3s; }
+  .nav-back:hover svg { transform: translateX(-3px); }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; letter-spacing: 0.18em;
+    color: var(--text); text-transform: uppercase;
+  }
+  .nav-logo-name em { font-style: italic; color: var(--burgundy); }
+  .nav-cta-top {
+    padding: 10px 28px;
+    background: var(--burgundy); color: white;
+    text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: background 0.3s;
+  }
+  .nav-cta-top:hover { background: #a0002a; }
+
+  /* HERO */
+  .hero {
+    min-height: 88vh;
+    display: grid; grid-template-columns: 56% 44%;
+    align-items: center;
+    padding-top: 72px;
+    background: #ffffff;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid rgba(128,0,31,0.06);
+  }
+  .hero-right {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; position: relative; overflow: hidden;
+  }
+  .hero-right > * { display: none !important; }
+  .hero-right::after {
+    content: 'ψ';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(220px, 30vw, 420px);
+    font-weight: 200; line-height: 1;
+    color: rgba(128,0,31,0.045);
+    pointer-events: none; user-select: none;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 56px 80px 80px;
+    position: relative; z-index: 1; background: transparent;
+  }
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.68rem; letter-spacing: 0.32em;
+    color: rgba(46,26,30,0.28); text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 24px;
+    padding: 5px 14px;
+    border: 1px solid rgba(216,167,178,0.4);
+    align-self: flex-start;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 4.8vw, 5rem);
+    font-weight: 300; line-height: 1.0;
+    color: var(--text); margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .hero-title em { font-style: italic; color: var(--burgundy); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-style: italic;
+    color: var(--muted); letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+  .hero-desc {
+    font-size: 0.76rem; line-height: 2;
+    color: var(--muted); max-width: 380px;
+    margin-bottom: 52px;
+    border-left: 2px solid rgba(216,167,178,0.35);
+    padding-left: 20px;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 15px 36px;
+    background: var(--burgundy);
+    color: #fff; text-decoration: none;
+    font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; align-self: flex-start;
+  }
+  .hero-cta:hover { background: #a0002a; transform: translateY(-2px); }
+  .hero-cta-arrow { transition: transform 0.3s; }
+  .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+  .hero-visual {
+    position: relative; z-index: 1; text-align: center;
+    width: 100%; max-width: 380px;
+  }
+
+  /* STRIP */
+  .strip {
+    background: var(--burgundy); padding: 22px 64px;
+    display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+  }
+  .strip-item {
+    font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(249,243,224,0.7); display: flex; align-items: center; gap: 10px;
+  }
+  .strip-item span { color: var(--beige); font-weight: 500; }
+  .strip-dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: rgba(249,243,224,0.25); flex-shrink: 0;
+  }
+
+  /* PROBLEMA / SOLU???fO */
+  .philosophy {
+    padding: 100px 64px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+    background: white;
+  }
+  .phil-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .phil-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    line-height: 1.2; color: var(--text); margin-bottom: 28px;
+  }
+  .phil-title em { font-style: italic; color: var(--burgundy); }
+  .phil-text {
+    font-size: 0.8rem; line-height: 2; color: var(--muted); margin-bottom: 18px;
+  }
+  .phil-highlight {
+    margin-top: 32px; padding: 28px 32px;
+    border-left: 2px solid var(--rose);
+    background: rgba(216,167,178,0.07);
+  }
+  .phil-highlight-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.7; margin-bottom: 10px;
+  }
+  .phil-highlight-ref {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose);
+  }
+  .phil-visual {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .phil-card {
+    padding: 40px 28px;
+    background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .phil-card-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; color: var(--burgundy);
+    margin-bottom: 12px; line-height: 1;
+  }
+  .phil-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 400; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .phil-card-text {
+    font-size: 0.72rem; line-height: 1.8; color: var(--muted);
+  }
+  .phil-card-stat {
+    display: inline-block; margin-top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300;
+    color: var(--burgundy); line-height: 1;
+  }
+
+  /* BENEFITS */
+  .benefits {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .benefits-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .benefits-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .benefits-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+    color: var(--text);
+  }
+  .benefits-title em { font-style: italic; color: var(--burgundy); }
+  .benefits-subtitle {
+    margin-top: 16px;
+    font-size: 0.78rem; color: var(--muted); line-height: 1.8;
+    max-width: 560px; margin-left: auto; margin-right: auto;
+  }
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .benefit-item {
+    padding: 48px 36px; background: white;
+    border: 1px solid rgba(128,0,31,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .benefit-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300;
+    color: rgba(128,0,31,0.1); line-height: 1;
+    margin-bottom: 16px;
+  }
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 12px;
+  }
+  .benefit-text {
+    font-size: 0.75rem; line-height: 1.9; color: var(--muted);
+  }
+
+  /* PROGRAMAS / FORMATOS */
+  .modalities {
+    padding: 100px 64px;
+    background: var(--dark);
+  }
+  .mod-header {
+    margin-bottom: 56px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .mod-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(216,167,178,0.6); margin-bottom: 12px;
+  }
+  .mod-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 300;
+    color: var(--cream);
+  }
+  .mod-title em { font-style: italic; color: var(--beige); }
+  .mod-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: rgba(255,255,255,0.04);
+  }
+  .mod-card {
+    padding: 48px 36px;
+    background: rgba(28,13,16,0.95);
+    border: 1px solid rgba(241,217,181,0.06);
+    transition: background 0.3s;
+  }
+  .mod-card:hover { background: rgba(40,18,22,0.98); }
+  .mod-number {
+    font-size: 0.58rem; letter-spacing: 0.3em;
+    color: rgba(241,217,181,0.2); margin-bottom: 28px;
+  }
+  .mod-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 300; color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .mod-format {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem; font-style: italic;
+    color: rgba(216,167,178,0.5); margin-bottom: 20px;
+  }
+  .mod-text {
+    font-size: 0.74rem; line-height: 1.9;
+    color: rgba(249,243,224,0.45); margin-bottom: 24px;
+  }
+  .mod-includes {
+    list-style: none; margin-bottom: 24px;
+  }
+  .mod-includes li {
+    font-size: 0.68rem; line-height: 1;
+    color: rgba(249,243,224,0.4);
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .mod-includes li::before {
+    content: ''; width: 4px; height: 4px; border-radius: 50%;
+    background: var(--rose); opacity: 0.5; flex-shrink: 0;
+  }
+  .mod-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid rgba(128,0,31,0.4);
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(216,167,178,0.7);
+  }
+
+  /* PLANS */
+  .plans {
+    padding: 100px 64px;
+    background: var(--cream);
+  }
+  .plans-header {
+    text-align: center; margin-bottom: 64px;
+  }
+  .plans-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .plans-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; color: var(--text);
+  }
+  .plans-title em { font-style: italic; color: var(--burgundy); }
+  .plans-subtitle {
+    margin-top: 14px; font-size: 0.78rem;
+    color: var(--muted); line-height: 1.8;
+  }
+  .plans-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    max-width: 980px; margin: 0 auto;
+  }
+  .plan-card {
+    padding: 48px 36px;
+    background: white;
+    border: 1px solid rgba(128,0,31,0.06);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .plan-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(128,0,31,0.08);
+  }
+  .plan-card.featured {
+    background: var(--burgundy); border-color: var(--burgundy);
+  }
+  .plan-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    padding: 4px 18px;
+    background: var(--purple); color: white;
+    font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .plan-name {
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .plan-card.featured .plan-name { color: rgba(249,243,224,0.6); }
+  .plan-scope {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic; font-weight: 300;
+    color: var(--text); margin-bottom: 20px; line-height: 1.4;
+  }
+  .plan-card.featured .plan-scope { color: rgba(249,243,224,0.75); }
+  .plan-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; line-height: 1;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .plan-card.featured .plan-price { color: var(--cream); }
+  .plan-period {
+    font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted);
+    margin-bottom: 28px; padding-bottom: 24px;
+    border-bottom: 1px solid rgba(128,0,31,0.08);
+  }
+  .plan-card.featured .plan-period { color: rgba(249,243,224,0.45); border-color: rgba(249,243,224,0.1); }
+  .plan-features { list-style: none; margin-bottom: 36px; }
+  .plan-features li {
+    font-size: 0.74rem; line-height: 1; color: var(--muted);
+    padding: 9px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .plan-card.featured .plan-features li { color: rgba(249,243,224,0.7); border-color: rgba(249,243,224,0.1); }
+  .plan-features li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0;
+  }
+  .plan-card.featured .plan-features li::before { background: var(--beige); }
+  .plan-btn {
+    display: block; width: 100%; padding: 14px;
+    background: transparent; border: 1px solid rgba(128,0,31,0.25);
+    color: var(--burgundy); text-align: center; text-decoration: none;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    transition: all 0.3s; cursor: pointer;
+  }
+  .plan-btn:hover { background: var(--burgundy); color: white; }
+  .plan-card.featured .plan-btn {
+    background: white; border-color: white; color: var(--burgundy);
+  }
+  .plan-card.featured .plan-btn:hover { background: var(--cream); }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 100px 64px;
+    background: white;
+  }
+  .test-header { text-align: center; margin-bottom: 56px; }
+  .test-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+  }
+  .test-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 300; color: var(--text);
+  }
+  .test-title em { font-style: italic; color: var(--burgundy); }
+  .test-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .test-card {
+    padding: 40px 32px; background: var(--cream);
+    border: 1px solid rgba(128,0,31,0.05);
+  }
+  .test-stars {
+    font-size: 0.8rem; color: var(--rose); margin-bottom: 16px; letter-spacing: 4px;
+  }
+  .test-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic; font-weight: 300;
+    color: var(--text); line-height: 1.8; margin-bottom: 20px;
+  }
+  .test-author {
+    font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .test-role {
+    font-size: 0.6rem; letter-spacing: 0.12em; color: var(--rose); opacity: 0.75;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 120px 64px;
+    background: var(--dark); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(128,0,31,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 50%, rgba(109,23,162,0.2) 0%, transparent 55%);
+  }
+  .cta-label {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(216,167,178,0.6); margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300;
+    line-height: 1.1; color: var(--cream); margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .cta-title em { font-style: italic; color: var(--beige); }
+  .cta-sub {
+    font-size: 0.8rem; line-height: 1.9;
+    color: rgba(249,243,224,0.45); max-width: 520px; margin: 0 auto 48px;
+    position: relative; z-index: 1;
+  }
+  .cta-diagnostico {
+    display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
+    margin-bottom: 48px; position: relative; z-index: 1;
+  }
+  .cta-diag-item {
+    text-align: center;
+  }
+  .cta-diag-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300;
+    color: var(--beige); line-height: 1; margin-bottom: 6px;
+  }
+  .cta-diag-label {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(249,243,224,0.4);
+  }
+  .cta-buttons {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+  .cta-btn-primary {
+    padding: 16px 44px;
+    background: rgba(128,0,31,0.85); border: 1px solid rgba(241,217,181,0.2);
+    color: var(--cream); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s; display: flex; align-items: center; gap: 12px;
+  }
+  .cta-btn-primary:hover { background: rgba(160,0,42,0.95); transform: translateY(-2px); }
+  .cta-btn-secondary {
+    padding: 16px 44px;
+    background: transparent; border: 1px solid rgba(249,243,224,0.2);
+    color: rgba(249,243,224,0.6); text-decoration: none;
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .cta-btn-secondary:hover { border-color: rgba(249,243,224,0.5); color: var(--cream); }
+  .cta-note {
+    margin-top: 24px; font-size: 0.65rem;
+    color: rgba(249,243,224,0.3); letter-spacing: 0.08em;
+    position: relative; z-index: 1;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); padding: 32px 64px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-text {
+    font-size: 0.62rem; letter-spacing: 0.15em; color: rgba(249,243,224,0.25);
+  }
+  .footer-link {
+    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(216,167,178,0.4); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-link:hover { color: var(--rose); }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PRICING */
+  .pricing { padding: 96px 64px; background: var(--cream); }
+  .pricing-inner { max-width: 960px; margin: 0 auto; }
+  .pricing-label {
+    font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pricing-label::before {
+    content: ''; display: inline-block; width: 28px; height: 1px;
+    background: var(--rose); opacity: 0.5;
+  }
+  .pricing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300; color: var(--text); margin-bottom: 12px;
+  }
+  .pricing-subtitle {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.9;
+    max-width: 520px; margin-bottom: 52px;
+  }
+  .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+  .pricing-card { background: #fff; padding: 40px 36px; }
+  .pricing-card.featured { background: var(--burgundy); }
+  .pricing-card-badge {
+    font-size: 0.52rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--rose); margin-bottom: 20px; display: block;
+  }
+  .pricing-card.featured .pricing-card-badge { color: rgba(255,255,255,0.55); }
+  .pricing-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--text);
+    margin-bottom: 20px; line-height: 1.3;
+  }
+  .pricing-card.featured .pricing-card-name { color: #fff; }
+  .pricing-card-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 300; color: var(--burgundy);
+    line-height: 1; margin-bottom: 4px;
+  }
+  .pricing-card.featured .pricing-card-price { color: #fff; }
+  .pricing-card-period {
+    font-size: 0.65rem; letter-spacing: 0.08em; color: var(--muted);
+    margin-bottom: 28px; display: block;
+  }
+  .pricing-card.featured .pricing-card-period { color: rgba(255,255,255,0.55); }
+  .pricing-card-divider { width: 28px; height: 1px; background: rgba(128,0,31,0.12); margin-bottom: 24px; }
+  .pricing-card.featured .pricing-card-divider { background: rgba(255,255,255,0.18); }
+  .pricing-card-details { list-style: none; padding: 0; margin: 0; }
+  .pricing-card-details li {
+    font-size: 0.73rem; line-height: 1.7; color: var(--muted);
+    padding: 7px 0; border-bottom: 1px solid rgba(128,0,31,0.05);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .pricing-card-details li::before { content: '—'; color: var(--rose); flex-shrink: 0; }
+  .pricing-card.featured .pricing-card-details li { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
+  .pricing-card.featured .pricing-card-details li::before { color: rgba(255,255,255,0.4); }
+  .pricing-note {
+    margin-top: 36px; font-size: 0.72rem; color: var(--muted); line-height: 1.9;
+    padding: 20px 28px; border-left: 2px solid rgba(128,0,31,0.15);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    .nav-logo-name { font-size: 0.95rem; }
+    .hero-left { padding: 80px 28px 56px; }
+    .hero::after { font-size: clamp(180px, 55vw, 280px); opacity: 0.6; }
+    .philosophy { grid-template-columns: 1fr; gap: 48px; }
+    .phil-visual { grid-template-columns: 1fr 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .modalities .mod-grid { grid-template-columns: 1fr; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .test-grid { grid-template-columns: 1fr; }
+    .philosophy, .benefits, .modalities, .plans, .testimonials, .cta-section { padding: 64px 24px; }
+    .strip { padding: 18px 24px; gap: 20px; }
+    footer { padding: 24px 24px; }
+    .cta-diagnostico { gap: 32px; }
+  }
+
+  @media (max-width: 600px) {
+    .phil-visual { grid-template-columns: 1fr; }
+    nav { padding: 16px 20px; }
+    .nav-logo-name { display: none; }
+  }
+
+  /* fallback p/ glifos CJK e simbolos no hero */
+  .hero-right::after, .hero-bg-glyph, .hero-chinese, .hero-kanji, .hero-sanskrit {
+    font-family: 'Cormorant Garamond', 'Segoe UI Symbol', 'Noto Serif SC', 'Microsoft YaHei', 'Yu Mincho', 'Nirmala UI', serif !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="espaco_vida_om.html" class="nav-back">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+    Voltar ao site
+  </a>
+  <a href="espaco_vida_om.html" class="nav-logo">
+    <span class="nav-logo-name">Espaço <em>Vida Om</em></span>
+  </a>
+  <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Sa?de Mental nas Empresas" class="nav-cta-top">Agendar diagnóstico</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Programas Corporativos — Espaço Vida Om</span>
+    <p class="hero-tag">Saúde Mental nas Empresas — by Andreia Rosa</p>
+    <h1 class="hero-title">Sua equipe<br>produz mais<br>quando<br><em>existe de verdade.</em></h1>
+    <p class="hero-subtitle">Bem-estar que gera resultados reais</p>
+    <p class="hero-desc">
+      Burnout, presenteísmo e ansiedade crônica custam bilhões às empresas — e esgotam quem mais contribui. Programas de saúde mental não são benefício extra: são estratégia de negócio.
+    </p>
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Sa?de Mental nas Empresas" class="hero-cta">
+      Quero um diagnóstico gratuito
+      <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <!-- SVG: Árvore no escritório — símbolo corporativo-humano -->
+      <svg viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;">
+
+        <!-- Fundo sutil: mesa de escritório -->
+        <rect x="60" y="360" width="240" height="6" rx="3" fill="rgba(128,0,31,0.10)"/>
+        <!-- Sombra base da árvore -->
+        <ellipse cx="180" cy="368" rx="52" ry="8" fill="rgba(128,0,31,0.07)"/>
+
+        <!-- TRONCO -->
+        <path d="M180 362 C178 330 176 298 180 260 C184 298 182 330 180 362Z"
+              fill="rgba(128,0,31,0.22)" stroke="rgba(128,0,31,0.3)" stroke-width="1"/>
+
+        <!-- RAÍZES -->
+        <path d="M180 360 C165 358 148 362 136 370" stroke="rgba(128,0,31,0.15)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M180 360 C195 358 212 362 224 370" stroke="rgba(128,0,31,0.15)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M180 365 C172 365 160 368 155 374" stroke="rgba(128,0,31,0.1)" stroke-width="1" stroke-linecap="round" fill="none"/>
+        <path d="M180 365 C188 365 200 368 205 374" stroke="rgba(128,0,31,0.1)" stroke-width="1" stroke-linecap="round" fill="none"/>
+
+        <!-- COPA - camadas de folhagem orgânica -->
+        <!-- Camada traseira -->
+        <ellipse cx="156" cy="210" rx="46" ry="38" fill="rgba(128,0,31,0.06)"/>
+        <ellipse cx="204" cy="215" rx="42" ry="34" fill="rgba(128,0,31,0.06)"/>
+        <!-- Camada intermediária -->
+        <ellipse cx="148" cy="186" rx="50" ry="42" fill="rgba(128,0,31,0.10)"/>
+        <ellipse cx="212" cy="190" rx="46" ry="38" fill="rgba(128,0,31,0.10)"/>
+        <ellipse cx="180" cy="175" rx="54" ry="46" fill="rgba(128,0,31,0.10)"/>
+        <!-- Camada frontal / principal -->
+        <ellipse cx="162" cy="158" rx="52" ry="44" fill="rgba(128,0,31,0.16)" stroke="rgba(128,0,31,0.22)" stroke-width="1"/>
+        <ellipse cx="200" cy="162" rx="48" ry="40" fill="rgba(128,0,31,0.16)" stroke="rgba(128,0,31,0.22)" stroke-width="1"/>
+        <ellipse cx="180" cy="140" rx="58" ry="50" fill="rgba(128,0,31,0.18)" stroke="rgba(128,0,31,0.24)" stroke-width="1"/>
+        <!-- Topo luminoso -->
+        <ellipse cx="180" cy="118" rx="44" ry="36" fill="rgba(128,0,31,0.13)" stroke="rgba(128,0,31,0.2)" stroke-width="1"/>
+        <ellipse cx="180" cy="104" rx="32" ry="26" fill="rgba(128,0,31,0.10)"/>
+
+        <!-- GALHOS VISÍVEIS -->
+        <path d="M180 220 C162 210 140 204 120 210" stroke="rgba(128,0,31,0.25)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M180 220 C198 210 220 204 240 210" stroke="rgba(128,0,31,0.25)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M180 190 C165 178 148 172 130 174" stroke="rgba(128,0,31,0.2)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        <path d="M180 190 C195 178 212 172 230 174" stroke="rgba(128,0,31,0.2)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+        <!-- PESSOAS (silhuetas minimalistas sentadas ao redor) -->
+        <!-- Pessoa esquerda - reclinada, relaxada -->
+        <circle cx="92" cy="306" r="10" fill="rgba(128,0,31,0.18)" stroke="rgba(128,0,31,0.3)" stroke-width="1"/>
+        <path d="M92 316 L92 342 M80 326 L104 326 M92 342 L80 358 M92 342 L104 358"
+              stroke="rgba(128,0,31,0.22)" stroke-width="1.8" stroke-linecap="round"/>
+
+        <!-- Pessoa direita - em pé, firme -->
+        <circle cx="268" cy="300" r="10" fill="rgba(128,0,31,0.18)" stroke="rgba(128,0,31,0.3)" stroke-width="1"/>
+        <path d="M268 310 L268 338 M256 320 L280 320 M268 338 L260 358 M268 338 L276 358"
+              stroke="rgba(128,0,31,0.22)" stroke-width="1.8" stroke-linecap="round"/>
+
+        <!-- Pessoa centro esquerda - sentada em meditação -->
+        <circle cx="136" cy="338" r="9" fill="rgba(128,0,31,0.15)" stroke="rgba(128,0,31,0.28)" stroke-width="1"/>
+        <path d="M136 347 L136 368" stroke="rgba(128,0,31,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M122 358 Q136 352 150 358" stroke="rgba(128,0,31,0.2)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Pessoa centro direita - sentada, levemente inclinada -->
+        <circle cx="224" cy="338" r="9" fill="rgba(128,0,31,0.15)" stroke="rgba(128,0,31,0.28)" stroke-width="1"/>
+        <path d="M224 347 L224 368" stroke="rgba(128,0,31,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M210 358 Q224 352 238 358" stroke="rgba(128,0,31,0.2)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+        <!-- VASOS / BASE (contexto escritório) -->
+        <rect x="156" y="362" width="48" height="14" rx="2" fill="rgba(128,0,31,0.10)" stroke="rgba(128,0,31,0.15)" stroke-width="1"/>
+        <rect x="162" y="358" width="36" height="6" rx="1" fill="rgba(128,0,31,0.12)"/>
+
+        <!-- LINHAS CONEX?fO (fios de energia sutil entre pessoas e árvore) -->
+        <path d="M180 362 Q136 362 136 347" stroke="rgba(128,0,31,0.08)" stroke-width="1" stroke-dasharray="3 4" fill="none"/>
+        <path d="M180 362 Q224 362 224 347" stroke="rgba(128,0,31,0.08)" stroke-width="1" stroke-dasharray="3 4" fill="none"/>
+        <path d="M180 362 Q92 360 92 316" stroke="rgba(128,0,31,0.06)" stroke-width="1" stroke-dasharray="3 5" fill="none"/>
+        <path d="M180 362 Q268 360 268 310" stroke="rgba(128,0,31,0.06)" stroke-width="1" stroke-dasharray="3 5" fill="none"/>
+
+        <!-- PONTOS DE LUZ sutis na folhagem -->
+        <circle cx="160" cy="130" r="2" fill="rgba(241,217,181,0.35)"/>
+        <circle cx="200" cy="118" r="1.5" fill="rgba(241,217,181,0.3)"/>
+        <circle cx="178" cy="110" r="1" fill="rgba(241,217,181,0.4)"/>
+        <circle cx="148" cy="148" r="1.5" fill="rgba(241,217,181,0.2)"/>
+        <circle cx="212" cy="144" r="1" fill="rgba(241,217,181,0.25)"/>
+      </svg>
+
+      <!-- Citação abaixo do SVG -->
+      <div style="margin-top:32px; text-align:center; max-width:320px; margin-left:auto; margin-right:auto;">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; font-weight:300; color:rgba(44,26,30,0.65); line-height:1.7;">
+          "Empresas que investem em saúde mental colhem equipes que, além de trabalhar, criam, conectam e permanecem."
+        </p>
+        <p style="margin-top:10px; font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--burgundy); opacity:0.6;">
+          Andreia Rosa — Espaço Vida Om
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-item">
+    <span>72% dos colaboradores</span>
+    <div class="strip-dot"></div>
+    relatam sintomas de burnout
+  </div>
+  <div class="strip-item">
+    <span>ROI de até 4x</span>
+    <div class="strip-dot"></div>
+    em programas de bem-estar
+  </div>
+  <div class="strip-item">
+    <span>R$ 4 bi/ano</span>
+    <div class="strip-dot"></div>
+    custo do adoecimento no Brasil
+  </div>
+  <div class="strip-item">
+    <span>Diagnóstico gratuito</span>
+    <div class="strip-dot"></div>
+    para a sua empresa
+  </div>
+</div>
+
+<!-- PROBLEMA / SOLU???fO -->
+<section class="philosophy">
+  <div class="reveal">
+    <p class="phil-label">O problema que ninguém quer nomear</p>
+    <h2 class="phil-title">Sua equipe está<br>presente —<br>mas <em>onde está</em><br>a sua energia?</h2>
+    <p class="phil-text">
+      Presenteísmo é o fenômeno silencioso de colaboradores que estão fisicamente no trabalho, mas mentalmente esgotados. Segundo dados da OMS, o presenteísmo custa às empresas até três vezes mais do que o absenteísmo — e raramente é identificado até que o talento peça demissão ou entre de licença.
+    </p>
+    <p class="phil-text">
+      Ansiedade crônica, síndrome de burnout e exaustão emocional não são fraqueza individual: são sintoma de ambientes que ainda não aprenderam a equilibrar performance com humanidade. A boa notícia é que há saída — e ela começa com a decisão de tratar saúde mental como prioridade estratégica.
+    </p>
+    <div class="phil-highlight">
+      <p class="phil-highlight-text">"Cada R$1 investido em saúde mental no ambiente de trabalho retorna, em média, R$4 em produtividade e redução de custos com afastamentos."</p>
+      <p class="phil-highlight-ref">Organização Mundial da Saúde — Relatório sobre Saúde Mental no Trabalho, 2023</p>
+    </div>
+  </div>
+  <div class="phil-visual reveal" style="transition-delay:0.15s">
+    <div class="phil-card">
+      <div class="phil-card-icon">
+        <!-- Ícone: cérebro / mente -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 6C11 6 7 10 7 15C7 17.5 8 19.7 9.8 21.2L10 28H22L22.2 21.2C24 19.7 25 17.5 25 15C25 10 21 6 16 6Z" stroke="var(--burgundy)" stroke-width="1.2" fill="none"/>
+          <path d="M13 14C13 14 14 17 16 17C18 17 19 14 19 14" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round" fill="none"/>
+          <line x1="16" y1="6" x2="16" y2="9" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="phil-card-title">Burnout</div>
+      <p class="phil-card-text">Esgotamento físico, emocional e cognitivo que leva ao colapso da performance e à rotatividade involuntária.</p>
+      <span class="phil-card-stat">1 em 3</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">colaboradores afetados</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">
+        <!-- Ícone: relógio / tempo perdido -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="17" r="10" stroke="var(--burgundy)" stroke-width="1.2"/>
+          <path d="M16 12V17L19 20" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M13 5H19" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="phil-card-title">Presenteísmo</div>
+      <p class="phil-card-text">O colaborador está, mas não está. Queda de até 33% na produtividade sem nenhum sinal visível de alerta.</p>
+      <span class="phil-card-stat">33%</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">de queda na produção</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">
+        <!-- Ícone: rotatividade / saída -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M20 8L26 14L20 20" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 14H12" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M8 8V26H20" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="phil-card-title">Rotatividade</div>
+      <p class="phil-card-text">Substituir um colaborador custa de 1,5x a 2x o salário anual — e o adoecimento é uma das principais causas de saída.</p>
+      <span class="phil-card-stat">2x</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">custo de substituição</p>
+    </div>
+    <div class="phil-card">
+      <div class="phil-card-icon">
+        <!-- Ícone: crescimento / solução -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M6 24L12 16L18 20L26 8" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 8H26V12" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="26" cy="24" r="4" stroke="var(--burgundy)" stroke-width="1"/>
+          <path d="M25 24H27 M26 23V25" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="phil-card-title">A Solução</div>
+      <p class="phil-card-text">Programas estruturados de bem-estar reduzem afastamentos, melhoram clima e aumentam engajamento de forma mensurável.</p>
+      <span class="phil-card-stat">4x</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">retorno sobre investimento</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="benefits-header reveal">
+    <p class="benefits-label">O que muda na sua organização</p>
+    <h2 class="benefits-title">6 transformações que a sua<br>empresa <em>passa a ter</em></h2>
+    <p class="benefits-subtitle">Quando as pessoas se sentem cuidadas, elas entregam o melhor de si. Não por obrigação — por pertencimento.</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-item reveal">
+      <div class="benefit-number">01</div>
+      <h3 class="benefit-title">Redução de Afastamentos</h3>
+      <p class="benefit-text">Programas contínuos de bem-estar reduzem significativamente afastamentos por transtornos de ansiedade, depressão e síndrome de burnout, aliviando custos com saúde e recontratação.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">02</div>
+      <h3 class="benefit-title">Clima Organizacional</h3>
+      <p class="benefit-text">Equipes que participam de práticas coletivas de bem-estar desenvolvem maior empatia, colaboração e senso de pertencimento — ingredientes de um ambiente que as pessoas querem estar.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">03</div>
+      <h3 class="benefit-title">Retenção de Talentos</h3>
+      <p class="benefit-text">Profissionais de alto valor escolhem empresas que os veem como seres humanos inteiros. Cuidado genuíno com saúde mental é hoje um fator decisivo na permanência dos melhores talentos.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.1s">
+      <div class="benefit-number">04</div>
+      <h3 class="benefit-title">Produtividade Real</h3>
+      <p class="benefit-text">Mente descansada pensa com clareza, decide com confiança e executa sem retrabalho. Práticas de mindfulness e manejo do estresse aumentam foco e eficiência de forma comprovada.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.2s">
+      <div class="benefit-number">05</div>
+      <h3 class="benefit-title">Criatividade e Inovação</h3>
+      <p class="benefit-text">Criatividade nasce onde há segurança psicológica. Quando as pessoas não estão em modo de sobrevivência, elas inovam, arriscam com inteligência e resolvem problemas de forma original.</p>
+    </div>
+    <div class="benefit-item reveal" style="transition-delay:0.3s">
+      <div class="benefit-number">06</div>
+      <h3 class="benefit-title">Liderança Consciente</h3>
+      <p class="benefit-text">Líderes que desenvolvem autoconhecimento e inteligência emocional conduzem times com mais clareza, menos reatividade e maior capacidade de inspirar — mesmo nos ciclos de alta pressão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="test-header reveal">
+    <p class="test-label">Quem já transformou</p>
+    <h2 class="test-title">O que dizem os <em>gestores e líderes</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Implementamos o programa trimestral após um período de alta pressão na equipe. Em dois meses, o clima da área mudou visivelmente — menos conflitos, mais escuta. A Andreia tem um jeito de conduzir que não parece consultoria: parece cuidado de verdade."</p>
+      <p class="test-author">— Fernanda M.</p>
+      <p class="test-role">Gerente de Pessoas — Empresa de Tecnologia, SP</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.1s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"Fizemos uma palestra no Setembro Amarelo sem grandes expectativas. O retorno dos colaboradores foi surpreendente — muitos buscaram apoio psicológico pela primeira vez depois daquele encontro. Contratamos o programa anual na semana seguinte."</p>
+      <p class="test-author">— Ricardo A.</p>
+      <p class="test-role">Diretor de RH — Indústria de médio porte, MG</p>
+    </div>
+    <div class="test-card reveal" style="transition-delay:0.2s">
+      <div class="test-stars">?~.?~.?~.?~.?~.</div>
+      <p class="test-text">"O índice de absenteísmo na minha equipe caiu 40% em seis meses. Mais do que o número, o que me impressionou foi ver as pessoas chegando mais leves. A Andreia não vende fórmula — ela escuta, adapta e entrega algo que realmente se encaixa na cultura da empresa."</p>
+      <p class="test-author">— Camila P.</p>
+      <p class="test-role">COO — Startup de alto crescimento, RJ</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <p class="pricing-label">Investimento</p>
+    <h2 class="pricing-title">Cada empresa tem a sua solução</h2>
+    <p class="pricing-subtitle">Programas sob medida de acordo com o tamanho da equipe, objetivos e frequência desejada.</p>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <span class="pricing-card-badge">Encontro pontual</span>
+        <p class="pricing-card-name">Workshop de bem-estar</p>
+        <p class="pricing-card-price">Sob consulta</p>
+        <span class="pricing-card-period">formato &amp; duração flexíveis</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Meditação, mindfulness ou palestra</li>
+          <li>Para grupos de qualquer tamanho</li>
+          <li>Presencial ou online</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-card-badge">Programa continuado</span>
+        <p class="pricing-card-name">Saúde Mental nas Empresas</p>
+        <p class="pricing-card-price">Sob consulta</p>
+        <span class="pricing-card-period">programa mensal personalizado</span>
+        <div class="pricing-card-divider"></div>
+        <ul class="pricing-card-details">
+          <li>Avaliação das necessidades da equipe</li>
+          <li>Sessões regulares de suporte</li>
+          <li>Relatório de impacto e resultados</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-note">Entre em contato para receber uma proposta personalizada e adequada à realidade da sua empresa.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label reveal">O próximo passo é simples</p>
+  <h2 class="cta-title reveal">Comece com um<br><em>diagnóstico gratuito.</em></h2>
+  <p class="cta-sub reveal">
+    Em uma conversa de 30 minutos, entendemos os desafios da sua equipe e desenhamos juntos um caminho possível. Sem compromisso de contratação. Sem pitch de vendas. Só escuta e clareza.
+  </p>
+  <div class="cta-diagnostico reveal">
+    <div class="cta-diag-item">
+      <div class="cta-diag-num">30'</div>
+      <div class="cta-diag-label">Duração da reunião</div>
+    </div>
+    <div class="cta-diag-item">
+      <div class="cta-diag-num">0</div>
+      <div class="cta-diag-label">Custo para você</div>
+    </div>
+    <div class="cta-diag-item">
+      <div class="cta-diag-num">100%</div>
+      <div class="cta-diag-label">Personalizado</div>
+    </div>
+  </div>
+  <div class="cta-buttons reveal">
+    <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Sa?de Mental nas Empresas" class="cta-btn-primary">
+      Agendar diagnóstico gratuito
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outros programas</a>
+  </div>
+  <p class="cta-note reveal">Atendimento presencial em São Paulo e online para todo o Brasil</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa · Saúde Mental nas Empresas</span>
+  <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

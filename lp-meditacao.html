@@ -607,7 +607,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-meditacao.json">
 
 <!-- NAV -->
 <nav>
@@ -626,15 +626,15 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-sanskrit">ध्यान — Sati · Dhyana · Samadhi</span>
-    <p class="hero-tag">Espaço Vida Om — Meditação &amp; Mindfulness</p>
-    <h1 class="hero-title">Você não precisa<br>parar os<br><em>pensamentos.</em><br>Só precisa aprender<br>a não segui-los.</h1>
-    <p class="hero-subtitle">Presença como prática, silêncio como caminho</p>
-    <p class="hero-desc">
+    <span class="hero-sanskrit" data-field="hero.eyebrow">ध्यान — Sati · Dhyana · Samadhi</span>
+    <p class="hero-tag" data-field="hero.tag">Espaço Vida Om — Meditação &amp; Mindfulness</p>
+    <h1 class="hero-title" data-field="hero.title">Você não precisa<br>parar os<br><em>pensamentos.</em><br>Só precisa aprender<br>a não segui-los.</h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Presença como prática, silêncio como caminho</p>
+    <p class="hero-desc" data-field="hero.desc">
       A meditação não é uma fuga da vida. ?? a arte de habitar a vida completamente — sem se perder no passado que passou nem no futuro que ainda não chegou.
     </p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Medita??o" class="hero-cta">
-      Quero praticar
+      <span data-field="hero.ctaText">Quero praticar</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -679,16 +679,16 @@
         </svg>
       </div>
       <div class="hero-quote">
-        <p class="hero-quote-text">"Onde quer que você esteja, esteja plenamente presente."</p>
-        <p class="hero-quote-source">Jon Kabat-Zinn — MBSR</p>
+        <p class="hero-quote-text" data-field="hero.quoteText">"Onde quer que você esteja, esteja plenamente presente."</p>
+        <p class="hero-quote-source" data-field="hero.quoteSource">Jon Kabat-Zinn — MBSR</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item"><span>Evidência científica</span> — Neuroplasticidade validada</div>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item><span data-field="highlight">Evidência científica</span><span data-field="text"> — Neuroplasticidade validada</span></div>
   <div class="strip-item"><span>Tradições autênticas</span> — Vipassana, Zen &amp; MBSR</div>
   <div class="strip-item"><span>Sem dogma</span> — Laico, acessível, profundo</div>
   <div class="strip-item"><span>1ª sessão grátis</span> — Venha experimentar</div>
@@ -697,27 +697,27 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O que é — e o que não é</p>
-    <h2 class="phil-title">A mente não precisa<br>ser <em>esvaziada.</em><br>Precisa ser vista.</h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="philosophy.label">O que é — e o que não é</p>
+    <h2 class="phil-title" data-field="philosophy.title">A mente não precisa<br>ser <em>esvaziada.</em><br>Precisa ser vista.</h2>
+    <p class="phil-text" data-field="philosophy.text1">
       Existe um equívoco muito comum: achar que meditar é parar de pensar. A mente pensa — é a função dela. O que muda com a prática é a sua <em>relação</em> com os pensamentos. Você deixa de ser arrastado por eles e passa a observá-los, com curiosidade e distância segura.
     </p>
     <p class="phil-text">
-      <strong style="font-weight:500; color:var(--text);">Meditação</strong> é a prática formal — sentar, respirar, observar. <strong style="font-weight:500; color:var(--text);">Mindfulness</strong> é a qualidade de atenção plena que essa prática cultiva e que se expande para toda a vida: comer, conversar, trabalhar, descansar.
+      <strong style="font-weight:500; color:var(--text);">Meditação</strong><span data-field="philosophy.text2a"> é a prática formal — sentar, respirar, observar. </span><strong style="font-weight:500; color:var(--text);">Mindfulness</strong><span data-field="philosophy.text2b"> é a qualidade de atenção plena que essa prática cultiva e que se expande para toda a vida: comer, conversar, trabalhar, descansar.</span>
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text3">
       As raízes são antigas: o Vipassana budista (contemplação da impermanência), o Zen (presença direta, sem conceitos) e a tradição contemplativa cristã. Em 1979, Jon Kabat-Zinn traduziu esse conhecimento para a linguagem da ciência com o programa MBSR — Mindfulness-Based Stress Reduction — hoje validado por milhares de estudos clínicos.
     </p>
     <div class="phil-sutra">
-      <p class="phil-sutra-text">"Você não pode parar as ondas. Mas pode aprender a surfar."</p>
-      <p class="phil-sutra-ref">Jon Kabat-Zinn — Wherever You Go, There You Are</p>
+      <p class="phil-sutra-text" data-field="philosophy.sutraText">"Você não pode parar as ondas. Mas pode aprender a surfar."</p>
+      <p class="phil-sutra-ref" data-field="philosophy.sutraRef">Jon Kabat-Zinn — Wherever You Go, There You Are</p>
     </div>
   </div>
-  <div class="phil-visual reveal" style="transition-delay:0.15s">
-    <div class="phil-card">
-      <div class="phil-card-icon">I</div>
-      <div class="phil-card-title">Vipassana</div>
-      <p class="phil-card-text">Contemplação da impermanência. Observar sensações, emoções e pensamentos surgir e desaparecer — sem apego, sem rejeição.</p>
+  <div class="phil-visual reveal" style="transition-delay:0.15s" data-list="philosophy.cards">
+    <div class="phil-card" data-list-item>
+      <div class="phil-card-icon" data-field="icon">I</div>
+      <div class="phil-card-title" data-field="title">Vipassana</div>
+      <p class="phil-card-text" data-field="text">Contemplação da impermanência. Observar sensações, emoções e pensamentos surgir e desaparecer — sem apego, sem rejeição.</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">II</div>
@@ -740,14 +740,14 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que a prática cultiva</p>
-    <h2 class="benefits-title">Seis transformações que a<br><em>ciência confirma</em></h2>
+    <p class="benefits-label" data-field="benefits.label">O que a prática cultiva</p>
+    <h2 class="benefits-title" data-field="benefits.title">Seis transformações que a<br><em>ciência confirma</em></h2>
   </div>
-  <div class="benefits-grid">
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Regulação da Ansiedade</h3>
-      <p class="benefit-text">A meditação desativa o modo de ruminação da mente-padrão (DMN) e treina o sistema nervoso a responder em vez de reagir. Menos disparo de amígdala, mais espaço entre o estímulo e a resposta.</p>
+  <div class="benefits-grid" data-list="benefits.items">
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Regulação da Ansiedade</h3>
+      <p class="benefit-text" data-field="text">A meditação desativa o modo de ruminação da mente-padrão (DMN) e treina o sistema nervoso a responder em vez de reagir. Menos disparo de amígdala, mais espaço entre o estímulo e a resposta.</p>
     </div>
     <div class="benefit-item reveal" style="transition-delay:0.1s">
       <div class="benefit-number">02</div>
@@ -780,14 +780,14 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Quem já pratica</p>
-    <h2 class="test-title">O que diz quem <em>chegou ao silêncio</em></h2>
+    <p class="test-label" data-field="testimonials.label">Quem já pratica</p>
+    <h2 class="test-title" data-field="testimonials.title">O que diz quem <em>chegou ao silêncio</em></h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
+  <div class="test-grid" data-list="testimonials.items">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
-      <p class="test-text">"Sempre achei que minha cabeça era agitada demais para meditar. Andreia me mostrou que essa é exatamente a razão para começar. Hoje tenho dez minutos por dia que valem horas."</p>
-      <p class="test-name">— Beatriz M., professora</p>
+      <p class="test-text" data-field="text">"Sempre achei que minha cabeça era agitada demais para meditar. Andreia me mostrou que essa é exatamente a razão para começar. Hoje tenho dez minutos por dia que valem horas."</p>
+      <p class="test-name" data-field="name">— Beatriz M., professora</p>
     </div>
     <div class="test-card reveal" style="transition-delay:0.1s">
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
@@ -805,31 +805,31 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Uma prática que se sustenta</h2>
-    <p class="pricing-subtitle">Sessões individuais de Meditação e Mindfulness para cultivar presença no dia a dia.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Uma prática que se sustenta</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Sessões individuais de Meditação e Mindfulness para cultivar presença no dia a dia.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <span class="pricing-card-badge">Sessão avulsa</span>
-        <p class="pricing-card-name">Meditação &amp; Mindfulness</p>
-        <p class="pricing-card-price">R$180</p>
-        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Sessão avulsa</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Meditação &amp; Mindfulness</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">R$180</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">por sessão · duração 1h00</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Sessão individual presencial</li>
-          <li>Agendamento flexível</li>
+          <li data-field="pricing.card1.detail1">Sessão individual presencial</li>
+          <li data-field="pricing.card1.detail2">Agendamento flexível</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Prática mensal</span>
-        <p class="pricing-card-name">4 sessões por mês</p>
-        <p class="pricing-card-price">R$680</p>
-        <span class="pricing-card-period">por mês · 1 sessão por semana</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Prática mensal</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">4 sessões por mês</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">R$680</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">por mês · 1 sessão por semana</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Desconto incluso no pacote</li>
-          <li>Prática semanal contínua</li>
-          <li>Evolução consistente e mensurável</li>
+          <li data-field="pricing.card2.detail1">Desconto incluso no pacote</li>
+          <li data-field="pricing.card2.detail2">Prática semanal contínua</li>
+          <li data-field="pricing.card2.detail3">Evolução consistente e mensurável</li>
         </ul>
       </div>
     </div>
@@ -838,31 +838,36 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <p class="cta-label">Há um lugar quieto em você à sua espera</p>
-  <h2 class="cta-title">A primeira sessão<br>é <em>gratuita.</em></h2>
-  <p class="cta-sub">Venha sentar. Sem expectativas, sem exigências. Uma sessão para conhecer a prática, o espaço e descobrir se este é o seu caminho de volta a si mesmo.</p>
+  <p class="cta-label" data-field="cta.label">Há um lugar quieto em você à sua espera</p>
+  <h2 class="cta-title" data-field="cta.title">A primeira sessão<br>é <em>gratuita.</em></h2>
+  <p class="cta-sub" data-field="cta.sub">Venha sentar. Sem expectativas, sem exigências. Uma sessão para conhecer a prática, o espaço e descobrir se este é o seu caminho de volta a si mesmo.</p>
   <div class="cta-buttons">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Medita??o" class="cta-btn-primary">
-      Agendar sessão gratuita
+      <span data-field="cta.primaryText">Agendar sessão gratuita</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras práticas</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outras práticas</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
   <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "eyebrow": "Programas Corporativos — Espaço Vida Om",
+    "tag": "Saúde Mental nas Empresas — by Andreia Rosa",
+    "title": "Sua equipe\nproduz mais\nquando\n*existe de verdade.*",
+    "subtitle": "Bem-estar que gera resultados reais",
+    "desc": "Burnout, presenteísmo e ansiedade crônica custam bilhões às empresas — e esgotam quem mais contribui. Programas de saúde mental não são benefício extra: são estratégia de negócio.",
+    "ctaText": "Quero um diagnóstico gratuito",
+    "quoteText": "\"Empresas que investem em saúde mental colhem equipes que, além de trabalhar, criam, conectam e permanecem.\"",
+    "quoteSource": "Andreia Rosa — Espaço Vida Om"
+  },
+  "strip": [
+    { "highlight": "72% dos colaboradores", "text": "relatam sintomas de burnout" },
+    { "highlight": "ROI de até 4x", "text": "em programas de bem-estar" },
+    { "highlight": "R$ 4 bi/ano", "text": "custo do adoecimento no Brasil" },
+    { "highlight": "Diagnóstico gratuito", "text": "para a sua empresa" }
+  ],
+  "problem": {
+    "label": "O problema que ninguém quer nomear",
+    "title": "Sua equipe está\npresente —\nmas *onde está*\na sua energia?",
+    "text1": "Presenteísmo é o fenômeno silencioso de colaboradores que estão fisicamente no trabalho, mas mentalmente esgotados. Segundo dados da OMS, o presenteísmo custa às empresas até três vezes mais do que o absenteísmo — e raramente é identificado até que o talento peça demissão ou entre de licença.",
+    "text2": "Ansiedade crônica, síndrome de burnout e exaustão emocional não são fraqueza individual: são sintoma de ambientes que ainda não aprenderam a equilibrar performance com humanidade. A boa notícia é que há saída — e ela começa com a decisão de tratar saúde mental como prioridade estratégica.",
+    "highlightText": "\"Cada R$1 investido em saúde mental no ambiente de trabalho retorna, em média, R$4 em produtividade e redução de custos com afastamentos.\"",
+    "highlightRef": "Organização Mundial da Saúde — Relatório sobre Saúde Mental no Trabalho, 2023",
+    "card1": {
+      "title": "Burnout",
+      "text": "Esgotamento físico, emocional e cognitivo que leva ao colapso da performance e à rotatividade involuntária.",
+      "stat": "1 em 3",
+      "statLabel": "colaboradores afetados"
+    },
+    "card2": {
+      "title": "Presenteísmo",
+      "text": "O colaborador está, mas não está. Queda de até 33% na produtividade sem nenhum sinal visível de alerta.",
+      "stat": "33%",
+      "statLabel": "de queda na produção"
+    },
+    "card3": {
+      "title": "Rotatividade",
+      "text": "Substituir um colaborador custa de 1,5x a 2x o salário anual — e o adoecimento é uma das principais causas de saída.",
+      "stat": "2x",
+      "statLabel": "custo de substituição"
+    },
+    "card4": {
+      "title": "A Solução",
+      "text": "Programas estruturados de bem-estar reduzem afastamentos, melhoram clima e aumentam engajamento de forma mensurável.",
+      "stat": "4x",
+      "statLabel": "retorno sobre investimento"
+    }
+  },
+  "benefits": {
+    "label": "O que muda na sua organização",
+    "title": "6 transformações que a sua\nempresa *passa a ter*",
+    "subtitle": "Quando as pessoas se sentem cuidadas, elas entregam o melhor de si. Não por obrigação — por pertencimento.",
+    "items": [
+      { "number": "01", "title": "Redução de Afastamentos", "text": "Programas contínuos de bem-estar reduzem significativamente afastamentos por transtornos de ansiedade, depressão e síndrome de burnout, aliviando custos com saúde e recontratação." },
+      { "number": "02", "title": "Clima Organizacional", "text": "Equipes que participam de práticas coletivas de bem-estar desenvolvem maior empatia, colaboração e senso de pertencimento — ingredientes de um ambiente que as pessoas querem estar." },
+      { "number": "03", "title": "Retenção de Talentos", "text": "Profissionais de alto valor escolhem empresas que os veem como seres humanos inteiros. Cuidado genuíno com saúde mental é hoje um fator decisivo na permanência dos melhores talentos." },
+      { "number": "04", "title": "Produtividade Real", "text": "Mente descansada pensa com clareza, decide com confiança e executa sem retrabalho. Práticas de mindfulness e manejo do estresse aumentam foco e eficiência de forma comprovada." },
+      { "number": "05", "title": "Criatividade e Inovação", "text": "Criatividade nasce onde há segurança psicológica. Quando as pessoas não estão em modo de sobrevivência, elas inovam, arriscam com inteligência e resolvem problemas de forma original." },
+      { "number": "06", "title": "Liderança Consciente", "text": "Líderes que desenvolvem autoconhecimento e inteligência emocional conduzem times com mais clareza, menos reatividade e maior capacidade de inspirar — mesmo nos ciclos de alta pressão." }
+    ]
+  },
+  "testimonials": {
+    "label": "Quem já transformou",
+    "title": "O que dizem os *gestores e líderes*",
+    "items": [
+      { "text": "\"Implementamos o programa trimestral após um período de alta pressão na equipe. Em dois meses, o clima da área mudou visivelmente — menos conflitos, mais escuta. A Andreia tem um jeito de conduzir que não parece consultoria: parece cuidado de verdade.\"", "author": "— Fernanda M.", "role": "Gerente de Pessoas — Empresa de Tecnologia, SP" },
+      { "text": "\"Fizemos uma palestra no Setembro Amarelo sem grandes expectativas. O retorno dos colaboradores foi surpreendente — muitos buscaram apoio psicológico pela primeira vez depois daquele encontro. Contratamos o programa anual na semana seguinte.\"", "author": "— Ricardo A.", "role": "Diretor de RH — Indústria de médio porte, MG" },
+      { "text": "\"O índice de absenteísmo na minha equipe caiu 40% em seis meses. Mais do que o número, o que me impressionou foi ver as pessoas chegando mais leves. A Andreia não vende fórmula — ela escuta, adapta e entrega algo que realmente se encaixa na cultura da empresa.\"", "author": "— Camila P.", "role": "COO — Startup de alto crescimento, RJ" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Cada empresa tem a sua solução",
+    "subtitle": "Programas sob medida de acordo com o tamanho da equipe, objetivos e frequência desejada.",
+    "card1": {
+      "badge": "Encontro pontual",
+      "name": "Workshop de bem-estar",
+      "price": "Sob consulta",
+      "period": "formato &amp; duração flexíveis",
+      "detail1": "Meditação, mindfulness ou palestra",
+      "detail2": "Para grupos de qualquer tamanho",
+      "detail3": "Presencial ou online"
+    },
+    "card2": {
+      "badge": "Programa continuado",
+      "name": "Saúde Mental nas Empresas",
+      "price": "Sob consulta",
+      "period": "programa mensal personalizado",
+      "detail1": "Avaliação das necessidades da equipe",
+      "detail2": "Sessões regulares de suporte",
+      "detail3": "Relatório de impacto e resultados"
+    },
+    "note": "Entre em contato para receber uma proposta personalizada e adequada à realidade da sua empresa."
+  },
+  "cta": {
+    "label": "O próximo passo é simples",
+    "title": "Comece com um\n*diagnóstico gratuito.*",
+    "sub": "Em uma conversa de 30 minutos, entendemos os desafios da sua equipe e desenhamos juntos um caminho possível. Sem compromisso de contratação. Sem pitch de vendas. Só escuta e clareza.",
+    "diagnostico": [
+      { "num": "30'", "label": "Duração da reunião" },
+      { "num": "0", "label": "Custo para você" },
+      { "num": "100%", "label": "Personalizado" }
+    ],
+    "primaryText": "Agendar diagnóstico gratuito",
+    "secondaryText": "Ver outros programas",
+    "note": "Atendimento presencial em São Paulo e online para todo o Brasil"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa · Saúde Mental nas Empresas"
+  }
+}

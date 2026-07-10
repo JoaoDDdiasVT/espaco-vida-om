@@ -579,7 +579,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-contoterapia.json">
 
 <!-- NAV -->
 <nav>
@@ -598,15 +598,15 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-epigraph">Era uma vez — a história que te cura</span>
-    <p class="hero-tag">Espaço Vida Om — Contoterapia</p>
-    <h1 class="hero-title">As histórias<br>que você <em>carrega</em><br>podem te libertar.</h1>
-    <p class="hero-subtitle">Cura pelo poder das narrativas e dos contos</p>
-    <p class="hero-desc">
+    <span class="hero-epigraph" data-field="hero.eyebrow">Era uma vez — a história que te cura</span>
+    <p class="hero-tag" data-field="hero.tag">Espaço Vida Om — Contoterapia</p>
+    <h1 class="hero-title" data-field="hero.title">As histórias<br>que você <em>carrega</em><br>podem te libertar.</h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Cura pelo poder das narrativas e dos contos</p>
+    <p class="hero-desc" data-field="hero.desc">
       Dentro de cada conto existe uma chave. A Contoterapia usa mitos, contos de fadas e narrativas simbólicas para acessar o que a razão não alcança — e transformar, pela beleza da metáfora, aquilo que a dor direta não consegue tocar.
     </p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Contoterapia" class="hero-cta">
-      Quero começar minha história
+      <span data-field="hero.ctaText">Quero começar minha história</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -662,16 +662,16 @@
         </svg>
       </div>
       <div class="hero-quote">
-        <p class="hero-quote-text">"Os contos de fadas são verdadeiros — não porque nos dizem que dragões existem, mas porque nos dizem que podem ser vencidos."</p>
-        <p class="hero-quote-source">G. K. Chesterton</p>
+        <p class="hero-quote-text" data-field="hero.quoteText">"Os contos de fadas são verdadeiros — não porque nos dizem que dragões existem, mas porque nos dizem que podem ser vencidos."</p>
+        <p class="hero-quote-source" data-field="hero.quoteSource">G. K. Chesterton</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item"><span>Crianças e adultos</span> — Para todas as idades</div>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item><span data-field="highlight">Crianças e adultos</span><span data-field="text"> — Para todas as idades</span></div>
   <div class="strip-item"><span>Metáfora como cura</span> — O inconsciente compreende</div>
   <div class="strip-item"><span>Base junguiana</span> — Bettelheim &amp; Campbell</div>
   <div class="strip-item"><span>Sessão experimental</span> — Conheça antes de decidir</div>
@@ -680,24 +680,24 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O que é Contoterapia</p>
-    <h2 class="phil-title">Histórias que<br>tocam onde as<br>palavras <em>não chegam.</em></h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="philosophy.label">O que é Contoterapia</p>
+    <h2 class="phil-title" data-field="philosophy.title">Histórias que<br>tocam onde as<br>palavras <em>não chegam.</em></h2>
+    <p class="phil-text" data-field="philosophy.text1">
       A Contoterapia é uma abordagem terapêutica que usa contos de fadas, mitos e narrativas simbólicas como instrumentos de cura. Ao contrário da terapia convencional, ela não exige que a pessoa confronte diretamente sua dor — em vez disso, oferece a distância segura da metáfora, permitindo que o inconsciente encontre seu próprio caminho de transformação.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text2">
       Bruno Bettelheim, em <em>A Psicanálise dos Contos de Fadas</em>, mostrou que as narrativas arquetípicas falam diretamente ao inconsciente da criança — e também do adulto que ainda vive dentro de nós. Joseph Campbell, com a Jornada do Herói, revelou que toda história de transformação segue um padrão universal: a travessia, o desafio, a virada e o retorno renovado. Na Contoterapia, você não apenas escuta essa jornada. Você a reconhece como sua.
     </p>
     <div class="phil-sutra">
-      <p class="phil-sutra-text">"O conto de fadas, ao contrário de qualquer outra forma de literatura, dirige a criança aos seus problemas internos e sugere soluções — mas apenas em termos simbólicos."</p>
-      <p class="phil-sutra-ref">Bruno Bettelheim — A Psicanálise dos Contos de Fadas</p>
+      <p class="phil-sutra-text" data-field="philosophy.sutraText">"O conto de fadas, ao contrário de qualquer outra forma de literatura, dirige a criança aos seus problemas internos e sugere soluções — mas apenas em termos simbólicos."</p>
+      <p class="phil-sutra-ref" data-field="philosophy.sutraRef">Bruno Bettelheim — A Psicanálise dos Contos de Fadas</p>
     </div>
   </div>
-  <div class="phil-visual reveal" style="transition-delay:0.15s">
-    <div class="phil-card">
-      <div class="phil-card-icon">I</div>
-      <div class="phil-card-title">O Conto</div>
-      <p class="phil-card-text">Narrativas escolhidas com intenção, que ressoam com o momento de vida de quem ouve.</p>
+  <div class="phil-visual reveal" style="transition-delay:0.15s" data-list="philosophy.cards">
+    <div class="phil-card" data-list-item>
+      <div class="phil-card-icon" data-field="icon">I</div>
+      <div class="phil-card-title" data-field="title">O Conto</div>
+      <p class="phil-card-text" data-field="text">Narrativas escolhidas com intenção, que ressoam com o momento de vida de quem ouve.</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">II</div>
@@ -720,14 +720,14 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que a narrativa transforma</p>
-    <h2 class="benefits-title">O que você <em>encontra</em> na Contoterapia</h2>
+    <p class="benefits-label" data-field="benefits.label">O que a narrativa transforma</p>
+    <h2 class="benefits-title" data-field="benefits.title">O que você <em>encontra</em> na Contoterapia</h2>
   </div>
-  <div class="benefits-grid">
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Desbloqueio Emocional</h3>
-      <p class="benefit-text">Emoções cristalizadas há anos encontram uma saída segura através do conto. O que não cabia em palavras diretas, cabe na linguagem do símbolo.</p>
+  <div class="benefits-grid" data-list="benefits.items">
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Desbloqueio Emocional</h3>
+      <p class="benefit-text" data-field="text">Emoções cristalizadas há anos encontram uma saída segura através do conto. O que não cabia em palavras diretas, cabe na linguagem do símbolo.</p>
     </div>
     <div class="benefit-item reveal" style="transition-delay:0.1s">
       <div class="benefit-number">02</div>
@@ -760,14 +760,14 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Quem já encontrou sua história</p>
-    <h2 class="test-title">O que dizem quem <em>viveu</em> a narrativa</h2>
+    <p class="test-label" data-field="testimonials.label">Quem já encontrou sua história</p>
+    <h2 class="test-title" data-field="testimonials.title">O que dizem quem <em>viveu</em> a narrativa</h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
+  <div class="test-grid" data-list="testimonials.items">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
-      <p class="test-text">"Cheguei sem saber ao certo o que esperar. Andreia leu um conto que parecia ter sido escrito para mim. Chorei — mas não de dor. De reconhecimento. Foi como se uma parte de mim, que estava trancada há anos, finalmente encontrasse a chave."</p>
-      <p class="test-name">— Fernanda L., 34 anos</p>
+      <p class="test-text" data-field="text">"Cheguei sem saber ao certo o que esperar. Andreia leu um conto que parecia ter sido escrito para mim. Chorei — mas não de dor. De reconhecimento. Foi como se uma parte de mim, que estava trancada há anos, finalmente encontrasse a chave."</p>
+      <p class="test-name" data-field="name">— Fernanda L., 34 anos</p>
     </div>
     <div class="test-card reveal" style="transition-delay:0.1s">
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
@@ -785,31 +785,31 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Cada história tem o seu ritmo</h2>
-    <p class="pricing-subtitle">Sessões individuais ou processo continuado — a escolha é sua.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Cada história tem o seu ritmo</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Sessões individuais ou processo continuado — a escolha é sua.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <span class="pricing-card-badge">Sessão avulsa</span>
-        <p class="pricing-card-name">Contoterapia — sessão individual</p>
-        <p class="pricing-card-price">R$180</p>
-        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Sessão avulsa</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Contoterapia — sessão individual</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">R$180</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">por sessão · duração 1h00</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Sessão individual presencial</li>
-          <li>Agendamento flexível</li>
+          <li data-field="pricing.card1.detail1">Sessão individual presencial</li>
+          <li data-field="pricing.card1.detail2">Agendamento flexível</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Processo continuado</span>
-        <p class="pricing-card-name">4 sessões por mês</p>
-        <p class="pricing-card-price">R$680</p>
-        <span class="pricing-card-period">por mês · 1 sessão por semana</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Processo continuado</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">4 sessões por mês</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">R$680</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">por mês · 1 sessão por semana</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Processo narrativo contínuo</li>
-          <li>Transformação mais profunda</li>
-          <li>Desconto incluso no pacote</li>
+          <li data-field="pricing.card2.detail1">Processo narrativo contínuo</li>
+          <li data-field="pricing.card2.detail2">Transformação mais profunda</li>
+          <li data-field="pricing.card2.detail3">Desconto incluso no pacote</li>
         </ul>
       </div>
     </div>
@@ -818,31 +818,36 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <p class="cta-label">Toda grande história começa com um primeiro passo</p>
-  <h2 class="cta-title">Qual é o próximo<br>capítulo da sua <em>história?</em></h2>
-  <p class="cta-sub">Você não precisa ter tudo resolvido para começar. Basta estar disposto a escutar — a si mesmo, através de uma narrativa que te encontra onde você está.</p>
+  <p class="cta-label" data-field="cta.label">Toda grande história começa com um primeiro passo</p>
+  <h2 class="cta-title" data-field="cta.title">Qual é o próximo<br>capítulo da sua <em>história?</em></h2>
+  <p class="cta-sub" data-field="cta.sub">Você não precisa ter tudo resolvido para começar. Basta estar disposto a escutar — a si mesmo, através de uma narrativa que te encontra onde você está.</p>
   <div class="cta-buttons">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Contoterapia" class="cta-btn-primary">
-      Começar minha jornada
+      <span data-field="cta.primaryText">Começar minha jornada</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras práticas</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outras práticas</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
   <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

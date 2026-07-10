@@ -610,7 +610,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-psicanalise-junguiana.json">
 
 <!-- NAV -->
 <nav>
@@ -629,15 +629,15 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-inscription">Psicologia Analítica — C. G. Jung</span>
-    <p class="hero-tag">Espaço Vida Om — Psicanálise Junguiana</p>
-    <h1 class="hero-title">O que vive<br>nas <em>sombras</em><br><strong>também é você.</strong></h1>
-    <p class="hero-subtitle">A jornada de tornar-se inteiro</p>
-    <p class="hero-desc">
+    <span class="hero-inscription" data-field="hero.inscription">Psicologia Analítica — C. G. Jung</span>
+    <p class="hero-tag" data-field="hero.tag">Espaço Vida Om — Psicanálise Junguiana</p>
+    <h1 class="hero-title"><span data-field="hero.titleLine1">O que vive</span><br><span data-field="hero.titleLine2">nas <em>sombras</em></span><br><strong data-field="hero.titleLine3">também é você.</strong></h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">A jornada de tornar-se inteiro</p>
+    <p class="hero-desc" data-field="hero.desc">
       A Psicologia Analítica de Jung convida você a descer ao inconsciente — onde vivem os arquétipos, os complexos e os sonhos — para integrar o que foi negado e encontrar o fio do próprio destino.
     </p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Psican?lise Junguiana" class="hero-cta">
-      Iniciar minha jornada
+      <span data-field="hero.ctaText">Iniciar minha jornada</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -761,16 +761,16 @@
       </svg>
 
       <div class="hero-quote">
-        <p class="hero-quote-text">"Quem olha para fora, sonha. Quem olha para dentro, desperta."</p>
-        <p class="hero-quote-source">Carl Gustav Jung</p>
+        <p class="hero-quote-text" data-field="hero.quoteText">"Quem olha para fora, sonha. Quem olha para dentro, desperta."</p>
+        <p class="hero-quote-source" data-field="hero.quoteSource">Carl Gustav Jung</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item"><span>Psicologia Analítica</span> — Abordagem de C. G. Jung</div>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item><span data-field="highlight">Psicologia Analítica</span><span data-field="text"> — Abordagem de C. G. Jung</span></div>
   <div class="strip-item"><span>Processo individual</span> — Atenção profunda e singular</div>
   <div class="strip-item"><span>Online e presencial</span> — Você escolhe o formato</div>
   <div class="strip-item"><span>Primeira conversa grátis</span> — Sem compromisso</div>
@@ -779,28 +779,28 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O que é a Psicologia Analítica</p>
-    <h2 class="phil-title">Mais do que sintomas.<br><em>A totalidade</em><br>do que você é.</h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="philosophy.label">O que é a Psicologia Analítica</p>
+    <h2 class="phil-title" data-field="philosophy.title">Mais do que sintomas.<br><em>A totalidade</em><br>do que você é.</h2>
+    <p class="phil-text" data-field="philosophy.text1">
       Carl Gustav Jung compreendeu que a psique humana é muito maior do que a consciência. Sob a superfície da vida cotidiana habita um vasto oceano — o inconsciente — onde vivem os arquétipos, os complexos, os sonhos e os padrões mais profundos da nossa existência.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text2">
       A Psicanálise Junguiana não busca apenas eliminar sintomas. Ela convida o indivíduo a um processo chamado <em>individuação</em>: a jornada de tornar-se quem se é de verdade, integrando tanto a luz quanto a sombra, o feminino e o masculino, o pessoal e o coletivo.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text3">
       Os sonhos são a linguagem direta do inconsciente. Os símbolos, os mitos e as imagens que emergem nas sessões carregam uma sabedoria que a lógica racional sozinha não alcança.
     </p>
     <div class="phil-sutra">
-      <p class="phil-sutra-text">"Tornar-se consciente significa, para o ser humano, a criação gradual e difícil de um mundo interior."</p>
-      <p class="phil-sutra-ref">Carl Gustav Jung — Tipos Psicológicos</p>
+      <p class="phil-sutra-text" data-field="philosophy.sutraText">"Tornar-se consciente significa, para o ser humano, a criação gradual e difícil de um mundo interior."</p>
+      <p class="phil-sutra-ref" data-field="philosophy.sutraRef">Carl Gustav Jung — Tipos Psicológicos</p>
     </div>
   </div>
 
-  <div class="phil-visual reveal" style="transition-delay:0.15s">
-    <div class="phil-card">
-      <div class="phil-card-icon">?~?</div>
-      <div class="phil-card-title">Inconsciente Coletivo</div>
-      <p class="phil-card-text">Camada profunda da psique compartilhada por toda a humanidade, onde vivem os arquétipos universais.</p>
+  <div class="phil-visual reveal" style="transition-delay:0.15s" data-list="philosophy.cards">
+    <div class="phil-card" data-list-item>
+      <div class="phil-card-icon" data-field="icon">?~?</div>
+      <div class="phil-card-title" data-field="title">Inconsciente Coletivo</div>
+      <p class="phil-card-text" data-field="text">Camada profunda da psique compartilhada por toda a humanidade, onde vivem os arquétipos universais.</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">?^</div>
@@ -823,15 +823,15 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que o processo transforma</p>
-    <h2 class="benefits-title">O que você encontra<br><em>quando desce fundo</em></h2>
+    <p class="benefits-label" data-field="benefits.label">O que o processo transforma</p>
+    <h2 class="benefits-title" data-field="benefits.title">O que você encontra<br><em>quando desce fundo</em></h2>
   </div>
-  <div class="benefits-grid">
+  <div class="benefits-grid" data-list="benefits.items">
 
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Autoconhecimento Profundo</h3>
-      <p class="benefit-text">Você começa a entender não só o que faz, mas o porquê — as motivações inconscientes, os complexos e as forças que operam na sombra da sua vida.</p>
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Autoconhecimento Profundo</h3>
+      <p class="benefit-text" data-field="text">Você começa a entender não só o que faz, mas o porquê — as motivações inconscientes, os complexos e as forças que operam na sombra da sua vida.</p>
     </div>
 
     <div class="benefit-item reveal" style="transition-delay:0.1s">
@@ -870,15 +870,15 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Quem já iniciou a jornada</p>
-    <h2 class="test-title">O que dizem quem<br><em>desceu fundo</em></h2>
+    <p class="test-label" data-field="testimonials.label">Quem já iniciou a jornada</p>
+    <h2 class="test-title" data-field="testimonials.title">O que dizem quem<br><em>desceu fundo</em></h2>
   </div>
-  <div class="test-grid">
+  <div class="test-grid" data-list="testimonials.items">
 
-    <div class="test-card reveal">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
-      <p class="test-text">"Passei anos em terapias que me ajudaram a funcionar melhor, mas nunca me entenderam de verdade. Com a Andreia, pela primeira vez, sinto que estou tocando o que é essencial. Os sonhos passaram a fazer sentido. Eu passei a fazer sentido."</p>
-      <p class="test-name">— Beatriz M., 38 anos — 14 meses de processo</p>
+      <p class="test-text" data-field="text">"Passei anos em terapias que me ajudaram a funcionar melhor, mas nunca me entenderam de verdade. Com a Andreia, pela primeira vez, sinto que estou tocando o que é essencial. Os sonhos passaram a fazer sentido. Eu passei a fazer sentido."</p>
+      <p class="test-name" data-field="name">— Beatriz M., 38 anos — 14 meses de processo</p>
     </div>
 
     <div class="test-card reveal" style="transition-delay:0.1s">
@@ -899,70 +899,75 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Duas possibilidades de jornada</h2>
-    <p class="pricing-subtitle">Escolha entre o processo integrado — Psicoterapia Junguiana com técnica complementar — ou a sessão analítica clássica.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Duas possibilidades de jornada</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Escolha entre o processo integrado — Psicoterapia Junguiana com técnica complementar — ou a sessão analítica clássica.</p>
     <div class="pricing-cards">
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Processo completo</span>
-        <p class="pricing-card-name">Análise Junguiana Integrativa</p>
-        <p class="pricing-card-price">R$180</p>
-        <span class="pricing-card-period">por sessão · duração 1h30</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Processo completo</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Análise Junguiana Integrativa</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">R$180</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">por sessão · duração 1h30</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Psicoterapia Junguiana + técnica integrativa</li>
-          <li>4 sessões/mês = R$720 (desc. 10% incluso)</li>
-          <li>Sessão avulsa = R$200</li>
+          <li data-field="pricing.card1.detail1">Psicoterapia Junguiana + técnica integrativa</li>
+          <li data-field="pricing.card1.detail2">4 sessões/mês = R$720 (desc. 10% incluso)</li>
+          <li data-field="pricing.card1.detail3">Sessão avulsa = R$200</li>
         </ul>
       </div>
       <div class="pricing-card">
-        <span class="pricing-card-badge">Sessão analítica</span>
-        <p class="pricing-card-name">Psicoterapia Analítica</p>
-        <p class="pricing-card-price">R$170</p>
-        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Sessão analítica</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">Psicoterapia Analítica</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">R$170</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">por sessão · duração 1h00</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>4 sessões/mês = R$680 (desc. 5% incluso)</li>
-          <li>Sessão avulsa = R$180</li>
-          <li>Presencial ou online</li>
+          <li data-field="pricing.card2.detail1">4 sessões/mês = R$680 (desc. 5% incluso)</li>
+          <li data-field="pricing.card2.detail2">Sessão avulsa = R$180</li>
+          <li data-field="pricing.card2.detail3">Presencial ou online</li>
         </ul>
       </div>
     </div>
-    <p class="pricing-note">A técnica integrativa é selecionada por Andreia de acordo com as necessidades e objetivos de cada paciente — Reiki, Meditação, Mindfulness ou técnicas de autorregulação emocional.</p>
+    <p class="pricing-note" data-field="pricing.note">A técnica integrativa é selecionada por Andreia de acordo com as necessidades e objetivos de cada paciente — Reiki, Meditação, Mindfulness ou técnicas de autorregulação emocional.</p>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="cta-section">
-  <p class="cta-label">O inconsciente espera por você</p>
-  <h2 class="cta-title">Você está pronto<br>para se <em>encontrar?</em></h2>
-  <p class="cta-sub">
+  <p class="cta-label" data-field="cta.label">O inconsciente espera por você</p>
+  <h2 class="cta-title" data-field="cta.title">Você está pronto<br>para se <em>encontrar?</em></h2>
+  <p class="cta-sub" data-field="cta.sub">
     A primeira conversa é gratuita. Nela, você me conta o que está vivendo e eu apresento como a Psicologia Analítica pode iluminar o seu caminho. Sem pressão. Sem pressa. No tempo da alma.
   </p>
   <div class="cta-buttons">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Psican?lise Junguiana" class="cta-btn-primary">
-      Agendar conversa gratuita
+      <span data-field="cta.primaryText">Agendar conversa gratuita</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras práticas</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outras práticas</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
   <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

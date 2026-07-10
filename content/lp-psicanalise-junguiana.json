@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "inscription": "Psicologia Analítica — C. G. Jung",
+    "tag": "Espaço Vida Om — Psicanálise Junguiana",
+    "titleLine1": "O que vive",
+    "titleLine2": "nas *sombras*",
+    "titleLine3": "também é você.",
+    "subtitle": "A jornada de tornar-se inteiro",
+    "desc": "A Psicologia Analítica de Jung convida você a descer ao inconsciente — onde vivem os arquétipos, os complexos e os sonhos — para integrar o que foi negado e encontrar o fio do próprio destino.",
+    "ctaText": "Iniciar minha jornada",
+    "quoteText": "\"Quem olha para fora, sonha. Quem olha para dentro, desperta.\"",
+    "quoteSource": "Carl Gustav Jung"
+  },
+  "strip": [
+    { "highlight": "Psicologia Analítica", "text": " — Abordagem de C. G. Jung" },
+    { "highlight": "Processo individual", "text": " — Atenção profunda e singular" },
+    { "highlight": "Online e presencial", "text": " — Você escolhe o formato" },
+    { "highlight": "Primeira conversa grátis", "text": " — Sem compromisso" }
+  ],
+  "philosophy": {
+    "label": "O que é a Psicologia Analítica",
+    "title": "Mais do que sintomas.\n*A totalidade*\ndo que você é.",
+    "text1": "Carl Gustav Jung compreendeu que a psique humana é muito maior do que a consciência. Sob a superfície da vida cotidiana habita um vasto oceano — o inconsciente — onde vivem os arquétipos, os complexos, os sonhos e os padrões mais profundos da nossa existência.",
+    "text2": "A Psicanálise Junguiana não busca apenas eliminar sintomas. Ela convida o indivíduo a um processo chamado *individuação*: a jornada de tornar-se quem se é de verdade, integrando tanto a luz quanto a sombra, o feminino e o masculino, o pessoal e o coletivo.",
+    "text3": "Os sonhos são a linguagem direta do inconsciente. Os símbolos, os mitos e as imagens que emergem nas sessões carregam uma sabedoria que a lógica racional sozinha não alcança.",
+    "sutraText": "\"Tornar-se consciente significa, para o ser humano, a criação gradual e difícil de um mundo interior.\"",
+    "sutraRef": "Carl Gustav Jung — Tipos Psicológicos",
+    "cards": [
+      { "icon": "?~?", "title": "Inconsciente Coletivo", "text": "Camada profunda da psique compartilhada por toda a humanidade, onde vivem os arquétipos universais." },
+      { "icon": "?^", "title": "Arquétipos", "text": "Padrões primordiais de experiência: a Sombra, a Anima, o Animus, o Self, a Grande Mãe, o Herói." },
+      { "icon": "?", "title": "Processo de Individuação", "text": "A jornada central de Jung: tornar-se plenamente si mesmo, integrando os opostos internos." },
+      { "icon": "?o?", "title": "Sonhos e Símbolos", "text": "Mensagens do inconsciente que apontam o caminho para a integração e o autoconhecimento." }
+    ]
+  },
+  "benefits": {
+    "label": "O que o processo transforma",
+    "title": "O que você encontra\n*quando desce fundo*",
+    "items": [
+      { "number": "01", "title": "Autoconhecimento Profundo", "text": "Você começa a entender não só o que faz, mas o porquê — as motivações inconscientes, os complexos e as forças que operam na sombra da sua vida." },
+      { "number": "02", "title": "Padrões que se Repetem", "text": "Relacionamentos que terminam da mesma forma. Trabalhos que se repetem. Ciclos de autossabotagem. O inconsciente que não é integrado se manifesta como destino." },
+      { "number": "03", "title": "Vínculos mais Verdadeiros", "text": "Ao reconhecer o que você projeta nos outros — o que vê neles e que na verdade é seu — os relacionamentos ganham profundidade, autenticidade e liberdade." },
+      { "number": "04", "title": "Crises como Passagem", "text": "Depressão, ansiedade, vazio existencial, crises de meia-vida — a psicologia junguiana os lê como chamados para uma transformação necessária, não como falhas a corrigir." },
+      { "number": "05", "title": "Integração da Sombra", "text": "Tudo o que foi rejeitado, reprimido ou envergonhado em você existe na sombra e consome energia vital. Integrá-la é recuperar partes preciosas de si mesmo." },
+      { "number": "06", "title": "Sentido e Propósito", "text": "Jung chamava de individuação a tarefa mais profunda da vida humana: encontrar quem você é para além dos papéis, das expectativas e das máscaras sociais." }
+    ]
+  },
+  "testimonials": {
+    "label": "Quem já iniciou a jornada",
+    "title": "O que dizem quem\n*desceu fundo*",
+    "items": [
+      { "text": "\"Passei anos em terapias que me ajudaram a funcionar melhor, mas nunca me entenderam de verdade. Com a Andreia, pela primeira vez, sinto que estou tocando o que é essencial. Os sonhos passaram a fazer sentido. Eu passei a fazer sentido.\"", "name": "— Beatriz M., 38 anos — 14 meses de processo" },
+      { "text": "\"Cheguei com uma crise de meia-vida que parecia o fim de tudo. A abordagem junguiana me mostrou que era um chamado — que algo em mim queria nascer. Hoje entendo que aquela crise foi a melhor coisa que me aconteceu. A Andreia soube esperar enquanto eu encontrava o meu caminho.\"", "name": "— Eduardo L., 47 anos — Processo anual" },
+      { "text": "\"Sempre achei que conhecia a mim mesma. A análise junguiana me mostrou que eu mal havia arranhado a superfície. Os arquétipos, a sombra, os padrões que se repetiam nos meus relacionamentos — tudo começou a se iluminar. ?? um trabalho exigente e transformador ao mesmo tempo.\"", "name": "— Renata C., 33 anos — Processo de 3 meses" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Duas possibilidades de jornada",
+    "subtitle": "Escolha entre o processo integrado — Psicoterapia Junguiana com técnica complementar — ou a sessão analítica clássica.",
+    "card1": {
+      "badge": "Processo completo",
+      "name": "Análise Junguiana Integrativa",
+      "price": "R$180",
+      "period": "por sessão · duração 1h30",
+      "detail1": "Psicoterapia Junguiana + técnica integrativa",
+      "detail2": "4 sessões/mês = R$720 (desc. 10% incluso)",
+      "detail3": "Sessão avulsa = R$200"
+    },
+    "card2": {
+      "badge": "Sessão analítica",
+      "name": "Psicoterapia Analítica",
+      "price": "R$170",
+      "period": "por sessão · duração 1h00",
+      "detail1": "4 sessões/mês = R$680 (desc. 5% incluso)",
+      "detail2": "Sessão avulsa = R$180",
+      "detail3": "Presencial ou online"
+    },
+    "note": "A técnica integrativa é selecionada por Andreia de acordo com as necessidades e objetivos de cada paciente — Reiki, Meditação, Mindfulness ou técnicas de autorregulação emocional."
+  },
+  "cta": {
+    "label": "O inconsciente espera por você",
+    "title": "Você está pronto\npara se *encontrar?*",
+    "sub": "A primeira conversa é gratuita. Nela, você me conta o que está vivendo e eu apresento como a Psicologia Analítica pode iluminar o seu caminho. Sem pressão. Sem pressa. No tempo da alma.",
+    "primaryText": "Agendar conversa gratuita",
+    "secondaryText": "Ver outras práticas"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa"
+  }
+}

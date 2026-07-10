@@ -608,7 +608,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-reiki.json">
 
 <!-- NAV -->
 <nav>
@@ -628,15 +628,15 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-divider"></div>
-    <p class="hero-kanji">霊気 — Rei Ki — Energia Vital Universal</p>
-    <p class="hero-tag">Espaço Vida Om — Terapia de Reiki</p>
-    <h1 class="hero-title">O que em você<br>precisa de <em>silêncio</em><br>para se curar.</h1>
-    <p class="hero-subtitle">Reiki como caminho de restauração e presença</p>
-    <p class="hero-desc">
+    <p class="hero-kanji" data-field="hero.eyebrow">霊気 — Rei Ki — Energia Vital Universal</p>
+    <p class="hero-tag" data-field="hero.tag">Espaço Vida Om — Terapia de Reiki</p>
+    <h1 class="hero-title" data-field="hero.title">O que em você<br>precisa de <em>silêncio</em><br>para se curar.</h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Reiki como caminho de restauração e presença</p>
+    <p class="hero-desc" data-field="hero.desc">
       Uma técnica japonesa de canalização da energia vital que dissolve bloqueios, acalma o sistema nervoso e desperta a capacidade natural do corpo de se equilibrar.
     </p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Reiki" class="hero-cta">
-      Quero agendar
+      <span data-field="hero.ctaText">Quero agendar</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -742,16 +742,16 @@
       </div>
 
       <div class="hero-quote">
-        <p class="hero-quote-text">"A cura não vem de fora.<br>Ela acorda dentro."</p>
-        <p class="hero-quote-source">Mikao Usui — Fundador do Reiki</p>
+        <p class="hero-quote-text" data-field="hero.quoteText">"A cura não vem de fora.<br>Ela acorda dentro."</p>
+        <p class="hero-quote-source" data-field="hero.quoteSource">Mikao Usui — Fundador do Reiki</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item"><span>Não invasivo</span> — Toque suave ou sem contato</div>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item><span data-field="highlight">Não invasivo</span><span data-field="text"> — Toque suave ou sem contato</span></div>
   <div class="strip-item"><span>Sessão individual</span> — Atenção plena e exclusiva</div>
   <div class="strip-item"><span>Origem japonesa</span> — Mikao Usui, 1922</div>
   <div class="strip-item"><span>1ª sessão especial</span> — Venha experienciar</div>
@@ -760,27 +760,27 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O que é Reiki</p>
-    <h2 class="phil-title">Uma arte antiga<br>de escutar<br><em>o invisível.</em></h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="philosophy.label">O que é Reiki</p>
+    <h2 class="phil-title" data-field="philosophy.title">Uma arte antiga<br>de escutar<br><em>o invisível.</em></h2>
+    <p class="phil-text" data-field="philosophy.text1">
       Reiki é uma técnica terapêutica criada no Japão em 1922 pelo mestre Mikao Usui. Seu nome une dois ideogramas: <em>Rei</em> (energia universal, espiritual) e <em>Ki</em> — o mesmo que <em>Prana</em> no sânscrito, <em>Chi</em> na tradição chinesa: a força vital que anima todos os seres.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text2">
       A prática parte da premissa de que o ser humano possui um campo energético estruturado por chakras e meridianos. Quando essa energia flui livremente, há saúde, clareza e equilíbrio. Quando bloqueada — por estresse, emoções reprimidas ou padrões inconscientes — o corpo responde com sinais de desequilíbrio físico e emocional.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text3">
       Durante a sessão, o praticante canaliza essa energia universal por meio das mãos, estimulando o organismo a recuperar sua inteligência curativa inata. ?? sutil, profundo e não invasivo.
     </p>
     <div class="phil-sutra">
-      <p class="phil-sutra-text">"Só hoje: não me irrites. Não me preocupes. Sê grato. Trabalha com dedicação. Sê gentil com todos os seres."</p>
-      <p class="phil-sutra-ref">Os Cinco Princípios de Reiki — Gokai de Mikao Usui</p>
+      <p class="phil-sutra-text" data-field="philosophy.sutraText">"Só hoje: não me irrites. Não me preocupes. Sê grato. Trabalha com dedicação. Sê gentil com todos os seres."</p>
+      <p class="phil-sutra-ref" data-field="philosophy.sutraRef">Os Cinco Princípios de Reiki — Gokai de Mikao Usui</p>
     </div>
   </div>
-  <div class="phil-visual reveal" style="transition-delay:0.15s">
-    <div class="phil-card">
-      <div class="phil-card-icon">?</div>
-      <div class="phil-card-title">Ki — Energia Vital</div>
-      <p class="phil-card-text">A força que organiza e sustenta a vida. Quando flui livremente, o equilíbrio é natural.</p>
+  <div class="phil-visual reveal" style="transition-delay:0.15s" data-list="philosophy.cards">
+    <div class="phil-card" data-list-item>
+      <div class="phil-card-icon" data-field="icon">?</div>
+      <div class="phil-card-title" data-field="title">Ki — Energia Vital</div>
+      <p class="phil-card-text" data-field="text">A força que organiza e sustenta a vida. Quando flui livremente, o equilíbrio é natural.</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">?~?</div>
@@ -803,14 +803,14 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que a sessão transforma</p>
-    <h2 class="benefits-title">Seis formas de sentir o <em>Reiki</em></h2>
+    <p class="benefits-label" data-field="benefits.label">O que a sessão transforma</p>
+    <h2 class="benefits-title" data-field="benefits.title">Seis formas de sentir o <em>Reiki</em></h2>
   </div>
-  <div class="benefits-grid">
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Alívio da Ansiedade</h3>
-      <p class="benefit-text">A sessão ativa o sistema nervoso parassimpático, dissolvendo o estado de alerta crônico e devolvendo a sensação de calma e segurança interna.</p>
+  <div class="benefits-grid" data-list="benefits.items">
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Alívio da Ansiedade</h3>
+      <p class="benefit-text" data-field="text">A sessão ativa o sistema nervoso parassimpático, dissolvendo o estado de alerta crônico e devolvendo a sensação de calma e segurança interna.</p>
     </div>
     <div class="benefit-item reveal" style="transition-delay:0.1s">
       <div class="benefit-number">02</div>
@@ -843,14 +843,14 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Experiências reais</p>
-    <h2 class="test-title">O que dizem quem já <em>sentiu</em></h2>
+    <p class="test-label" data-field="testimonials.label">Experiências reais</p>
+    <h2 class="test-title" data-field="testimonials.title">O que dizem quem já <em>sentiu</em></h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
+  <div class="test-grid" data-list="testimonials.items">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
-      <p class="test-text">"Cheguei ao Reiki num momento de ansiedade severa. Depois da segunda sessão com a Andreia senti como se um peso imenso tivesse saído do meu peito. ?? difícil explicar, mas o corpo sabe. ?? real."</p>
-      <p class="test-name">— Fernanda M., 34 anos</p>
+      <p class="test-text" data-field="text">"Cheguei ao Reiki num momento de ansiedade severa. Depois da segunda sessão com a Andreia senti como se um peso imenso tivesse saído do meu peito. ?? difícil explicar, mas o corpo sabe. ?? real."</p>
+      <p class="test-name" data-field="name">— Fernanda M., 34 anos</p>
     </div>
     <div class="test-card reveal" style="transition-delay:0.1s">
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
@@ -868,31 +868,31 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Clareza em cada escolha</h2>
-    <p class="pricing-subtitle">Sessões individuais ou em pacote para um acompanhamento mais profundo e contínuo.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Clareza em cada escolha</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Sessões individuais ou em pacote para um acompanhamento mais profundo e contínuo.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <span class="pricing-card-badge">Sessão avulsa</span>
-        <p class="pricing-card-name">Reiki — sessão individual</p>
-        <p class="pricing-card-price">R$180</p>
-        <span class="pricing-card-period">por sessão · duração 1h00</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Sessão avulsa</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Reiki — sessão individual</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">R$180</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">por sessão · duração 1h00</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Sessão completa de 60 minutos</li>
-          <li>Agendamento flexível</li>
+          <li data-field="pricing.card1.detail1">Sessão completa de 60 minutos</li>
+          <li data-field="pricing.card1.detail2">Agendamento flexível</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Pacote recomendado</span>
-        <p class="pricing-card-name">4 sessões de Reiki</p>
-        <p class="pricing-card-price">R$680</p>
-        <span class="pricing-card-period">à vista · ou 2? de R$360</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Pacote recomendado</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">4 sessões de Reiki</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">R$680</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">à vista · ou 2? de R$360</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Desconto de R$40 no pacote</li>
-          <li>1 sessão por semana</li>
-          <li>Acompanhamento contínuo e profundo</li>
+          <li data-field="pricing.card2.detail1">Desconto de R$40 no pacote</li>
+          <li data-field="pricing.card2.detail2">1 sessão por semana</li>
+          <li data-field="pricing.card2.detail3">Acompanhamento contínuo e profundo</li>
         </ul>
       </div>
     </div>
@@ -901,31 +901,36 @@
 
 <!-- CTA FINAL -->
 <section class="cta-section">
-  <p class="cta-label">Comece hoje</p>
-  <h2 class="cta-title">Seu corpo sabe<br>que precisa de <em>descanso.</em></h2>
-  <p class="cta-sub">Agende sua sessão e permita-se uma hora de presença plena, silêncio e restauração. O próximo passo é apenas um clique.</p>
+  <p class="cta-label" data-field="cta.label">Comece hoje</p>
+  <h2 class="cta-title" data-field="cta.title">Seu corpo sabe<br>que precisa de <em>descanso.</em></h2>
+  <p class="cta-sub" data-field="cta.sub">Agende sua sessão e permita-se uma hora de presença plena, silêncio e restauração. O próximo passo é apenas um clique.</p>
   <div class="cta-buttons">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Reiki" class="cta-btn-primary">
-      Agendar minha sessão
+      <span data-field="cta.primaryText">Agendar minha sessão</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras terapias</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outras terapias</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
   <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

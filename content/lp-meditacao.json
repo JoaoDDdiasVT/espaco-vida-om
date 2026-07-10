@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "eyebrow": "ध्यान — Sati · Dhyana · Samadhi",
+    "tag": "Espaço Vida Om — Meditação &amp; Mindfulness",
+    "title": "Você não precisa\nparar os\n*pensamentos.*\nSó precisa aprender\na não segui-los.",
+    "subtitle": "Presença como prática, silêncio como caminho",
+    "desc": "A meditação não é uma fuga da vida. ?? a arte de habitar a vida completamente — sem se perder no passado que passou nem no futuro que ainda não chegou.",
+    "ctaText": "Quero praticar",
+    "quoteText": "\"Onde quer que você esteja, esteja plenamente presente.\"",
+    "quoteSource": "Jon Kabat-Zinn — MBSR"
+  },
+  "strip": [
+    { "highlight": "Evidência científica", "text": " — Neuroplasticidade validada" },
+    { "highlight": "Tradições autênticas", "text": " — Vipassana, Zen &amp; MBSR" },
+    { "highlight": "Sem dogma", "text": " — Laico, acessível, profundo" },
+    { "highlight": "1ª sessão grátis", "text": " — Venha experimentar" }
+  ],
+  "philosophy": {
+    "label": "O que é — e o que não é",
+    "title": "A mente não precisa\nser *esvaziada.*\nPrecisa ser vista.",
+    "text1": "Existe um equívoco muito comum: achar que meditar é parar de pensar. A mente pensa — é a função dela. O que muda com a prática é a sua *relação* com os pensamentos. Você deixa de ser arrastado por eles e passa a observá-los, com curiosidade e distância segura.",
+    "text2a": " é a prática formal — sentar, respirar, observar. ",
+    "text2b": " é a qualidade de atenção plena que essa prática cultiva e que se expande para toda a vida: comer, conversar, trabalhar, descansar.",
+    "text3": "As raízes são antigas: o Vipassana budista (contemplação da impermanência), o Zen (presença direta, sem conceitos) e a tradição contemplativa cristã. Em 1979, Jon Kabat-Zinn traduziu esse conhecimento para a linguagem da ciência com o programa MBSR — Mindfulness-Based Stress Reduction — hoje validado por milhares de estudos clínicos.",
+    "sutraText": "\"Você não pode parar as ondas. Mas pode aprender a surfar.\"",
+    "sutraRef": "Jon Kabat-Zinn — Wherever You Go, There You Are",
+    "cards": [
+      { "icon": "I", "title": "Vipassana", "text": "Contemplação da impermanência. Observar sensações, emoções e pensamentos surgir e desaparecer — sem apego, sem rejeição." },
+      { "icon": "II", "title": "Zen", "text": "Presença direta e silenciosa. Zazen — simplesmente sentar — como o caminho em si, não como meio para outro fim." },
+      { "icon": "III", "title": "MBSR", "text": "Protocolo de 8 semanas criado por Jon Kabat-Zinn. Ciência rigorosa encontrando sabedoria milenar para reduzir sofrimento mensurável." },
+      { "icon": "IV", "title": "Neurociência", "text": "A prática regular espessa o córtex pré-frontal, encolhe a amígdala e aumenta a densidade de matéria cinzenta. O cérebro literalmente muda." }
+    ]
+  },
+  "benefits": {
+    "label": "O que a prática cultiva",
+    "title": "Seis transformações que a\n*ciência confirma*",
+    "items": [
+      { "number": "01", "title": "Regulação da Ansiedade", "text": "A meditação desativa o modo de ruminação da mente-padrão (DMN) e treina o sistema nervoso a responder em vez de reagir. Menos disparo de amígdala, mais espaço entre o estímulo e a resposta." },
+      { "number": "02", "title": "Foco &amp; Clareza Mental", "text": "Praticar atenção plena é literalmente treinar o músculo da concentração. Estudos mostram aumento mensurável na capacidade de sustentar atenção e de retornar ao foco após distrações." },
+      { "number": "03", "title": "Regulação Emocional", "text": "Aprender a observar emoções sem ser engolido por elas. A prática cria distância saudável — você vê a raiva, o medo, a tristeza — sem precisar agir a partir deles de forma automática." },
+      { "number": "04", "title": "Qualidade do Sono", "text": "Meditações específicas para o fim do dia — escaneamento corporal, respiração consciente — desativam o sistema de alerta e preparam o sistema nervoso para um descanso verdadeiramente restaurador." },
+      { "number": "05", "title": "Criatividade &amp; Insight", "text": "A mente silenciada acessa camadas mais profundas do processamento cognitivo. Muitos praticantes relatam clareza intuitiva, soluções criativas e a capacidade de ver problemas de ângulos novos." },
+      { "number": "06", "title": "Presença nas Relações", "text": "Estar presente consigo mesmo é o treino para estar presente com o outro. Conversas mais profundas, escuta real, menos reatividade. Mindfulness como base para relações mais humanas e autênticas." }
+    ]
+  },
+  "testimonials": {
+    "label": "Quem já pratica",
+    "title": "O que diz quem *chegou ao silêncio*",
+    "items": [
+      { "text": "\"Sempre achei que minha cabeça era agitada demais para meditar. Andreia me mostrou que essa é exatamente a razão para começar. Hoje tenho dez minutos por dia que valem horas.\"", "name": "— Beatriz M., professora" },
+      { "text": "\"O curso de 8 semanas mudou a forma como eu lido com o stress do trabalho. Aprendi a dar um passo atrás antes de reagir. Parece simples — mas não é fácil. E ela ensina com uma paciência extraordinária.\"", "name": "— Rodrigo F., gestor" },
+      { "text": "\"Fui ao retiro sem grandes expectativas. Voltei com algo que não sei nomear — uma quietude que ainda está comigo semanas depois. Foi um dos dias mais importantes que já vivi.\"", "name": "— Inês C., terapeuta" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Uma prática que se sustenta",
+    "subtitle": "Sessões individuais de Meditação e Mindfulness para cultivar presença no dia a dia.",
+    "card1": {
+      "badge": "Sessão avulsa",
+      "name": "Meditação &amp; Mindfulness",
+      "price": "R$180",
+      "period": "por sessão · duração 1h00",
+      "detail1": "Sessão individual presencial",
+      "detail2": "Agendamento flexível"
+    },
+    "card2": {
+      "badge": "Prática mensal",
+      "name": "4 sessões por mês",
+      "price": "R$680",
+      "period": "por mês · 1 sessão por semana",
+      "detail1": "Desconto incluso no pacote",
+      "detail2": "Prática semanal contínua",
+      "detail3": "Evolução consistente e mensurável"
+    }
+  },
+  "cta": {
+    "label": "Há um lugar quieto em você à sua espera",
+    "title": "A primeira sessão\né *gratuita.*",
+    "sub": "Venha sentar. Sem expectativas, sem exigências. Uma sessão para conhecer a prática, o espaço e descobrir se este é o seu caminho de volta a si mesmo.",
+    "primaryText": "Agendar sessão gratuita",
+    "secondaryText": "Ver outras práticas"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa"
+  }
+}

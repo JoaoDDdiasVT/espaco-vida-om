@@ -650,7 +650,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-saude-mental-empresas.json">
 
 <!-- NAV -->
 <nav>
@@ -669,15 +669,15 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-eyebrow">Programas Corporativos — Espaço Vida Om</span>
-    <p class="hero-tag">Saúde Mental nas Empresas — by Andreia Rosa</p>
-    <h1 class="hero-title">Sua equipe<br>produz mais<br>quando<br><em>existe de verdade.</em></h1>
-    <p class="hero-subtitle">Bem-estar que gera resultados reais</p>
-    <p class="hero-desc">
+    <span class="hero-eyebrow" data-field="hero.eyebrow">Programas Corporativos — Espaço Vida Om</span>
+    <p class="hero-tag" data-field="hero.tag">Saúde Mental nas Empresas — by Andreia Rosa</p>
+    <h1 class="hero-title" data-field="hero.title">Sua equipe<br>produz mais<br>quando<br><em>existe de verdade.</em></h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Bem-estar que gera resultados reais</p>
+    <p class="hero-desc" data-field="hero.desc">
       Burnout, presenteísmo e ansiedade crônica custam bilhões às empresas — e esgotam quem mais contribui. Programas de saúde mental não são benefício extra: são estratégia de negócio.
     </p>
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Sa?de Mental nas Empresas" class="hero-cta">
-      Quero um diagnóstico gratuito
+      <span data-field="hero.ctaText">Quero um diagnóstico gratuito</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -766,10 +766,10 @@
 
       <!-- Citação abaixo do SVG -->
       <div style="margin-top:32px; text-align:center; max-width:320px; margin-left:auto; margin-right:auto;">
-        <p style="font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; font-weight:300; color:rgba(44,26,30,0.65); line-height:1.7;">
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; font-weight:300; color:rgba(44,26,30,0.65); line-height:1.7;" data-field="hero.quoteText">
           "Empresas que investem em saúde mental colhem equipes que, além de trabalhar, criam, conectam e permanecem."
         </p>
-        <p style="margin-top:10px; font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--burgundy); opacity:0.6;">
+        <p style="margin-top:10px; font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--burgundy); opacity:0.6;" data-field="hero.quoteSource">
           Andreia Rosa — Espaço Vida Om
         </p>
       </div>
@@ -778,11 +778,11 @@
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item">
-    <span>72% dos colaboradores</span>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item>
+    <span data-field="highlight">72% dos colaboradores</span>
     <div class="strip-dot"></div>
-    relatam sintomas de burnout
+    <span data-field="text">relatam sintomas de burnout</span>
   </div>
   <div class="strip-item">
     <span>ROI de até 4x</span>
@@ -804,17 +804,17 @@
 <!-- PROBLEMA / SOLU???fO -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O problema que ninguém quer nomear</p>
-    <h2 class="phil-title">Sua equipe está<br>presente —<br>mas <em>onde está</em><br>a sua energia?</h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="problem.label">O problema que ninguém quer nomear</p>
+    <h2 class="phil-title" data-field="problem.title">Sua equipe está<br>presente —<br>mas <em>onde está</em><br>a sua energia?</h2>
+    <p class="phil-text" data-field="problem.text1">
       Presenteísmo é o fenômeno silencioso de colaboradores que estão fisicamente no trabalho, mas mentalmente esgotados. Segundo dados da OMS, o presenteísmo custa às empresas até três vezes mais do que o absenteísmo — e raramente é identificado até que o talento peça demissão ou entre de licença.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="problem.text2">
       Ansiedade crônica, síndrome de burnout e exaustão emocional não são fraqueza individual: são sintoma de ambientes que ainda não aprenderam a equilibrar performance com humanidade. A boa notícia é que há saída — e ela começa com a decisão de tratar saúde mental como prioridade estratégica.
     </p>
     <div class="phil-highlight">
-      <p class="phil-highlight-text">"Cada R$1 investido em saúde mental no ambiente de trabalho retorna, em média, R$4 em produtividade e redução de custos com afastamentos."</p>
-      <p class="phil-highlight-ref">Organização Mundial da Saúde — Relatório sobre Saúde Mental no Trabalho, 2023</p>
+      <p class="phil-highlight-text" data-field="problem.highlightText">"Cada R$1 investido em saúde mental no ambiente de trabalho retorna, em média, R$4 em produtividade e redução de custos com afastamentos."</p>
+      <p class="phil-highlight-ref" data-field="problem.highlightRef">Organização Mundial da Saúde — Relatório sobre Saúde Mental no Trabalho, 2023</p>
     </div>
   </div>
   <div class="phil-visual reveal" style="transition-delay:0.15s">
@@ -827,10 +827,10 @@
           <line x1="16" y1="6" x2="16" y2="9" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="phil-card-title">Burnout</div>
-      <p class="phil-card-text">Esgotamento físico, emocional e cognitivo que leva ao colapso da performance e à rotatividade involuntária.</p>
-      <span class="phil-card-stat">1 em 3</span>
-      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">colaboradores afetados</p>
+      <div class="phil-card-title" data-field="problem.card1.title">Burnout</div>
+      <p class="phil-card-text" data-field="problem.card1.text">Esgotamento físico, emocional e cognitivo que leva ao colapso da performance e à rotatividade involuntária.</p>
+      <span class="phil-card-stat" data-field="problem.card1.stat">1 em 3</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;" data-field="problem.card1.statLabel">colaboradores afetados</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">
@@ -841,10 +841,10 @@
           <path d="M13 5H19" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="phil-card-title">Presenteísmo</div>
-      <p class="phil-card-text">O colaborador está, mas não está. Queda de até 33% na produtividade sem nenhum sinal visível de alerta.</p>
-      <span class="phil-card-stat">33%</span>
-      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">de queda na produção</p>
+      <div class="phil-card-title" data-field="problem.card2.title">Presenteísmo</div>
+      <p class="phil-card-text" data-field="problem.card2.text">O colaborador está, mas não está. Queda de até 33% na produtividade sem nenhum sinal visível de alerta.</p>
+      <span class="phil-card-stat" data-field="problem.card2.stat">33%</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;" data-field="problem.card2.statLabel">de queda na produção</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">
@@ -855,10 +855,10 @@
           <path d="M8 8V26H20" stroke="var(--burgundy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="phil-card-title">Rotatividade</div>
-      <p class="phil-card-text">Substituir um colaborador custa de 1,5x a 2x o salário anual — e o adoecimento é uma das principais causas de saída.</p>
-      <span class="phil-card-stat">2x</span>
-      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">custo de substituição</p>
+      <div class="phil-card-title" data-field="problem.card3.title">Rotatividade</div>
+      <p class="phil-card-text" data-field="problem.card3.text">Substituir um colaborador custa de 1,5x a 2x o salário anual — e o adoecimento é uma das principais causas de saída.</p>
+      <span class="phil-card-stat" data-field="problem.card3.stat">2x</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;" data-field="problem.card3.statLabel">custo de substituição</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">
@@ -870,10 +870,10 @@
           <path d="M25 24H27 M26 23V25" stroke="var(--burgundy)" stroke-width="1" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="phil-card-title">A Solução</div>
-      <p class="phil-card-text">Programas estruturados de bem-estar reduzem afastamentos, melhoram clima e aumentam engajamento de forma mensurável.</p>
-      <span class="phil-card-stat">4x</span>
-      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;">retorno sobre investimento</p>
+      <div class="phil-card-title" data-field="problem.card4.title">A Solução</div>
+      <p class="phil-card-text" data-field="problem.card4.text">Programas estruturados de bem-estar reduzem afastamentos, melhoram clima e aumentam engajamento de forma mensurável.</p>
+      <span class="phil-card-stat" data-field="problem.card4.stat">4x</span>
+      <p style="font-size:0.62rem; color:var(--muted); margin-top:4px;" data-field="problem.card4.statLabel">retorno sobre investimento</p>
     </div>
   </div>
 </section>
@@ -881,15 +881,15 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que muda na sua organização</p>
-    <h2 class="benefits-title">6 transformações que a sua<br>empresa <em>passa a ter</em></h2>
-    <p class="benefits-subtitle">Quando as pessoas se sentem cuidadas, elas entregam o melhor de si. Não por obrigação — por pertencimento.</p>
+    <p class="benefits-label" data-field="benefits.label">O que muda na sua organização</p>
+    <h2 class="benefits-title" data-field="benefits.title">6 transformações que a sua<br>empresa <em>passa a ter</em></h2>
+    <p class="benefits-subtitle" data-field="benefits.subtitle">Quando as pessoas se sentem cuidadas, elas entregam o melhor de si. Não por obrigação — por pertencimento.</p>
   </div>
-  <div class="benefits-grid">
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Redução de Afastamentos</h3>
-      <p class="benefit-text">Programas contínuos de bem-estar reduzem significativamente afastamentos por transtornos de ansiedade, depressão e síndrome de burnout, aliviando custos com saúde e recontratação.</p>
+  <div class="benefits-grid" data-list="benefits.items">
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Redução de Afastamentos</h3>
+      <p class="benefit-text" data-field="text">Programas contínuos de bem-estar reduzem significativamente afastamentos por transtornos de ansiedade, depressão e síndrome de burnout, aliviando custos com saúde e recontratação.</p>
     </div>
     <div class="benefit-item reveal" style="transition-delay:0.1s">
       <div class="benefit-number">02</div>
@@ -922,15 +922,15 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Quem já transformou</p>
-    <h2 class="test-title">O que dizem os <em>gestores e líderes</em></h2>
+    <p class="test-label" data-field="testimonials.label">Quem já transformou</p>
+    <h2 class="test-title" data-field="testimonials.title">O que dizem os <em>gestores e líderes</em></h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
+  <div class="test-grid" data-list="testimonials.items">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
-      <p class="test-text">"Implementamos o programa trimestral após um período de alta pressão na equipe. Em dois meses, o clima da área mudou visivelmente — menos conflitos, mais escuta. A Andreia tem um jeito de conduzir que não parece consultoria: parece cuidado de verdade."</p>
-      <p class="test-author">— Fernanda M.</p>
-      <p class="test-role">Gerente de Pessoas — Empresa de Tecnologia, SP</p>
+      <p class="test-text" data-field="text">"Implementamos o programa trimestral após um período de alta pressão na equipe. Em dois meses, o clima da área mudou visivelmente — menos conflitos, mais escuta. A Andreia tem um jeito de conduzir que não parece consultoria: parece cuidado de verdade."</p>
+      <p class="test-author" data-field="author">— Fernanda M.</p>
+      <p class="test-role" data-field="role">Gerente de Pessoas — Empresa de Tecnologia, SP</p>
     </div>
     <div class="test-card reveal" style="transition-delay:0.1s">
       <div class="test-stars">?~.?~.?~.?~.?~.</div>
@@ -950,50 +950,50 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Cada empresa tem a sua solução</h2>
-    <p class="pricing-subtitle">Programas sob medida de acordo com o tamanho da equipe, objetivos e frequência desejada.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Cada empresa tem a sua solução</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Programas sob medida de acordo com o tamanho da equipe, objetivos e frequência desejada.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <span class="pricing-card-badge">Encontro pontual</span>
-        <p class="pricing-card-name">Workshop de bem-estar</p>
-        <p class="pricing-card-price">Sob consulta</p>
-        <span class="pricing-card-period">formato &amp; duração flexíveis</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Encontro pontual</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Workshop de bem-estar</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">Sob consulta</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">formato &amp; duração flexíveis</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Meditação, mindfulness ou palestra</li>
-          <li>Para grupos de qualquer tamanho</li>
-          <li>Presencial ou online</li>
+          <li data-field="pricing.card1.detail1">Meditação, mindfulness ou palestra</li>
+          <li data-field="pricing.card1.detail2">Para grupos de qualquer tamanho</li>
+          <li data-field="pricing.card1.detail3">Presencial ou online</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Programa continuado</span>
-        <p class="pricing-card-name">Saúde Mental nas Empresas</p>
-        <p class="pricing-card-price">Sob consulta</p>
-        <span class="pricing-card-period">programa mensal personalizado</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Programa continuado</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">Saúde Mental nas Empresas</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">Sob consulta</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">programa mensal personalizado</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Avaliação das necessidades da equipe</li>
-          <li>Sessões regulares de suporte</li>
-          <li>Relatório de impacto e resultados</li>
+          <li data-field="pricing.card2.detail1">Avaliação das necessidades da equipe</li>
+          <li data-field="pricing.card2.detail2">Sessões regulares de suporte</li>
+          <li data-field="pricing.card2.detail3">Relatório de impacto e resultados</li>
         </ul>
       </div>
     </div>
-    <p class="pricing-note">Entre em contato para receber uma proposta personalizada e adequada à realidade da sua empresa.</p>
+    <p class="pricing-note" data-field="pricing.note">Entre em contato para receber uma proposta personalizada e adequada à realidade da sua empresa.</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <p class="cta-label reveal">O próximo passo é simples</p>
-  <h2 class="cta-title reveal">Comece com um<br><em>diagnóstico gratuito.</em></h2>
-  <p class="cta-sub reveal">
+  <p class="cta-label reveal" data-field="cta.label">O próximo passo é simples</p>
+  <h2 class="cta-title reveal" data-field="cta.title">Comece com um<br><em>diagnóstico gratuito.</em></h2>
+  <p class="cta-sub reveal" data-field="cta.sub">
     Em uma conversa de 30 minutos, entendemos os desafios da sua equipe e desenhamos juntos um caminho possível. Sem compromisso de contratação. Sem pitch de vendas. Só escuta e clareza.
   </p>
-  <div class="cta-diagnostico reveal">
-    <div class="cta-diag-item">
-      <div class="cta-diag-num">30'</div>
-      <div class="cta-diag-label">Duração da reunião</div>
+  <div class="cta-diagnostico reveal" data-list="cta.diagnostico">
+    <div class="cta-diag-item" data-list-item>
+      <div class="cta-diag-num" data-field="num">30'</div>
+      <div class="cta-diag-label" data-field="label">Duração da reunião</div>
     </div>
     <div class="cta-diag-item">
       <div class="cta-diag-num">0</div>
@@ -1006,22 +1006,23 @@
   </div>
   <div class="cta-buttons reveal">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Sa?de Mental nas Empresas" class="cta-btn-primary">
-      Agendar diagnóstico gratuito
+      <span data-field="cta.primaryText">Agendar diagnóstico gratuito</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outros programas</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outros programas</a>
   </div>
-  <p class="cta-note reveal">Atendimento presencial em São Paulo e online para todo o Brasil</p>
+  <p class="cta-note reveal" data-field="cta.note">Atendimento presencial em São Paulo e online para todo o Brasil</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa · Saúde Mental nas Empresas</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa · Saúde Mental nas Empresas</span>
   <a href="espaco_vida_om.html" class="footer-link">??? Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1030,7 +1031,11 @@
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

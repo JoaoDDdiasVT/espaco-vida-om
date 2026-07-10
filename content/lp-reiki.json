@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "eyebrow": "霊気 — Rei Ki — Energia Vital Universal",
+    "tag": "Espaço Vida Om — Terapia de Reiki",
+    "title": "O que em você\nprecisa de *silêncio*\npara se curar.",
+    "subtitle": "Reiki como caminho de restauração e presença",
+    "desc": "Uma técnica japonesa de canalização da energia vital que dissolve bloqueios, acalma o sistema nervoso e desperta a capacidade natural do corpo de se equilibrar.",
+    "ctaText": "Quero agendar",
+    "quoteText": "\"A cura não vem de fora.\nEla acorda dentro.\"",
+    "quoteSource": "Mikao Usui — Fundador do Reiki"
+  },
+  "strip": [
+    { "highlight": "Não invasivo", "text": " — Toque suave ou sem contato" },
+    { "highlight": "Sessão individual", "text": " — Atenção plena e exclusiva" },
+    { "highlight": "Origem japonesa", "text": " — Mikao Usui, 1922" },
+    { "highlight": "1ª sessão especial", "text": " — Venha experienciar" }
+  ],
+  "philosophy": {
+    "label": "O que é Reiki",
+    "title": "Uma arte antiga\nde escutar\n*o invisível.*",
+    "text1": "Reiki é uma técnica terapêutica criada no Japão em 1922 pelo mestre Mikao Usui. Seu nome une dois ideogramas: *Rei* (energia universal, espiritual) e *Ki* — o mesmo que *Prana* no sânscrito, *Chi* na tradição chinesa: a força vital que anima todos os seres.",
+    "text2": "A prática parte da premissa de que o ser humano possui um campo energético estruturado por chakras e meridianos. Quando essa energia flui livremente, há saúde, clareza e equilíbrio. Quando bloqueada — por estresse, emoções reprimidas ou padrões inconscientes — o corpo responde com sinais de desequilíbrio físico e emocional.",
+    "text3": "Durante a sessão, o praticante canaliza essa energia universal por meio das mãos, estimulando o organismo a recuperar sua inteligência curativa inata. ?? sutil, profundo e não invasivo.",
+    "sutraText": "\"Só hoje: não me irrites. Não me preocupes. Sê grato. Trabalha com dedicação. Sê gentil com todos os seres.\"",
+    "sutraRef": "Os Cinco Princípios de Reiki — Gokai de Mikao Usui",
+    "cards": [
+      { "icon": "?", "title": "Ki — Energia Vital", "text": "A força que organiza e sustenta a vida. Quando flui livremente, o equilíbrio é natural." },
+      { "icon": "?~?", "title": "Chakras", "text": "Centros de energia que conectam corpo, mente e campo sutil. O Reiki harmoniza cada um deles." },
+      { "icon": "?^?", "title": "Meridianos", "text": "Canais por onde a energia circula. Quando desobstruídos, o vitalidade e a clareza se restabelecem." },
+      { "icon": "?~?", "title": "Autocura", "text": "O Reiki não cura — ele ativa o potencial que o próprio organismo já carrega para se reequilibrar." }
+    ]
+  },
+  "benefits": {
+    "label": "O que a sessão transforma",
+    "title": "Seis formas de sentir o *Reiki*",
+    "items": [
+      { "number": "01", "title": "Alívio da Ansiedade", "text": "A sessão ativa o sistema nervoso parassimpático, dissolvendo o estado de alerta crônico e devolvendo a sensação de calma e segurança interna." },
+      { "number": "02", "title": "Redução da Dor", "text": "A energia canalizada estimula processos anti-inflamatórios naturais e promove bem-estar físico, aliviando tensões musculares e desconfortos crônicos." },
+      { "number": "03", "title": "Equilíbrio Emocional", "text": "Emoções represadas encontram espaço para se mover. O Reiki favorece o processamento gentil de padrões emocionais que o corpo guarda há anos." },
+      { "number": "04", "title": "Qualidade do Sono", "text": "Ao reorganizar o campo energético e reduzir o estado de hipervigilância, o Reiki favorece noites mais profundas e o descanso que o corpo realmente precisa." },
+      { "number": "05", "title": "Fortalecimento Imunológico", "text": "O equilíbrio energético apoia diretamente os sistemas de autorregulação do organismo, tornando o corpo mais resiliente ao estresse e às variações do ambiente." },
+      { "number": "06", "title": "Autoconhecimento", "text": "Cada sessão é um encontro consigo mesmo. Muitas pessoas relatam clareza sobre padrões, propósito e um contato mais genuíno com sua vida interior." }
+    ]
+  },
+  "testimonials": {
+    "label": "Experiências reais",
+    "title": "O que dizem quem já *sentiu*",
+    "items": [
+      { "text": "\"Cheguei ao Reiki num momento de ansiedade severa. Depois da segunda sessão com a Andreia senti como se um peso imenso tivesse saído do meu peito. ?? difícil explicar, mas o corpo sabe. ?? real.\"", "name": "— Fernanda M., 34 anos" },
+      { "text": "\"Era cético no início. Fui por indicação da minha esposa. Na primeira sessão adormeci e acordei sentindo uma leveza que não sentia há anos. Hoje faço sessão toda semana e minha qualidade de vida mudou completamente.\"", "name": "— Marcelo A., 41 anos" },
+      { "text": "\"A Andreia tem uma presença muito especial. As sessões são um espaço de acolhimento profundo. Saio sempre diferente — mais inteira, mais conectada comigo mesma. O Reiki me devolveu a clareza que eu precisava.\"", "name": "— Luciana P., 38 anos" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Clareza em cada escolha",
+    "subtitle": "Sessões individuais ou em pacote para um acompanhamento mais profundo e contínuo.",
+    "card1": {
+      "badge": "Sessão avulsa",
+      "name": "Reiki — sessão individual",
+      "price": "R$180",
+      "period": "por sessão · duração 1h00",
+      "detail1": "Sessão completa de 60 minutos",
+      "detail2": "Agendamento flexível"
+    },
+    "card2": {
+      "badge": "Pacote recomendado",
+      "name": "4 sessões de Reiki",
+      "price": "R$680",
+      "period": "à vista · ou 2? de R$360",
+      "detail1": "Desconto de R$40 no pacote",
+      "detail2": "1 sessão por semana",
+      "detail3": "Acompanhamento contínuo e profundo"
+    }
+  },
+  "cta": {
+    "label": "Comece hoje",
+    "title": "Seu corpo sabe\nque precisa de *descanso.*",
+    "sub": "Agende sua sessão e permita-se uma hora de presença plena, silêncio e restauração. O próximo passo é apenas um clique.",
+    "primaryText": "Agendar minha sessão",
+    "secondaryText": "Ver outras terapias"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa"
+  }
+}

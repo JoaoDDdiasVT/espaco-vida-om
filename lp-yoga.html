@@ -600,7 +600,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content="content/lp-yoga.json">
 
 <!-- NAV -->
 <nav>
@@ -619,15 +619,15 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <span class="hero-sanskrit">योग — Yoga Sūtra de Patañjali</span>
-    <p class="hero-tag">Espaço Vida Om — Prática de Yoga</p>
-    <h1 class="hero-title">A arte<br>de <em>desaprender</em><br>o que sobra.</h1>
-    <p class="hero-subtitle">Yoga como caminho de autoconhecimento</p>
-    <p class="hero-desc">
+    <span class="hero-sanskrit" data-field="hero.eyebrow">योग — Yoga Sūtra de Patañjali</span>
+    <p class="hero-tag" data-field="hero.tag">Espaço Vida Om — Prática de Yoga</p>
+    <h1 class="hero-title" data-field="hero.title">A arte<br>de <em>desaprender</em><br>o que sobra.</h1>
+    <p class="hero-subtitle" data-field="hero.subtitle">Yoga como caminho de autoconhecimento</p>
+    <p class="hero-desc" data-field="hero.desc">
       Mais do que postura: uma tecnologia milenar para pacificar a mente, libertar-se dos condicionamentos e reposar na sua natureza essencial.
     </p>
     <a href="https://wa.me/5500000000000" class="hero-cta">
-      Quero começar
+      <span data-field="hero.ctaText">Quero começar</span>
       <svg class="hero-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
@@ -635,7 +635,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-visual">
-      <div class="hero-om">ॐ</div>
+      <div class="hero-om" data-field="hero.om">ॐ</div>
       <div class="hero-pose-icon">
         <svg viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Simplified yoga silhouette — Vrksasana (tree pose) -->
@@ -649,16 +649,16 @@
         </svg>
       </div>
       <div class="hero-quote">
-        <p class="hero-quote-text">"Yogaś citta-vṛtti-nirodhaḥ"</p>
-        <p class="hero-quote-source">Yoga Sūtra I:2 — Patañjali</p>
+        <p class="hero-quote-text" data-field="hero.quoteText">"Yogaś citta-vṛtti-nirodhaḥ"</p>
+        <p class="hero-quote-source" data-field="hero.quoteSource">Yoga Sūtra I:2 — Patañjali</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STRIP -->
-<div class="strip">
-  <div class="strip-item"><span>Todos os níveis</span> — Iniciante ao avançado</div>
+<div class="strip" data-list="strip">
+  <div class="strip-item" data-list-item><span data-field="highlight">Todos os níveis</span><span data-field="text"> — Iniciante ao avançado</span></div>
   <div class="strip-item"><span>Turmas reduzidas</span> — Atenção individual</div>
   <div class="strip-item"><span>Base filosófica</span> — Yoga Sutras de Patañjali</div>
   <div class="strip-item"><span>1ª aula grátis</span> — Experimente sem compromisso</div>
@@ -667,24 +667,24 @@
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <div class="reveal">
-    <p class="phil-label">O que é Yoga de verdade</p>
-    <h2 class="phil-title">Mais do que<br>corpos flexíveis.<br><em>Mentes livres.</em></h2>
-    <p class="phil-text">
+    <p class="phil-label" data-field="philosophy.label">O que é Yoga de verdade</p>
+    <h2 class="phil-title" data-field="philosophy.title">Mais do que<br>corpos flexíveis.<br><em>Mentes livres.</em></h2>
+    <p class="phil-text" data-field="philosophy.text1">
       Yoga não é só asana. É uma ciência milenar que nos ensina a reconhecer e pacificar os movimentos da mente — os vṛttis — para que o Ser verdadeiro possa se revelar.
     </p>
-    <p class="phil-text">
+    <p class="phil-text" data-field="philosophy.text2">
       Conduzo cada prática a partir dos ensinamentos de Patañjali, integrando postura, respiração, filosofia e meditação num único caminho coerente de autoconhecimento.
     </p>
     <div class="phil-sutra">
-      <p class="phil-sutra-text">"Yoga é a cessação da identificação com os movimentos psicomentais."</p>
-      <p class="phil-sutra-ref">Yoga Sūtra I:2-4 — Patañjali</p>
+      <p class="phil-sutra-text" data-field="philosophy.sutraText">"Yoga é a cessação da identificação com os movimentos psicomentais."</p>
+      <p class="phil-sutra-ref" data-field="philosophy.sutraRef">Yoga Sūtra I:2-4 — Patañjali</p>
     </div>
   </div>
-  <div class="phil-visual reveal" style="transition-delay:0.15s">
-    <div class="phil-card">
-      <div class="phil-card-icon">I</div>
-      <div class="phil-card-title">Corpo</div>
-      <p class="phil-card-text">Asanas que cultivam força, mobilidade e presença física plena.</p>
+  <div class="phil-visual reveal" style="transition-delay:0.15s" data-list="philosophy.cards">
+    <div class="phil-card" data-list-item>
+      <div class="phil-card-icon" data-field="icon">I</div>
+      <div class="phil-card-title" data-field="title">Corpo</div>
+      <p class="phil-card-text" data-field="text">Asanas que cultivam força, mobilidade e presença física plena.</p>
     </div>
     <div class="phil-card">
       <div class="phil-card-icon">II</div>
@@ -707,14 +707,14 @@
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="benefits-header reveal">
-    <p class="benefits-label">O que a prática transforma</p>
-    <h2 class="benefits-title">O que você <em>ganha</em> com o Yoga</h2>
+    <p class="benefits-label" data-field="benefits.label">O que a prática transforma</p>
+    <h2 class="benefits-title" data-field="benefits.title">O que você <em>ganha</em> com o Yoga</h2>
   </div>
-  <div class="benefits-grid">
-    <div class="benefit-item reveal">
-      <div class="benefit-number">01</div>
-      <h3 class="benefit-title">Clareza Mental</h3>
-      <p class="benefit-text">A prática regular reduz o ruído mental e aumenta a capacidade de foco, presença e tomada de decisão.</p>
+  <div class="benefits-grid" data-list="benefits.items">
+    <div class="benefit-item reveal" data-list-item>
+      <div class="benefit-number" data-field="number">01</div>
+      <h3 class="benefit-title" data-field="title">Clareza Mental</h3>
+      <p class="benefit-text" data-field="text">A prática regular reduz o ruído mental e aumenta a capacidade de foco, presença e tomada de decisão.</p>
     </div>
     <div class="benefit-item reveal" style="transition-delay:0.1s">
       <div class="benefit-number">02</div>
@@ -748,17 +748,17 @@
 <section class="modalities">
   <div class="mod-header reveal">
     <div>
-      <p class="mod-label">Como praticamos</p>
-      <h2 class="mod-title">Escolha sua <em>prática</em></h2>
+      <p class="mod-label" data-field="modalities.label">Como praticamos</p>
+      <h2 class="mod-title" data-field="modalities.title">Escolha sua <em>prática</em></h2>
     </div>
   </div>
-  <div class="mod-grid">
-    <div class="mod-card reveal">
-      <p class="mod-number">01 —</p>
-      <h3 class="mod-name">Hatha Yoga</h3>
-      <p class="mod-sanskrit">Haṭha — força do sol e da lua</p>
-      <p class="mod-text">A base clássica do Yoga. Postura e respiração em harmonia, com ênfase no alinhamento, na consciência corporal e na introdução à filosofia dos Yoga Sutras.</p>
-      <span class="mod-tag">Todos os níveis</span>
+  <div class="mod-grid" data-list="modalities.cards">
+    <div class="mod-card reveal" data-list-item>
+      <p class="mod-number" data-field="number">01 —</p>
+      <h3 class="mod-name" data-field="name">Hatha Yoga</h3>
+      <p class="mod-sanskrit" data-field="sanskrit">Haṭha — força do sol e da lua</p>
+      <p class="mod-text" data-field="text">A base clássica do Yoga. Postura e respiração em harmonia, com ênfase no alinhamento, na consciência corporal e na introdução à filosofia dos Yoga Sutras.</p>
+      <span class="mod-tag" data-field="tag">Todos os níveis</span>
     </div>
     <div class="mod-card reveal" style="transition-delay:0.1s">
       <p class="mod-number">02 —</p>
@@ -780,14 +780,14 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="test-header reveal">
-    <p class="test-label">Quem já pratica</p>
-    <h2 class="test-title">O que dizem os <em>alunos</em></h2>
+    <p class="test-label" data-field="testimonials.label">Quem já pratica</p>
+    <h2 class="test-title" data-field="testimonials.title">O que dizem os <em>alunos</em></h2>
   </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
+  <div class="test-grid" data-list="testimonials.items">
+    <div class="test-card reveal" data-list-item>
       <div class="test-stars">★★★★★</div>
-      <p class="test-text">"Comecei o Yoga achando que era só alongamento. Andreia me mostrou uma filosofia inteira de vida. Mudou minha relação com minha mente."</p>
-      <p class="test-name">— Mariana S.</p>
+      <p class="test-text" data-field="text">"Comecei o Yoga achando que era só alongamento. Andreia me mostrou uma filosofia inteira de vida. Mudou minha relação com minha mente."</p>
+      <p class="test-name" data-field="name">— Mariana S.</p>
     </div>
     <div class="test-card reveal" style="transition-delay:0.1s">
       <div class="test-stars">★★★★★</div>
@@ -805,32 +805,32 @@
 <!-- PRICING -->
 <section class="pricing">
   <div class="pricing-inner">
-    <p class="pricing-label">Investimento</p>
-    <h2 class="pricing-title">Escolha a frequência ideal para você</h2>
-    <p class="pricing-subtitle">Aulas em grupo com acompanhamento próximo. Todos os níveis são bem-vindos.</p>
+    <p class="pricing-label" data-field="pricing.label">Investimento</p>
+    <h2 class="pricing-title" data-field="pricing.title">Escolha a frequência ideal para você</h2>
+    <p class="pricing-subtitle" data-field="pricing.subtitle">Aulas em grupo com acompanhamento próximo. Todos os níveis são bem-vindos.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
-        <span class="pricing-card-badge">Aula única</span>
-        <p class="pricing-card-name">Avulsa</p>
-        <p class="pricing-card-price">R$80</p>
-        <span class="pricing-card-period">uma aula</span>
+        <span class="pricing-card-badge" data-field="pricing.card1.badge">Aula única</span>
+        <p class="pricing-card-name" data-field="pricing.card1.name">Avulsa</p>
+        <p class="pricing-card-price" data-field="pricing.card1.price">R$80</p>
+        <span class="pricing-card-period" data-field="pricing.card1.period">uma aula</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Acesso flexível</li>
-          <li>Turma reduzida</li>
-          <li>Todos os níveis</li>
+          <li data-field="pricing.card1.detail1">Acesso flexível</li>
+          <li data-field="pricing.card1.detail2">Turma reduzida</li>
+          <li data-field="pricing.card1.detail3">Todos os níveis</li>
         </ul>
       </div>
       <div class="pricing-card featured">
-        <span class="pricing-card-badge">Melhor valor</span>
-        <p class="pricing-card-name">4 Sessões</p>
-        <p class="pricing-card-price">R$280</p>
-        <span class="pricing-card-period">4 aulas · válido por 30 dias</span>
+        <span class="pricing-card-badge" data-field="pricing.card2.badge">Melhor valor</span>
+        <p class="pricing-card-name" data-field="pricing.card2.name">4 Sessões</p>
+        <p class="pricing-card-price" data-field="pricing.card2.price">R$280</p>
+        <span class="pricing-card-period" data-field="pricing.card2.period">4 aulas · válido por 30 dias</span>
         <div class="pricing-card-divider"></div>
         <ul class="pricing-card-details">
-          <li>Flexibilidade de horário</li>
-          <li>Turma reduzida</li>
-          <li>Economia de 12%</li>
+          <li data-field="pricing.card2.detail1">Flexibilidade de horário</li>
+          <li data-field="pricing.card2.detail2">Turma reduzida</li>
+          <li data-field="pricing.card2.detail3">Economia de 12%</li>
         </ul>
       </div>
     </div>
@@ -839,31 +839,36 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <p class="cta-label">Pronto para começar?</p>
-  <h2 class="cta-title">Sua primeira aula<br>é <em>gratuita.</em></h2>
-  <p class="cta-sub">Venha experimentar sem compromisso. Uma aula para sentir o espaço, me conhecer e descobrir se o Yoga é o seu caminho.</p>
+  <p class="cta-label" data-field="cta.label">Pronto para começar?</p>
+  <h2 class="cta-title" data-field="cta.title">Sua primeira aula<br>é <em>gratuita.</em></h2>
+  <p class="cta-sub" data-field="cta.sub">Venha experimentar sem compromisso. Uma aula para sentir o espaço, me conhecer e descobrir se o Yoga é o seu caminho.</p>
   <div class="cta-buttons">
     <a href="https://wa.me/5517981326283?text=Ola%20vim%20atraves%20da%20sua%20pagina%20para%20saber%20mais%20informacoes%20sobre%20Yoga" class="cta-btn-primary">
-      Agendar aula gratuita
+      <span data-field="cta.primaryText">Agendar aula gratuita</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
       </svg>
     </a>
-    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary">Ver outras práticas</a>
+    <a href="espaco_vida_om.html#servicos" class="cta-btn-secondary" data-field="cta.secondaryText">Ver outras práticas</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
+  <span class="footer-text" data-field="footer.text">© 2024 Espaço Vida Om — by Andreia Rosa</span>
   <a href="espaco_vida_om.html" class="footer-link">← Voltar ao site</a>
 </footer>
 
+<script src="content-loader.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  function observeReveals() {
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  observeReveals();
+  document.addEventListener('content-loaded', observeReveals);
 </script>
 
 </body>

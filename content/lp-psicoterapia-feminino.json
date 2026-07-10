@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "eyebrow": "Sagrado Feminino — Psicoterapia para Mulheres",
+    "tag": "Espaço Vida Om — by Andreia Rosa",
+    "title": "Você tem\npermissão\nde *florescer.*",
+    "subtitle": "Psicoterapia que honra sua natureza cíclica e sagrada",
+    "desc": "Um espaço de escuta profunda, cuidado genuíno e reconexão com o que há de mais essencial em você — sua força, seus ciclos, sua voz interior.",
+    "ctaText": "Quero me reconectar",
+    "quoteText": "\"Ela não precisa ser consertada. Ela precisa ser *lembrada.*\"",
+    "quoteSource": "— Andreia Rosa, Psicoterapeuta"
+  },
+  "strip": [
+    { "highlight": "Espaço seguro", "text": " — Somente para mulheres" },
+    { "highlight": "Abordagem integrativa", "text": " — Corpo, mente e alma" },
+    { "highlight": "Florais de Bach", "text": " — Cuidado floral incluído" },
+    { "highlight": "1ª conversa gratuita", "text": " — Sem compromisso" }
+  ],
+  "philosophy": {
+    "label": "O que é psicoterapia para mulheres",
+    "title": "Você não está\nquebrada.\n*Está em ciclo.*",
+    "text1": "A psicoterapia para mulheres que pratico não é apenas clínica — é sagrada. Parte do princípio de que a mulher é, por natureza, um ser cíclico. Suas emoções não são excessos: são informações. Seu corpo não é obstáculo: é sabedoria.",
+    "text2": "Integro a escuta psicoterapêutica com a sabedoria do Sagrado Feminino, os arquétipos femininos da psicologia junguiana, os florais de Bach e a linguagem dos círculos de mulheres — criando um espaço onde você pode, finalmente, ser quem é sem pedir desculpas.",
+    "text3": "A Shekinah — a presença divina feminina — nos lembra que há uma força maior habitando em cada mulher. Meu trabalho é ajudá-la a encontrar esse lar dentro de si mesma.",
+    "sutraText": "\"Quando a mulher se cura, ela cura o que veio antes dela e o que virá depois.\"",
+    "sutraRef": "— Sabedoria ancestral feminina",
+    "cards": [
+      { "icon": "?~?", "title": "Ciclos", "text": "Honrar a natureza cíclica — menstrual, emocional, lunar — como fonte de autoconhecimento e força." },
+      { "icon": "?o?", "title": "Arquétipos", "text": "Donzela, Mãe, Sacerdotisa, Sábia — cada arquétipo feminino revela aspectos dormentes esperando para despertar." },
+      { "icon": "??", "title": "Florais de Bach", "text": "Essências florais que tocam os padrões emocionais mais profundos, suavizando resistências e abrindo passagens." },
+      { "icon": "?<", "title": "Círculo", "text": "A roda de mulheres como espaço de encontro, cura coletiva e reconexão com a linhagem feminina ancestral." }
+    ]
+  },
+  "benefits": {
+    "label": "O que a terapia transforma em você",
+    "title": "Para onde esse *caminho* te leva",
+    "items": [
+      { "number": "01", "title": "Autoestima Genuína", "text": "Não a autoestima construída para agradar — a que vem do encontro real consigo mesma. Quando você aprende a se ver com olhos de compaixão, tudo ao redor começa a mudar de forma natural." },
+      { "number": "02", "title": "Relacionamentos mais Saudáveis", "text": "Padrões repetitivos se dissolvem quando são vistos com clareza. Você aprende a se relacionar a partir da escolha, não da necessidade. A partir do amor, não do medo." },
+      { "number": "03", "title": "Harmonia com seus Ciclos", "text": "Compreender o ciclo menstrual como bússola emocional transforma a sua relação com o próprio corpo. O que antes era sofrimento torna-se linguagem — e depois, aliado." },
+      { "number": "04", "title": "Elaboração do Luto", "text": "Perdas de pessoas, relacionamentos, versões de si mesma, sonhos adiados. O luto não elaborado vive no corpo. A terapia cria o espaço seguro para que ele possa, finalmente, ser sentido e atravessado." },
+      { "number": "05", "title": "Maternidade Consciente", "text": "Ser mãe não apaga quem você é. Trabalho a identidade materna com acolhimento — o cansaço, a ambivalência, a culpa, o amor intenso. Tudo cabe aqui, sem julgamento." },
+      { "number": "06", "title": "Propósito e Direção de Vida", "text": "Quando a névoa emocional se dissipa, o que quer que seja verdadeiro para você começa a aparecer. A terapia abre espaço para que sua vida deixe de ser vivida por obrigação e passe a ser vivida por escolha." }
+    ]
+  },
+  "testimonials": {
+    "label": "Mulheres que já trilharam esse caminho",
+    "title": "O que elas *sentiram*",
+    "items": [
+      { "text": "\"Cheguei à terapia com a Andreia achando que estava 'louca' por sentir tanto. Fui descobrindo que não estava louca — estava viva. Aprendi a ouvir meus ciclos e hoje me relaciono comigo mesma de um jeito que nunca achei que fosse possível. Foi o maior presente que me dei.\"", "name": "— Fernanda M., 38 anos" },
+      { "text": "\"Participei do Círculo de Mulheres com muito medo de me expor. Saí de lá sabendo que havia algo de sagrado em nós que nunca tinha sido nomeado. A Andreia cria um espaço de cuidado que raramente encontrei em qualquer outro lugar. Continuo em sessões individuais até hoje e cada encontro é uma camada nova de mim que se revela.\"", "name": "— Renata C., 44 anos" },
+      { "text": "\"Depois do fim do meu casamento, senti que havia perdido quem eu era. A terapia com a Andreia me devolveu para mim mesma — não a versão que eu era antes, mas uma versão mais inteira, mais honesta e mais corajosa. Os florais de Bach foram uma surpresa: senti a diferença logo nas primeiras semanas. Recomendo de coração.\"", "name": "— Isabela T., 35 anos" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Um espaço que cabe em você",
+    "subtitle": "Acompanhamento semanal para uma transformação real, profunda e duradoura.",
+    "card1": {
+      "badge": "Sessão avulsa",
+      "name": "Psicoterapia para Mulheres",
+      "price": "R$180",
+      "period": "por sessão · duração 1h00",
+      "detail1": "Sessão individual presencial ou online",
+      "detail2": "Agendamento flexível"
+    },
+    "card2": {
+      "badge": "Tratamento mensal",
+      "name": "4 sessões por mês",
+      "price": "R$680",
+      "period": "por mês · 1 sessão por semana",
+      "detail1": "Desconto de 5% incluso",
+      "detail2": "Acompanhamento contínuo semanal",
+      "detail3": "Processo de transformação real"
+    }
+  },
+  "cta": {
+    "label": "Você já esperou tempo suficiente",
+    "title": "Esse espaço\nexiste *para você.*",
+    "sub": "Uma conversa inicial gratuita para que possamos nos conhecer, entender o que você está vivendo e descobrir juntas se este é o caminho certo para o seu momento. Sem pressão. Com cuidado.",
+    "primaryText": "Agendar conversa gratuita",
+    "secondaryText": "Ver outras práticas"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa · Psicoterapia para Mulheres & Sagrado Feminino"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "eyebrow": "योग — Yoga Sūtra de Patañjali",
+    "tag": "Espaço Vida Om — Prática de Yoga",
+    "title": "A arte\nde *desaprender*\no que sobra.",
+    "subtitle": "Yoga como caminho de autoconhecimento",
+    "desc": "Mais do que postura: uma tecnologia milenar para pacificar a mente, libertar-se dos condicionamentos e reposar na sua natureza essencial.",
+    "ctaText": "Quero começar",
+    "om": "ॐ",
+    "quoteText": "\"Yogaś citta-vṛtti-nirodhaḥ\"",
+    "quoteSource": "Yoga Sūtra I:2 — Patañjali"
+  },
+  "strip": [
+    { "highlight": "Todos os níveis", "text": " — Iniciante ao avançado" },
+    { "highlight": "Turmas reduzidas", "text": " — Atenção individual" },
+    { "highlight": "Base filosófica", "text": " — Yoga Sutras de Patañjali" },
+    { "highlight": "1ª aula grátis", "text": " — Experimente sem compromisso" }
+  ],
+  "philosophy": {
+    "label": "O que é Yoga de verdade",
+    "title": "Mais do que\ncorpos flexíveis.\n*Mentes livres.*",
+    "text1": "Yoga não é só asana. É uma ciência milenar que nos ensina a reconhecer e pacificar os movimentos da mente — os vṛttis — para que o Ser verdadeiro possa se revelar.",
+    "text2": "Conduzo cada prática a partir dos ensinamentos de Patañjali, integrando postura, respiração, filosofia e meditação num único caminho coerente de autoconhecimento.",
+    "sutraText": "\"Yoga é a cessação da identificação com os movimentos psicomentais.\"",
+    "sutraRef": "Yoga Sūtra I:2-4 — Patañjali",
+    "cards": [
+      { "icon": "I", "title": "Corpo", "text": "Asanas que cultivam força, mobilidade e presença física plena." },
+      { "icon": "II", "title": "Respiração", "text": "Prāṇāyāma como ponte entre o corpo e a mente silenciosa." },
+      { "icon": "III", "title": "Mente", "text": "Técnicas de concentração e meditação para pacificar os vṛttis." },
+      { "icon": "IV", "title": "Ser", "text": "O caminho de volta a si mesmo — a testemunha que tudo observa." }
+    ]
+  },
+  "benefits": {
+    "label": "O que a prática transforma",
+    "title": "O que você *ganha* com o Yoga",
+    "items": [
+      { "number": "01", "title": "Clareza Mental", "text": "A prática regular reduz o ruído mental e aumenta a capacidade de foco, presença e tomada de decisão." },
+      { "number": "02", "title": "Gestão do Estresse", "text": "Prāṇāyāma e meditação ativam o sistema nervoso parassimpático, reduzindo cortisol e ansiedade." },
+      { "number": "03", "title": "Corpo Presente", "text": "Flexibilidade, força e equilíbrio que vão além do físico — uma nova relação com o próprio corpo." },
+      { "number": "04", "title": "Autoconhecimento", "text": "Cada aula é um espelho. Você aprende a observar pensamentos e emoções sem se identificar com eles." },
+      { "number": "05", "title": "Qualidade do Sono", "text": "Práticas noturnas e de relaxamento profundo (yoga nidrā) melhoram o padrão de sono significativamente." },
+      { "number": "06", "title": "Comunidade", "text": "Entrar em uma prática é também entrar em um espaço de acolhimento, escuta e crescimento compartilhado." }
+    ]
+  },
+  "modalities": {
+    "label": "Como praticamos",
+    "title": "Escolha sua *prática*",
+    "cards": [
+      { "number": "01 —", "name": "Hatha Yoga", "sanskrit": "Haṭha — força do sol e da lua", "text": "A base clássica do Yoga. Postura e respiração em harmonia, com ênfase no alinhamento, na consciência corporal e na introdução à filosofia dos Yoga Sutras.", "tag": "Todos os níveis" },
+      { "number": "02 —", "name": "Yoga Filosófico", "sanskrit": "Jñāna — caminho do conhecimento", "text": "Imersão nos ensinamentos de Patañjali e Vedanta. Prática contemplativa que une leitura dos sūtras com meditação e investigação do Ser.", "tag": "Intermediário" },
+      { "number": "03 —", "name": "Yoga Restaurativo", "sanskrit": "Śavāsana — rendição consciente", "text": "Posições sustentadas com suportes para relaxamento profundo do sistema nervoso. Indicado para períodos de alta demanda, recuperação ou simplesmente descanso.", "tag": "Todos os níveis" }
+    ]
+  },
+  "testimonials": {
+    "label": "Quem já pratica",
+    "title": "O que dizem os *alunos*",
+    "items": [
+      { "text": "\"Comecei o Yoga achando que era só alongamento. Andreia me mostrou uma filosofia inteira de vida. Mudou minha relação com minha mente.\"", "name": "— Mariana S." },
+      { "text": "\"As aulas têm uma profundidade que eu nunca encontrei em outros lugares. A Andreia explica o lado filosófico de um jeito que faz total sentido no dia a dia.\"", "name": "— Rafael T." },
+      { "text": "\"Faz 2 anos que pratico aqui. O espaço é acolhedor, a professora é incrível e a turma virou uma família. Não consigo imaginar minha semana sem o Yoga.\"", "name": "— Camila R." }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Escolha a frequência ideal para você",
+    "subtitle": "Aulas em grupo com acompanhamento próximo. Todos os níveis são bem-vindos.",
+    "card1": {
+      "badge": "Aula única",
+      "name": "Avulsa",
+      "price": "R$80",
+      "period": "uma aula",
+      "detail1": "Acesso flexível",
+      "detail2": "Turma reduzida",
+      "detail3": "Todos os níveis"
+    },
+    "card2": {
+      "badge": "Melhor valor",
+      "name": "4 Sessões",
+      "price": "R$280",
+      "period": "4 aulas · válido por 30 dias",
+      "detail1": "Flexibilidade de horário",
+      "detail2": "Turma reduzida",
+      "detail3": "Economia de 12%"
+    }
+  },
+  "cta": {
+    "label": "Pronto para começar?",
+    "title": "Sua primeira aula\né *gratuita.*",
+    "sub": "Venha experimentar sem compromisso. Uma aula para sentir o espaço, me conhecer e descobrir se o Yoga é o seu caminho.",
+    "primaryText": "Agendar aula gratuita",
+    "secondaryText": "Ver outras práticas"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "eyebrow": "Era uma vez — a história que te cura",
+    "tag": "Espaço Vida Om — Contoterapia",
+    "title": "As histórias\nque você *carrega*\npodem te libertar.",
+    "subtitle": "Cura pelo poder das narrativas e dos contos",
+    "desc": "Dentro de cada conto existe uma chave. A Contoterapia usa mitos, contos de fadas e narrativas simbólicas para acessar o que a razão não alcança — e transformar, pela beleza da metáfora, aquilo que a dor direta não consegue tocar.",
+    "ctaText": "Quero começar minha história",
+    "quoteText": "\"Os contos de fadas são verdadeiros — não porque nos dizem que dragões existem, mas porque nos dizem que podem ser vencidos.\"",
+    "quoteSource": "G. K. Chesterton"
+  },
+  "strip": [
+    { "highlight": "Crianças e adultos", "text": " — Para todas as idades" },
+    { "highlight": "Metáfora como cura", "text": " — O inconsciente compreende" },
+    { "highlight": "Base junguiana", "text": " — Bettelheim & Campbell" },
+    { "highlight": "Sessão experimental", "text": " — Conheça antes de decidir" }
+  ],
+  "philosophy": {
+    "label": "O que é Contoterapia",
+    "title": "Histórias que\ntocam onde as\npalavras *não chegam.*",
+    "text1": "A Contoterapia é uma abordagem terapêutica que usa contos de fadas, mitos e narrativas simbólicas como instrumentos de cura. Ao contrário da terapia convencional, ela não exige que a pessoa confronte diretamente sua dor — em vez disso, oferece a distância segura da metáfora, permitindo que o inconsciente encontre seu próprio caminho de transformação.",
+    "text2": "Bruno Bettelheim, em *A Psicanálise dos Contos de Fadas*, mostrou que as narrativas arquetípicas falam diretamente ao inconsciente da criança — e também do adulto que ainda vive dentro de nós. Joseph Campbell, com a Jornada do Herói, revelou que toda história de transformação segue um padrão universal: a travessia, o desafio, a virada e o retorno renovado. Na Contoterapia, você não apenas escuta essa jornada. Você a reconhece como sua.",
+    "sutraText": "\"O conto de fadas, ao contrário de qualquer outra forma de literatura, dirige a criança aos seus problemas internos e sugere soluções — mas apenas em termos simbólicos.\"",
+    "sutraRef": "Bruno Bettelheim — A Psicanálise dos Contos de Fadas",
+    "cards": [
+      { "icon": "I", "title": "O Conto", "text": "Narrativas escolhidas com intenção, que ressoam com o momento de vida de quem ouve." },
+      { "icon": "II", "title": "A Metáfora", "text": "A linguagem simbólica bypassa as defesas da mente racional e alcança camadas mais profundas." },
+      { "icon": "III", "title": "A Jornada", "text": "O herói do conto carrega os conflitos do leitor. Ao vê-lo superar, algo dentro de nós se move." },
+      { "icon": "IV", "title": "A Ressignificação", "text": "Ao fim, a experiência vivida ganha um novo sentido — e a história de vida começa a ser reescrita." }
+    ]
+  },
+  "benefits": {
+    "label": "O que a narrativa transforma",
+    "title": "O que você *encontra* na Contoterapia",
+    "items": [
+      { "number": "01", "title": "Desbloqueio Emocional", "text": "Emoções cristalizadas há anos encontram uma saída segura através do conto. O que não cabia em palavras diretas, cabe na linguagem do símbolo." },
+      { "number": "02", "title": "Trauma Suavizado", "text": "A metáfora cria distância psíquica saudável. ?? mais fácil olhar para o dragão no conto do que encarar a dor de frente — e ainda assim, o efeito é profundamente real." },
+      { "number": "03", "title": "Para Crianças e Adultos", "text": "Crianças processam o mundo através de histórias; adultos, muitas vezes, esqueceram que também podem. A Contoterapia devolve a ambos essa linguagem essencial." },
+      { "number": "04", "title": "Criatividade Expandida", "text": "Ao habitar universos narrativos e criar seus próprios finais, a imaginação se destrava. A criatividade que desperta nas histórias transborda para a vida real." },
+      { "number": "05", "title": "Identidade e Pertencimento", "text": "Os arquétipos dos contos — o herói, o sábio, o pária que se transforma — espelham partes da nossa identidade que aguardam reconhecimento e integração." },
+      { "number": "06", "title": "Ressignificação de Experiências", "text": "Toda experiência difícil pode ser relida como capítulo de uma história maior. A Contoterapia ensina a enxergar a própria vida com olhos de narrador — não de vítima." }
+    ]
+  },
+  "testimonials": {
+    "label": "Quem já encontrou sua história",
+    "title": "O que dizem quem *viveu* a narrativa",
+    "items": [
+      { "text": "\"Cheguei sem saber ao certo o que esperar. Andreia leu um conto que parecia ter sido escrito para mim. Chorei — mas não de dor. De reconhecimento. Foi como se uma parte de mim, que estava trancada há anos, finalmente encontrasse a chave.\"", "name": "— Fernanda L., 34 anos" },
+      { "text": "\"Levei meu filho de 8 anos depois que ele passou por uma situação difícil na escola. Em vez de psicólogo com prancheta — histórias. Ele saiu falando do personagem como se fosse um amigo. Em duas semanas, era outro menino. A Contoterapia é mágica de verdade.\"", "name": "— Cláudia M., mãe" },
+      { "text": "\"Participei do workshop sobre a sombra junguiana. Fui por curiosidade e saí com perguntas que nunca tinha me feito sobre mim mesmo. Em dois meses, mudei de emprego, reatei com minha família e comecei a escrever. A história do herói era a minha — só não sabia ainda.\"", "name": "— Ricardo A., 41 anos" }
+    ]
+  },
+  "pricing": {
+    "label": "Investimento",
+    "title": "Cada história tem o seu ritmo",
+    "subtitle": "Sessões individuais ou processo continuado — a escolha é sua.",
+    "card1": {
+      "badge": "Sessão avulsa",
+      "name": "Contoterapia — sessão individual",
+      "price": "R$180",
+      "period": "por sessão · duração 1h00",
+      "detail1": "Sessão individual presencial",
+      "detail2": "Agendamento flexível"
+    },
+    "card2": {
+      "badge": "Processo continuado",
+      "name": "4 sessões por mês",
+      "price": "R$680",
+      "period": "por mês · 1 sessão por semana",
+      "detail1": "Processo narrativo contínuo",
+      "detail2": "Transformação mais profunda",
+      "detail3": "Desconto incluso no pacote"
+    }
+  },
+  "cta": {
+    "label": "Toda grande história começa com um primeiro passo",
+    "title": "Qual é o próximo\ncapítulo da sua *história?*",
+    "sub": "Você não precisa ter tudo resolvido para começar. Basta estar disposto a escutar — a si mesmo, através de uma narrativa que te encontra onde você está.",
+    "primaryText": "Começar minha jornada",
+    "secondaryText": "Ver outras práticas"
+  },
+  "footer": {
+    "text": "© 2024 Espaço Vida Om — by Andreia Rosa"
+  }
+}

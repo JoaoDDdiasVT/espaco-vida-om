@@ -37,18 +37,18 @@
   "about": {
     "label": "Nossa essência",
     "title": "Um lar para quem\nbusca o *equilíbrio*\ninterior.",
-    "text": "Há quase uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar  silêncio, força, presença."
+    "text": "Há uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar: silêncio, força, presença."
   },
   "founder": {
-    "bio1": "Sou instrutora de Yoga, facilitadora de Meditação e praticante de Reiki com mais de 9 anos dedicados ao autoconhecimento e ao cuidado com o ser. Formada em diversas tradições, conduzo cada aluno com presença, escuta e profundo respeito pela jornada individual.",
+    "bio1": "Terapeuta Integrativa desde 2010, porém a minha jornada no caminho do autoconhecimento começou muito antes, ainda na graduação de Educação Física, na Universidade Estadual de Londrina. Como instrutora de Yoga, meditação e mindfulness, conduzo cursos e vivências em grupos desde 2014, unindo neurociência e espiritualidade. E desde 2017, como facilitadora de círculos de mulheres do sagrado feminino. Com a Psicanálise Junguiana, foi possível agregar a psicoterapia, às técnicas integrativas em meus atendimentos individuais, tratando o ser humano de forma integral, como deve ser.\n",
     "pillars": [
-      "Yoga",
-      "Meditação",
+      "Psicanálise Junguina",
+      "Mindfulness",
       "Reiki",
-      "Sagrado Feminino",
-      "Florais de Bach"
+      "Yoga",
+      "Sagrado Feminino"
     ],
-    "bio2": "No Espaço Vida Om, criei um ambiente onde o sagrado e o cotidiano se encontram  um lugar para quem busca parar, respirar e se reconectar com a própria essência. Uno o rigor das práticas ancestrais com a leveza necessária para a vida moderna.",
+    "bio2": "No Espaço Vida Om, criei um ambiente onde o sagrado e o cotidiano se encontram um lugar para quem busca parar, respirar e se reconectar com a própria essência. Uno o rigor das práticas ancestrais com a leveza necessária para a vida moderna.",
     "name": "Andreia *Rosa*",
     "badgeNumber": "9+",
     "badgeLabel": "anos",
@@ -82,7 +82,7 @@
     "tag": "Bem-vinda ao sagrado",
     "title": "Um espaço para\n*reconectar*\nsua essência.teste",
     "subtitle": "Espaço Vida Om.",
-    "desc": "Yoga, meditação, reiki e práticas do sagrado feminino. Um convite para desacelerar, sentir e florescer.",
+    "desc": "Um convite para desacelerar, sentir e ser.",
     "ctaText": "Explorar práticas"
   },
   "footer": {

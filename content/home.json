@@ -40,7 +40,7 @@
     "text": "Há uma década criamos um espaço de acolhimento, cura e autoconhecimento. Cada prática é conduzida para que você encontre o que veio buscar: silêncio, força, presença."
   },
   "founder": {
-    "bio1": "Terapeuta Integrativa desde 2010, porém a minha jornada no caminho do autoconhecimento começou muito antes, ainda na graduação de Educação Física, na Universidade Estadual de Londrina. Como instrutora de Yoga, meditação e mindfulness, conduzo cursos e vivências em grupos desde 2014, unindo neurociência e espiritualidade. E desde 2017, como facilitadora de círculos de mulheres do sagrado feminino. Com a Psicanálise Junguiana, foi possível agregar a psicoterapia, às técnicas integrativas em meus atendimentos individuais, tratando o ser humano de forma integral, como deve ser.\n",
+    "bio1": "Terapeuta Integrativa desde 2010, porém a minha jornada no caminho do autoconhecimento começou muito antes, ainda na graduação de Educação Física, na Universidade Estadual de Londrina. Como instrutora de Yoga, meditação e mindfulness, conduzo cursos e vivências em grupos desde 2014, unindo neurociência e espiritualidade, e desde 2017, como facilitadora de círculos de mulheres do sagrado feminino. Com a Psicanálise Junguiana, foi possível agregar a psicoterapia, às técnicas integrativas em meus atendimentos individuais, tratando o ser humano de forma integral, como deve ser.\n",
     "pillars": [
       "Psicanálise Junguina",
       "Mindfulness",
@@ -50,7 +50,7 @@
     ],
     "bio2": "No Espaço Vida Om, criei um ambiente onde o sagrado e o cotidiano se encontram um lugar para quem busca parar, respirar e se reconectar com a própria essência. Uno o rigor das práticas ancestrais com a leveza necessária para a vida moderna.",
     "name": "Andreia *Rosa*",
-    "badgeNumber": "9+",
+    "badgeNumber": "10+",
     "badgeLabel": "anos",
     "photo": "andreia.jpeg",
     "label": "Quem guia o espaço",
@@ -95,6 +95,30 @@
     "count": "08 práticas",
     "items": [
       {
+        "icon": "&#9737;",
+        "tag": "Análise profunda",
+        "title": "Psicanálise\nJunguiana",
+        "desc": "Mergulho no inconsciente à luz de Jung  sonhos, símbolos e arquétipos no caminho da individuação.",
+        "linkText": "Conhecer &#8594;",
+        "href": "lp-psicanalise-junguiana.html"
+      },
+      {
+        "icon": "&#9790;",
+        "tag": "Sagrado Feminino",
+        "title": "Psicoterapia\npara Mulheres",
+        "desc": "Escuta terapêutica e vivências do sagrado feminino para reconectar com sua natureza cíclica e sua força.",
+        "linkText": "Conhecer &#8594;",
+        "href": "lp-psicoterapia-feminino.html"
+      },
+      {
+        "icon": "&#9670;",
+        "tag": "Silêncio interior",
+        "title": "Meditação &amp;\nMindfulness",
+        "desc": "Práticas guiadas para aquietar a mente, cultivar presença e atenção plena no momento presente.",
+        "linkText": "Conhecer &#8594;",
+        "href": "lp-meditacao.html"
+      },
+      {
         "icon": "&#9711;",
         "tag": "Prática corporal",
         "title": "Yoga",
@@ -119,36 +143,12 @@
         "href": "lp-acupuntura.html"
       },
       {
-        "icon": "&#9737;",
-        "tag": "Análise profunda",
-        "title": "Psicanálise\nJunguiana",
-        "desc": "Mergulho no inconsciente à luz de Jung  sonhos, símbolos e arquétipos no caminho da individuação.",
-        "linkText": "Conhecer &#8594;",
-        "href": "lp-psicanalise-junguiana.html"
-      },
-      {
-        "icon": "&#9790;",
-        "tag": "Sagrado Feminino",
-        "title": "Psicoterapia\npara Mulheres",
-        "desc": "Escuta terapêutica e vivências do sagrado feminino para reconectar com sua natureza cíclica e sua força.",
-        "linkText": "Conhecer &#8594;",
-        "href": "lp-psicoterapia-feminino.html"
-      },
-      {
         "icon": "&#10086;",
         "tag": "Cura pelas histórias",
         "title": "Contoterapia",
         "desc": "O poder terapêutico dos contos e das narrativas para acessar emoções, ressignificar e curar.",
         "linkText": "Conhecer &#8594;",
         "href": "lp-contoterapia.html"
-      },
-      {
-        "icon": "&#9670;",
-        "tag": "Silêncio interior",
-        "title": "Meditação &amp;\nMindfulness",
-        "desc": "Práticas guiadas para aquietar a mente, cultivar presença e atenção plena no momento presente.",
-        "linkText": "Conhecer &#8594;",
-        "href": "lp-meditacao.html"
       },
       {
         "icon": "&#9784;",

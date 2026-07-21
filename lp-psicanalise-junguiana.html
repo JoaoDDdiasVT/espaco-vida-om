@@ -76,7 +76,30 @@
     display: flex; align-items: center; justify-content: center;
     height: 100%; position: relative; overflow: hidden;
   }
-  .hero-right > * { display: none !important; }
+  .hero-right > *:not(.hero-video-frame) { display: none !important; }
+  .hero-video-frame {
+    position: relative; z-index: 2;
+    width: min(380px, 88%);
+    aspect-ratio: 9 / 16;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(128,0,31,0.15);
+    box-shadow: 0 30px 70px -25px rgba(28,13,16,0.4);
+    background: rgba(28,13,16,0.06);
+  }
+  .hero-video-frame video {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .hero-video-frame:has(video:not([src]))::after {
+    content: 'Vídeo em breve';
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.03em; text-align: center;
+    padding: 24px; color: rgba(46,26,30,0.4);
+    background: linear-gradient(160deg, rgba(241,217,181,0.35), rgba(216,167,178,0.2));
+  }
   .hero-right::after {
     content: 'ψ';
     font-family: 'Cormorant Garamond', serif;
@@ -593,7 +616,9 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 18px 28px; }
+    .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 80px 28px 56px; }
+    .hero-right { min-height: auto; padding: 40px 28px 64px; }
     .hero::after { font-size: clamp(180px, 55vw, 280px); opacity: 0.6; }
     .philosophy { grid-template-columns: 1fr; }
     .phil-visual { grid-template-columns: 1fr 1fr; }
@@ -646,6 +671,9 @@
 
   <!-- HERO RIGHT — Mandala arquetípica clean, traços delicados -->
   <div class="hero-right">
+    <div class="hero-video-frame">
+      <video class="hero-video-el" autoplay muted loop playsinline controls data-field-src="hero.video"></video>
+    </div>
     <div class="hero-visual">
       <svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
 

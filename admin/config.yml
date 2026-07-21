@@ -121,6 +121,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"
@@ -229,6 +230,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Símbolo Om decorativo", name: om, widget: string, required: false }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
@@ -358,6 +360,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"
@@ -469,6 +472,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"
@@ -579,6 +583,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"
@@ -687,6 +692,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"
@@ -795,6 +801,7 @@ collections:
               - { label: "Subtítulo", name: subtitle, widget: string }
               - { label: "Descrição", name: desc, widget: text }
               - { label: "Texto do botão", name: ctaText, widget: string }
+              - { label: "Vídeo vertical do topo (formato retrato, 9:16)", name: video, widget: file, required: false, hint: "Vídeo curto na vertical, exibido ao lado do texto principal." }
               - { label: "Frase/citação decorativa", name: quoteText, widget: text, required: false }
               - { label: "Fonte da citação", name: quoteSource, widget: string, required: false }
           - label: "Faixa de destaques"

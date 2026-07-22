@@ -1,20 +1,32 @@
 {
   "hero": {
-    "eyebrow": "針灸 — Zhēnjiǔ · Medicina Tradicional Chinesa",
-    "tag": "Espaço Vida Om — Acupuntura",
-    "title": "O equilíbrio\nque o corpo\n*já conhece.*",
-    "subtitle": "Acupuntura como linguagem do Qi",
-    "desc": "Mais de 5000 anos de sabedoria oriental aplicados com precisão e cuidado. Uma terapia que escuta o corpo em sua totalidade — e devolve a ele o fluxo natural da vida.",
-    "ctaText": "Quero minha sessão",
-    "video": "",
     "quoteText": "\"Onde flui o Qi, ali está a saúde.\nOnde o Qi estagna, ali está a doença.\"",
-    "quoteSource": "Huangdi Neijing — O Clássico do Imperador Amarelo"
+    "eyebrow": "針灸 — Zhēnjiǔ · Medicina Tradicional Chinesa",
+    "desc": "Mais de 5000 anos de sabedoria oriental aplicados com precisão e cuidado. Uma terapia que escuta o corpo em sua totalidade — e devolve a ele o fluxo natural da vida.",
+    "quoteSource": "Huangdi Neijing — O Clássico do Imperador Amarelo",
+    "subtitle": "Acupuntura como linguagem do Qi",
+    "title": "O equilíbrio\nque o corpo\n*já conhece.*",
+    "tag": "Espaço Vida Om — Acupuntura",
+    "video": "https://www.youtube.com/watch?v=2K1K3V1FC7M&t=9s",
+    "ctaText": "Quero minha sessão"
   },
   "strip": [
-    { "highlight": "5000 anos", "text": " — de Medicina Tradicional Chinesa" },
-    { "highlight": "Atendimento individualizado", "text": " — diagnóstico energético completo" },
-    { "highlight": "Agulhas estéreis", "text": " — descartáveis e certificadas" },
-    { "highlight": "1ª sessão avaliativa", "text": " — diagnóstico sem compromisso" }
+    {
+      "highlight": "5000 anos",
+      "text": " — de Medicina Tradicional Chinesa"
+    },
+    {
+      "highlight": "Atendimento individualizado",
+      "text": " — diagnóstico energético completo"
+    },
+    {
+      "highlight": "Agulhas estéreis",
+      "text": " — descartáveis e certificadas"
+    },
+    {
+      "highlight": "1ª sessão avaliativa",
+      "text": " — diagnóstico sem compromisso"
+    }
   ],
   "philosophy": {
     "label": "O que é Acupuntura de verdade",
@@ -24,31 +36,80 @@
     "sutraText": "\"O médico superior trata a doença antes que ela exista. O médico inferior trata a doença depois que ela já se instalou.\"",
     "sutraRef": "Huangdi Neijing — Clássico Interno do Imperador Amarelo (séc. II a.C.)",
     "cards": [
-      { "icon": "æ°\"", "title": "Qi — Energia Vital", "text": "A força que anima todos os processos vivos. Quando flui livre pelos meridianos, o corpo encontra seu equilíbrio natural." },
-      { "icon": "☯", "title": "Yin e Yang", "text": "Forças opostas e complementares. A saúde é a dança harmoniosa entre elas — nem excesso, nem falta, apenas fluxo." },
-      { "icon": "经", "title": "Meridianos", "text": "Canais energéticos que conectam órgãos, emoções e funções do corpo. A Acupuntura acessa e reequilibra esses canais." },
-      { "icon": "äº\"", "title": "Cinco Elementos", "text": "Madeira, Fogo, Terra, Metal e Água — um mapa completo das interações entre órgãos, estações e emoções humanas." }
+      {
+        "icon": "æ°\"",
+        "title": "Qi — Energia Vital",
+        "text": "A força que anima todos os processos vivos. Quando flui livre pelos meridianos, o corpo encontra seu equilíbrio natural."
+      },
+      {
+        "icon": "☯",
+        "title": "Yin e Yang",
+        "text": "Forças opostas e complementares. A saúde é a dança harmoniosa entre elas — nem excesso, nem falta, apenas fluxo."
+      },
+      {
+        "icon": "经",
+        "title": "Meridianos",
+        "text": "Canais energéticos que conectam órgãos, emoções e funções do corpo. A Acupuntura acessa e reequilibra esses canais."
+      },
+      {
+        "icon": "äº\"",
+        "title": "Cinco Elementos",
+        "text": "Madeira, Fogo, Terra, Metal e Água — um mapa completo das interações entre órgãos, estações e emoções humanas."
+      }
     ]
   },
   "benefits": {
     "label": "O que a Acupuntura pode transformar",
     "title": "Condições que a *Acupuntura* trata",
     "items": [
-      { "number": "01", "title": "Dores Crônicas", "text": "Lombalgia, cervicalgia, artrite, fibromialgia e dores musculares persistentes respondem de forma consistente à Acupuntura, com redução comprovada da inflamação e da percepção de dor." },
-      { "number": "02", "title": "Ansiedade e Estresse", "text": "Pontos específicos regulam o sistema nervoso autônomo, reduzindo cortisol, acalmando a mente agitada e promovendo um estado de serenidade que se estende para o cotidiano." },
-      { "number": "03", "title": "Saúde Digestiva", "text": "Síndrome do intestino irritável, gastrite, refluxo e constipação são condições diretamente ligadas ao desequilíbrio do elemento Terra — e profundamente beneficiadas pela Acupuntura." },
-      { "number": "04", "title": "Fertilidade e Hormônios", "text": "A Acupuntura regula o eixo hipotálamo-hipófise-ovário, melhora a circulação uterina e apoia tratamentos de fertilidade, TPM e menopausa com suavidade e eficácia." },
-      { "number": "05", "title": "Enxaqueca e Cefaleia", "text": "Estudos clínicos reconhecidos pela OMS confirmam a eficácia da Acupuntura na prevenção e redução da frequência e intensidade das crises de enxaqueca." },
-      { "number": "06", "title": "Equilíbrio Emocional", "text": "Na MTC, cada emoção é gerida por um órgão-sistema. Medo, raiva, tristeza e preocupação têm meridianos correspondentes — e a Acupuntura harmoniza emoção e fisiologia ao mesmo tempo." }
+      {
+        "number": "01",
+        "title": "Dores Crônicas",
+        "text": "Lombalgia, cervicalgia, artrite, fibromialgia e dores musculares persistentes respondem de forma consistente à Acupuntura, com redução comprovada da inflamação e da percepção de dor."
+      },
+      {
+        "number": "02",
+        "title": "Ansiedade e Estresse",
+        "text": "Pontos específicos regulam o sistema nervoso autônomo, reduzindo cortisol, acalmando a mente agitada e promovendo um estado de serenidade que se estende para o cotidiano."
+      },
+      {
+        "number": "03",
+        "title": "Saúde Digestiva",
+        "text": "Síndrome do intestino irritável, gastrite, refluxo e constipação são condições diretamente ligadas ao desequilíbrio do elemento Terra — e profundamente beneficiadas pela Acupuntura."
+      },
+      {
+        "number": "04",
+        "title": "Fertilidade e Hormônios",
+        "text": "A Acupuntura regula o eixo hipotálamo-hipófise-ovário, melhora a circulação uterina e apoia tratamentos de fertilidade, TPM e menopausa com suavidade e eficácia."
+      },
+      {
+        "number": "05",
+        "title": "Enxaqueca e Cefaleia",
+        "text": "Estudos clínicos reconhecidos pela OMS confirmam a eficácia da Acupuntura na prevenção e redução da frequência e intensidade das crises de enxaqueca."
+      },
+      {
+        "number": "06",
+        "title": "Equilíbrio Emocional",
+        "text": "Na MTC, cada emoção é gerida por um órgão-sistema. Medo, raiva, tristeza e preocupação têm meridianos correspondentes — e a Acupuntura harmoniza emoção e fisiologia ao mesmo tempo."
+      }
     ]
   },
   "testimonials": {
     "label": "Experiências reais",
     "title": "O que dizem os *pacientes*",
     "items": [
-      { "text": "\"Sofri por anos com enxaqueca sem encontrar solução. Após o terceiro encontro com a Andreia, a frequência das crises caiu pela metade. Depois de completar o protocolo, minha vida mudou completamente.\"", "name": "— Fernanda L., 38 anos" },
-      { "text": "\"Fiz a Acupuntura com ceticismo, confesso. O que me surpreendeu não foi só a melhora na lombalgia crônica — foi a sensação de calma profunda que persiste por dias depois de cada sessão. É diferente de tudo.\"", "name": "— Ricardo M., 45 anos" },
-      { "text": "\"Estava passando por um período de muita ansiedade e ciclo irregular. A Andreia tratou tudo de forma integrada. Senti que fui vista como uma pessoa inteira, não como uma lista de sintomas. Recomendo sem hesitar.\"", "name": "— Juliana P., 31 anos" }
+      {
+        "text": "\"Sofri por anos com enxaqueca sem encontrar solução. Após o terceiro encontro com a Andreia, a frequência das crises caiu pela metade. Depois de completar o protocolo, minha vida mudou completamente.\"",
+        "name": "— Fernanda L., 38 anos"
+      },
+      {
+        "text": "\"Fiz a Acupuntura com ceticismo, confesso. O que me surpreendeu não foi só a melhora na lombalgia crônica — foi a sensação de calma profunda que persiste por dias depois de cada sessão. É diferente de tudo.\"",
+        "name": "— Ricardo M., 45 anos"
+      },
+      {
+        "text": "\"Estava passando por um período de muita ansiedade e ciclo irregular. A Andreia tratou tudo de forma integrada. Senti que fui vista como uma pessoa inteira, não como uma lista de sintomas. Recomendo sem hesitar.\"",
+        "name": "— Juliana P., 31 anos"
+      }
     ]
   },
   "pricing": {
